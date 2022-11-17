@@ -1,0 +1,75 @@
+import enum
+import json
+import os
+
+
+base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+
+class Modifier(enum.Enum):
+    MEH = ('ctrl+shift+alt+')
+    HYPR = ('ctrl+shift+alt+meta+')
+
+    def __init__(self, vscode_shorcut):
+        self.vscode_shortcut = vscode_shorcut
+
+class Mapping(enum.Enum):
+    VS_COMMANDS         = (Modifier.MEH,  'b', 'workbench.action.showCommands')
+    VS_LINE             = (Modifier.MEH,  'c', 'workbench.action.gotoLine')
+    VS_DEFINITION       = (Modifier.MEH,  'e', 'editor.action.revealDefinition')
+    VS_IMPLEMENTATION   = (Modifier.MEH,  'f', 'editor.action.goToImplementation')
+    VS_REFERENCES       = (Modifier.MEH,  'g', 'editor.action.goToReferences')
+    VS_BACK             = (Modifier.MEH,  'h', 'workbench.action.navigateBack')
+    VS_BRACKET          = (Modifier.MEH,  'i', 'editor.action.jumpToBracket')
+    VS_TABLEFT          = (Modifier.MEH,  'j', 'workbench.action.previousEditor')
+    VS_TABRIGHT         = (Modifier.MEH,  'k', 'workbench.action.nextEditor')
+    VS_CLOSETAB         = (Modifier.MEH,  'l', 'workbench.action.closeActiveEditor')
+    VS_GROUP_1          = (Modifier.MEH,  'm', 'workbench.action.focusFirstEditorGroup')
+    VS_GROUP_2          = (Modifier.MEH,  'n', 'workbench.action.focusSecondEditorGroup')
+    VS_CMT_BLOCK        = (Modifier.MEH,  'o', 'editor.action.blockComment')
+    VS_CMT_LINE         = (Modifier.MEH,  'p', 'editor.action.commentLine')
+    VS_DEL_LINE         = (Modifier.MEH,  'q', 'editor.action.deleteLines')
+    VS_COPYLINEDOWN     = (Modifier.MEH,  'r', 'editor.action.copyLinesDownAction')
+    VS_BM_PREV          = (Modifier.MEH,  's', 'bookmarks.jumpToPrevious')
+    VS_BM_NEXT          = (Modifier.MEH,  't', 'bookmarks.jumpToNext')
+    VS_BM_TOGGLE        = (Modifier.MEH,  'u', 'bookmarks.toggle')
+    VS_BM_CLEARALL      = (Modifier.MEH,  'v', 'bookmarks.clearFromAllFiles')
+    VS_BM_LIST          = (Modifier.MEH,  'w', 'bookmarks.list')
+    VS_BM_LISTALL       = (Modifier.MEH,  'x', 'bookmarks.listFromAllFiles')
+    VS_JUMPY            = (Modifier.MEH,  'y', 'extension.jumpy-word')
+    VS_FOCUS_EDITOR     = (Modifier.MEH,  'z', 'workbench.action.focusActiveEditorGroup')
+    VS_FOCUS_TERMINAL   = (Modifier.MEH,  '0', 'workbench.action.terminal.focus')
+    VS_TOGGLE_TERMINAL  = (Modifier.MEH,  '1', 'workbench.action.terminal.toggleTerminal')
+    VS_DEL_LEFT         = (Modifier.MEH,  '2', 'deleteAllLeft')
+    VS_DEL_RIGHT        = (Modifier.MEH,  '3', 'deleteAllRight')
+    VS_FIND_FILES       = (Modifier.MEH,  '4', 'workbench.action.findInFiles')
+    VS_FILE             = (Modifier.MEH,  '5', 'workbench.action.quickOpen')    
+    VS_SYMBOLEDITOR     = (Modifier.MEH,  '6', 'workbench.action.gotoSymbol')
+
+    def __init__(self, modifier, keycode, command):
+        self.modifier = modifier
+        self.keycode = keycode
+        self.command = command
+
+# print qmk macro definitions
+macros_output_file = os.path.join(base_dir, 'user', 'vscode_macros.h')
+f = open(macros_output_file, 'w')
+f.write('#pragma once\n')
+for map in Mapping:
+    macro = map.name
+    keycode = map.modifier.name + '(KC_' + map.keycode.upper() + ')'
+    command = map.command
+    f.write(f'#define {macro.ljust(24)} {keycode.ljust(15)} // {command}\n')
+f.close()
+
+# print vscode keyboard shortcuts
+shortcut_entries = []
+for map in Mapping:
+    entry = {
+        'key': map.modifier.vscode_shortcut + map.keycode,
+        'command': map.command
+    }
+    shortcut_entries.append(entry)
+
+f = open('keybindings.json', 'w')
+json.dump(shortcut_entries, f, indent=4)
+f.close()
