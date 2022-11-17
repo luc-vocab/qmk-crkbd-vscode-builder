@@ -70,6 +70,7 @@ for map in Mapping:
     }
     shortcut_entries.append(entry)
 
-f = open('keybindings.json', 'w')
+keybindings_output_file = os.path.join(base_dir, 'keybindings.json')
+f = open(keybindings_output_file, 'w')
 json.dump(shortcut_entries, f, indent=4)
 f.close()
