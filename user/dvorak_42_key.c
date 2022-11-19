@@ -182,6 +182,13 @@ bool caps_word_press_user(uint16_t keycode) {
         case KC_A ... KC_Z:
             add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.        
             return true;
+        
+        // these keycodes are not shifted, but they allow the caps word to continue
+        case KC_1 ... KC_0:
+        case KC_UNDS:
+        case KC_BSPC:
+        case KC_DEL:        
+            return true;
 
         default:
             return false;  // Deactivate Caps Word.
