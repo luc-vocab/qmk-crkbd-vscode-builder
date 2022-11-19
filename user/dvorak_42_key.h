@@ -94,6 +94,7 @@ enum custom_keycodes {
 #define OBS_READMODE RCTL(KC_E)
 #define OBS_CMD RCTL(KC_P)
 #define OBS_QUICKSW RCTL(KC_O)
+#define OBS_CHECKBOX RCTL(KC_L)
 
 
 // Notepad++ shortcuts
