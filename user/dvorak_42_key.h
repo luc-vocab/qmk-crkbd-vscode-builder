@@ -88,6 +88,12 @@ enum custom_keycodes {
 #define SH_DEL_PATH LALT(KC_BSPC)
 #define SH_EXIT RCTL(KC_X)
 
+// Obsidian shortcuts
+// ==================
+
+#define OBS_READMODE RCTL(KC_E)
+#define OBS_CMD RCTL(KC_P)
+#define OBS_QUICKSW RCTL(KC_O)
 
 
 // Notepad++ shortcuts
