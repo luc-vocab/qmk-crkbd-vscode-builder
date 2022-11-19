@@ -81,6 +81,14 @@ enum custom_keycodes {
 
 
 
+// shell shortcuts
+// ===============
+
+#define SH_DEL_WORD RCTL(KC_W)
+#define SH_DEL_PATH LALT(KC_BSPC)
+#define SH_EXIT RCTL(KC_X)
+
+
 
 // Notepad++ shortcuts
 // ===================
