@@ -1,5 +1,5 @@
 # how to build
-# docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t lucwastiaux/qmk-crkbd-vscode-builder:latest -f Dockerfile .
+# docker build --build-arg UNAME=$(id -un) --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t lucwastiaux/qmk-crkbd-vscode-builder:latest -f Dockerfile .
 # run 
 # scripts/docker_qmk_build.sh
 # docker run -it --mount type=bind,source="$(pwd)"/keymap,target=/qmk_firmware/keyboards/crkbd/keymaps/luc --mount type=bind,source="$(pwd)"/user,target=/qmk_firmware/users/luc lucwastiaux/qmk-crkbd-vscode-builder:latest
