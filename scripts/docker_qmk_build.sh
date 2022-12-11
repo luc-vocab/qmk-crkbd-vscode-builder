@@ -3,7 +3,7 @@
 BASEDIR=$(dirname $0)
 python3 $BASEDIR/process_mapping.py
 
-docker run -it \
+docker run --rm -it \
 --mount type=bind,source="$(pwd)"/keymap,target=/workspace/qmk_firmware/keyboards/crkbd/keymaps/luc \
 --mount type=bind,source="$(pwd)"/user,target=/workspace/qmk_firmware/users/luc \
 --mount type=bind,source=${HOME}/keyboard/firmware,target=/firmware \
