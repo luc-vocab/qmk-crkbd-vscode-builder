@@ -50,7 +50,7 @@ KC_TRNS, OBS_CMD, OBS_QUICKSW, OBS_CHECKBOX, RCTL(KC_B), NP_DUPE_LINE,     KC_TR
 
   [SHELL_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                              ,-----------------------------------------------------.
-TO(BASE),SHELL_GIT_DIFF, SHELL_PGREP, SHELL_PLESS, SHELL_LESS, KC_TRNS,              RCTL(KC_D), KC_HOME, KC_UP, KC_END, RCTL(KC_L), SH_DEL_PATH,
+TO(BASE),SHELL_GIT_DIFF, SHELL_PGREP, SHELL_PLESS, SHELL_LESS, SH_EXIT,              RCTL(KC_D), KC_HOME, KC_UP, KC_END, RCTL(KC_L), SH_DEL_PATH,
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 OSL(SHELL_SCREEN),SHELL_GIT_STATUS,SHELL_CDPRE,SHELL_LSLTR,SHELL_LS, SHELL_LSLA,              LALT(KC_B), KC_LEFT, KC_DOWN, KC_RIGHT, LALT(KC_F), SH_DEL_WORD,
   //|--------+--------+--------+--------+--------+--------|                           |--------+--------+--------+--------+--------+--------|
