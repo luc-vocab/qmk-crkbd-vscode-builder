@@ -1,3 +1,6 @@
+// Copyright 2022 LucW (@luc-languagetools)
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #include "dvorak_42_key.h"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -17,27 +20,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SHELL_LS:
             SEND_STRING("ls\n");
-            return true;
             break;
         case SHELL_LSLTR:
             SEND_STRING("ls -ltr\n");
-            return true;
             break;
         case SHELL_LSLA:
             SEND_STRING("ls -la\n");
-            return true;
             break;
         case SHELL_CDPRE:
             SEND_STRING("cd ..\n");
-            return true;
             break;
         case SHELL_LESS:
             SEND_STRING("less ");
-            return true;
             break;
         case SHELL_PLESS:
             SEND_STRING(" | less");
-            return true;
             break;
         case SHELL_PGREP:
             SEND_STRING(" | grep ");
@@ -45,40 +42,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case SHELL_TAILF:
             SEND_STRING("tail -f ");
-            return true;
             break;
         case SHELL_SCREENRD:
             SEND_STRING("screen -r -d ");
-            return true;
             break;
         case SHELL_SCREEN_NEW:
             SEND_STRING("screen -S ");
-            return true;
             break;
         case SHELL_SCREEN_LIST:
             SEND_STRING("screen -list\n");
-            return true;
             break;
 
         case SHELL_GIT_DIFF:
             SEND_STRING("git diff\n");
-            return true;
             break;
 
         case SHELL_GIT_STATUS:
             SEND_STRING("git status\n");
-            return true;
             break;            
 
         case WINDOWS10_WORKSPACE_LEFT:
-            SEND_STRING(SS_LGUI(SS_LCTRL(SS_TAP(X_LEFT))));
-            return true;
+            tap_code16(C(G(KC_LEFT)));
             break;
         case WINDOWS10_WORKSPACE_RIGHT:
-            SEND_STRING(SS_LGUI(SS_LCTRL(SS_TAP(X_RIGHT))));
+            tap_code16(C(G(KC_RIGHT)));
             break;
         case WINDOWS10_TASK_VIEW:
-            SEND_STRING(SS_LGUI(SS_TAP(X_TAB)));
+            tap_code16(G(KC_TAB));
             break;
         // linux screen shortcuts
         case SCREEN_TAB_LEFT:
@@ -94,7 +84,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(SS_LCTL("a") "d");
             break;
         case SCREEN_RENAME:
-            SEND_STRING(SS_LCTL("a") SS_LSFT("a"));
+            SEND_STRING(SS_LCTL("a") "A");
             break;
         case SCREEN_NUMBER:
             SEND_STRING(SS_LCTL("a") ":number ");
@@ -136,38 +126,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(SS_LCTL("a") "]");
             break;
         case SCREEN_KILL:
-            SEND_STRING(SS_LCTL("a") "k" "y");
+            SEND_STRING(SS_LCTL("a") "ky");
             break;            
         case SCREEN_READREG_1:
-            tap_code16(C(KC_A));
-            tap_code16(S(KC_SCOLON));
-            SEND_STRING("readreg 1\n");
+            SEND_STRING(SS_LCTL("a") ":readreg 1\n");
             break;
         case SCREEN_READREG_2:
-            tap_code16(C(KC_A));
-            tap_code16(S(KC_SCOLON));
-            SEND_STRING("readreg 2\n");
+            SEND_STRING(SS_LCTL("a") ":readreg 2\n");
             break;
         case SCREEN_READREG_3:
-            tap_code16(C(KC_A));
-            tap_code16(S(KC_SCOLON));
-            SEND_STRING("readreg 3\n");
+            SEND_STRING(SS_LCTL("a") ":readreg 3\n");
             break;
 
         case SCREEN_PASTEREG_1:
-            tap_code16(C(KC_A));
-            tap_code16(S(KC_SCOLON));
-            SEND_STRING("paste 1\n");
+            SEND_STRING(SS_LCTL("a") ":paste 1\n");
             break;
         case SCREEN_PASTEREG_2:
-            tap_code16(C(KC_A));
-            tap_code16(S(KC_SCOLON));
-            SEND_STRING("paste 2\n");
+            SEND_STRING(SS_LCTL("a") ":paste 2\n");
             break;
         case SCREEN_PASTEREG_3:
-            tap_code16(C(KC_A));
-            tap_code16(S(KC_SCOLON));
-            SEND_STRING("paste 3\n");
+            SEND_STRING(SS_LCTL("a") ":paste 3\n");
             break;
     }
   }
@@ -181,13 +159,6 @@ bool caps_word_press_user(uint16_t keycode) {
         // Keycodes that continue Caps Word, with shift applied.
         case KC_A ... KC_Z:
             add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.        
-            return true;
-        
-        // these keycodes are not shifted, but they allow the caps word to continue
-        case KC_1 ... KC_0:
-        case KC_UNDS:
-        case KC_BSPC:
-        case KC_DEL:        
             return true;
 
         default:

@@ -1,3 +1,6 @@
+// Copyright 2022 LucW (@luc-languagetools)
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #pragma once
 
 #include "quantum.h"
@@ -5,22 +8,21 @@
 // LAYERS
 // ======
 
-#define BASE             0 // base dvorak layer
-#define KEYNAV           1 // arrow navigation (right hand)
-#define KEYSEL           2 // arrow navigation + shift (allow text selection)
-#define SHELL_NAV        3 // bash shortcuts
-#define SHELL_SCREEN     4 // linux screen shortcuts
-#define BROWSER_CONTROL  5 // control browser and mouse
-#define COMBINED         6 // combined numbers and symbols layer
-#define ANDROID_STUDIO   7 // android studio specific layer
-#define VSCODE           8 // visual studio code specific layer
-#define SHORTCUTS        9 // shortcuts to be intercepted by autohotkey
+enum layer_names {
+    BASE,            // base dvorak layer
+    KEYNAV,          // arrow navigation (right hand)
+    KEYSEL,          // arrow navigation + shift (allow text selection)
+    SHELL_NAV,       // bash shortcuts
+    SHELL_SCREEN,    // linux screen shortcuts
+    BROWSER_CONTROL, // control browser and mouse
+    COMBINED,        // combined numbers and symbols layer
+    ANDROID_STUDIO,  // android studio specific layer
+    VSCODE,          // visual studio code specific layer
+    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
+};
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
-  EPRM,
-  VRSN,
-  RGB_SLD,
   
   // shell nav macros
   SHELL_LS,
@@ -81,21 +83,6 @@ enum custom_keycodes {
 
 
 
-// shell shortcuts
-// ===============
-
-#define SH_DEL_WORD RCTL(KC_W)
-#define SH_DEL_PATH LALT(KC_BSPC)
-#define SH_EXIT RCTL(KC_X)
-
-// Obsidian shortcuts
-// ==================
-
-#define OBS_READMODE RCTL(KC_E)
-#define OBS_CMD RCTL(KC_P)
-#define OBS_QUICKSW RCTL(KC_O)
-#define OBS_CHECKBOX RCTL(KC_L)
-
 
 // Notepad++ shortcuts
 // ===================
@@ -103,8 +90,8 @@ enum custom_keycodes {
 
 // ChromeOS shortcuts
 // ==================
-#define CO_WS_LEFT RGUI(KC_LBRACKET)
-#define CO_WS_RIGHT RGUI(KC_RBRACKET)
+#define CO_WS_LEFT RGUI(KC_LBRC)
+#define CO_WS_RIGHT RGUI(KC_RBRC)
 
 
 // Android Studio shortcuts
@@ -153,46 +140,6 @@ enum custom_keycodes {
 
 
 
-#define MACRO_SCREEN_NUM(MACRO_NAME,NUM) \
-        case MACRO_NAME:\
-             if (record->event.pressed) {\
-                return MACRO( D(LCTL), T(A), U(LCTL), T(NUM), END);\
-            }\
-        break;\
-
-#define MACRO_SCREEN_REG(MACRO_NAME,NUM) \
-        case MACRO_NAME:\
-             if (record->event.pressed) {\
-                return MACRO( D(LCTL), T(A), U(LCTL), D(LSFT), T(SCOLON), U(LSFT),\
-                              T(R),\
-                              T(E),\
-                              T(A),\
-                              T(D),\
-                              T(R),\
-                              T(E),\
-							  T(G),\
-                              T(SPC),\
-							  T(NUM),\
-							  T(ENTER),\
-                             END);\
-            }\
-        break;\
-
-#define MACRO_SCREEN_PASTE(MACRO_NAME,NUM)\
-        case MACRO_NAME:\
-             if (record->event.pressed) {\
-                return MACRO( D(LCTL), T(A), U(LCTL), D(LSFT), T(SCOLON), U(LSFT),\
-                              T(P),\
-                              T(A),\
-                              T(S),\
-                              T(T),\
-                              T(E),\
-                              T(SPC),\
-							  T(NUM),\
-							  T(ENTER),\
-                             END);\
-            }\
-        break;\
 
 // tap-dance configuration
 // =======================
