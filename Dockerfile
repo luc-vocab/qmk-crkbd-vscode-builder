@@ -13,7 +13,7 @@ FROM ubuntu:20.04
 ARG UNAME=qmk_user
 ARG UID=1000
 ARG GID=1000
-ARG QMK_TAG=0.18.17
+ARG QMK_TAG=0.19.4
 
 # use ubuntu mirrors
 RUN sed -i -e 's|archive\.ubuntu\.com|mirrors\.xtom\.com\.hk|g' /etc/apt/sources.list
