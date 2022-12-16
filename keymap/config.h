@@ -57,4 +57,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  //#define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #endif
 
+// we don't want any colors by default
+#define RGBLIGHT_DEFAULT_HUE 	0
+#define RGBLIGHT_DEFAULT_SAT 	0
+#define RGBLIGHT_DEFAULT_VAL    0
+
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
