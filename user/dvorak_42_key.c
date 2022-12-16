@@ -197,9 +197,5 @@ void tap_dance_tap_hold_reset(qk_tap_dance_state_t *state, void *user_data) {
 
 // Tap Dance definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for Escape, twice for Caps Lock
-    // [TD_BSPC_CTL_BSPC] = ACTION_TAP_DANCE_DOUBLE(KC_BSPC, RCTL(KC_BSPC)),
-    // [TD_BSPC_CTL_BSPC_IOS] = ACTION_TAP_DANCE_DOUBLE(KC_BSPC, LALT(KC_BSPC)),
-    [TD_DEL_WORD_DEL] = ACTION_TAP_DANCE_TAP_HOLD(RCTL(KC_BSPC), KC_BSPC),
-    [TD_DEL_WORD_DEL_IOS] = ACTION_TAP_DANCE_TAP_HOLD(LALT(KC_BSPC), KC_BSPC)
+    [TD_DEL_WORD_DEL] = ACTION_TAP_DANCE_TAP_HOLD(RCTL(KC_BSPC), KC_BSPC)
 };

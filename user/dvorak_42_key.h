@@ -134,34 +134,11 @@ enum custom_keycodes {
 
 #include "vscode_macros.h"
 
-// unused vscode shortcuts
-// #define VS_BM_LIST LCTL(LALT(KC_L))
-// #define VS_BM_LISTALL LCTL(LALT(KC_A))
-// #define VS_BM_CLEARALL LCTL(LALT(KC_C))
-
-// #define VS_TERMINAL_PREV MEH(KC_F12)
-// #define VS_TERMINAL_NEXT MEH(KC_F13)
-// #define VS_TERMINAL_NEW MEH(KC_F14)
-// #define VS_TERMINAL_DETACH MEH(KC_F15)
-// #define VS_TERMINAL_RENAME MEH(KC_F16)
-// #define VS_JUMPY MEH(KC_F17)
-// #define VS_FIND MEH(KC_F19)
-// #define VS_CLOSEPANEL LCTL(LSFT(KC_W))
-// #define VS_BUILD LCTL(LSFT(KC_B))
-// #define VS_OPEN_FILE        MEH(KC_F2)
-// #define VS_TERMINAL         MEH(KC_F15)
-
-
-
-
 // tap-dance configuration
 // =======================
 
 enum {
-    // TD_BSPC_CTL_BSPC,
-    // TD_BSPC_CTL_BSPC_IOS,
-    TD_DEL_WORD_DEL,
-    TD_DEL_WORD_DEL_IOS
+    TD_DEL_WORD_DEL
 };
 
 typedef struct {

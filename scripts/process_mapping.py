@@ -44,6 +44,7 @@ class Mapping(enum.Enum):
     VS_FIND_FILES       = (Modifier.MEH,  '4', 'workbench.action.findInFiles')
     VS_FILE             = (Modifier.MEH,  '5', 'workbench.action.quickOpen')    
     VS_SYMBOLEDITOR     = (Modifier.MEH,  '6', 'workbench.action.gotoSymbol')
+    VS_GO_TO_TOP        = (Modifier.MEH,  '7', 'cursorTop')
 
     def __init__(self, modifier, keycode, command):
         self.modifier = modifier
