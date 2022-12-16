@@ -227,12 +227,15 @@ void keyboard_post_init_user(void) {
 }
 
 layer_state_t default_layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE));
+    // just call layer_state_set_user
+    layer_state_set_user(layer_state);
     return state;
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
 
+    // base layer must be here
+    rgblight_set_layer_state(0, layer_state_cmp(state, BASE));
 
     rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV));
     rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL));    
