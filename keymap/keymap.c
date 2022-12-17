@@ -12,6 +12,7 @@ static bool g_oneshot_shift = false;
 static bool g_oneshot_ctrl = false;
 static bool g_oneshot_alt = false;
 static bool g_oneshot_gui = false;
+static bool g_capsword = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_split_3x6_3(
@@ -217,7 +218,7 @@ void oneshot_mods_changed_user(uint8_t mods) {
     g_oneshot_alt = false;
     g_oneshot_gui = false;
   }
-  rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui);
+  rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui || g_capsword);
 }
 
 const rgblight_segment_t PROGMEM rgb_layer_off[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -296,8 +297,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void caps_word_set_user(bool active) {
-    // will enable/disable rgb layer 7 based on whether caps word is active
-    rgblight_set_layer_state(7, active);
+  g_capsword = active;
+  // will enable/disable rgb layer 7 based on whether caps word is active
+  rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui || g_capsword);
 }
 
 void render_bootmagic_status(bool status) {
