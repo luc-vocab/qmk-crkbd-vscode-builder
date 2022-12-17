@@ -8,6 +8,8 @@
 
 // to build: qmk compile -kb crkbd/rev1 -km dvorak_42_key
 
+static bool g_oneshot_shift = false;
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -164,6 +166,10 @@ void oled_render_layer_state(void) {
       oled_write_ln_P(PSTR("CAPS WORD"), false);
       return;
   }
+  if(g_oneshot_shift) {
+      oled_write_ln_P(PSTR("SHIFT"), false);
+      return;
+  }  
   DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
   DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
   DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
@@ -174,6 +180,27 @@ void oled_render_layer_state(void) {
   DISPLAY_LAYER_NAME(KEYNAV, "KEYNAV");
   DISPLAY_LAYER_NAME(BASE, "BASE");
 
+}
+
+void oneshot_mods_changed_user(uint8_t mods) {
+  if (mods & MOD_MASK_SHIFT) {
+    // println("Oneshot mods SHIFT");
+    // oled_write_ln_P(PSTR("SHIFT"), false);
+    g_oneshot_shift = true;
+  }
+  if (mods & MOD_MASK_CTRL) {
+    // println("Oneshot mods CTRL");
+  }
+  if (mods & MOD_MASK_ALT) {
+    // println("Oneshot mods ALT");
+  }
+  if (mods & MOD_MASK_GUI) {
+    // println("Oneshot mods GUI");
+  }
+  if (!mods) {
+    // println("Oneshot mods off");
+    g_oneshot_shift = false;
+  }
 }
 
 const rgblight_segment_t PROGMEM rgb_layer_off[] = RGBLIGHT_LAYER_SEGMENTS(
