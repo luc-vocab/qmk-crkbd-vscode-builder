@@ -9,6 +9,9 @@
 // to build: qmk compile -kb crkbd/rev1 -km dvorak_42_key
 
 static bool g_oneshot_shift = false;
+static bool g_oneshot_ctrl = false;
+static bool g_oneshot_alt = false;
+static bool g_oneshot_gui = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_split_3x6_3(
@@ -163,13 +166,25 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 void oled_render_layer_state(void) {
   // if caps word is enabled, show
   if(is_caps_word_on()) {
-      oled_write_ln_P(PSTR("CAPS WORD"), false);
+      oled_write_ln_P(PSTR("MOD: CAPS WORD"), false);
       return;
   }
   if(g_oneshot_shift) {
-      oled_write_ln_P(PSTR("SHIFT"), false);
+      oled_write_ln_P(PSTR("MOD: SHIFT"), false);
       return;
   }  
+  if(g_oneshot_ctrl) {
+      oled_write_ln_P(PSTR("MOD: CTRL"), false);
+      return;
+  }    
+  if(g_oneshot_alt) {
+      oled_write_ln_P(PSTR("MOD: ALT"), false);
+      return;
+  }      
+  if(g_oneshot_gui) {
+      oled_write_ln_P(PSTR("MOD: GUI"), false);
+      return;
+  }        
   DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
   DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
   DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
@@ -182,25 +197,27 @@ void oled_render_layer_state(void) {
 
 }
 
+// callback when oneshot modifiers are enabled
 void oneshot_mods_changed_user(uint8_t mods) {
   if (mods & MOD_MASK_SHIFT) {
-    // println("Oneshot mods SHIFT");
-    // oled_write_ln_P(PSTR("SHIFT"), false);
     g_oneshot_shift = true;
   }
   if (mods & MOD_MASK_CTRL) {
-    // println("Oneshot mods CTRL");
+    g_oneshot_ctrl = true;
   }
   if (mods & MOD_MASK_ALT) {
-    // println("Oneshot mods ALT");
+    g_oneshot_alt = true;
   }
   if (mods & MOD_MASK_GUI) {
-    // println("Oneshot mods GUI");
+    g_oneshot_gui = true;
   }
   if (!mods) {
-    // println("Oneshot mods off");
     g_oneshot_shift = false;
+    g_oneshot_ctrl = false;
+    g_oneshot_alt = false;
+    g_oneshot_gui = false;
   }
+  rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui);
 }
 
 const rgblight_segment_t PROGMEM rgb_layer_off[] = RGBLIGHT_LAYER_SEGMENTS(
