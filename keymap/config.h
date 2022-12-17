@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define TAPPING_TERM 100
 
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+#define ONESHOT_TIMEOUT 2000
 
 // MOUSE SETTINGS
 // ==============
