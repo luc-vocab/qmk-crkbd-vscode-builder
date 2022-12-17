@@ -30,8 +30,3 @@ USER $UNAME
 RUN git clone --branch $QMK_TAG --single-branch https://github.com/qmk/qmk_firmware.git /workspace/qmk_firmware
 RUN cd /workspace/qmk_firmware && make git-submodule
 
-# copy initial keymap and compile to cache some of the compilation steps in the image
-COPY keymap /workspace/qmk_firmware/keyboards/crkbd/keymaps/${UNAME}
-COPY user /workspace/qmk_firmware/users/${UNAME}
-RUN cd /workspace/qmk_firmware && qmk compile -kb crkbd -km ${UNAME}
-
