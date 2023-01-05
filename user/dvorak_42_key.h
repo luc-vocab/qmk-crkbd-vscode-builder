@@ -86,7 +86,20 @@ enum custom_keycodes {
 
 #define SH_DEL_WORD RCTL(KC_W)
 #define SH_DEL_PATH LALT(KC_BSPC)
+#define SH_WORD_LEFT LALT(KC_B)
+#define SH_WORD_RIGHT LALT(KC_F)
+
+#define SH_DEL_TO_START RCTL(KC_U)
+#define SH_DEL_TO_END RCTL(KC_K)
+
+#define SH_RECALL LALT(KC_DOT)
+#define SH_SEARCH RCTL(KC_R)
+#define SH_PASTE KC_BTN2
+
 #define SH_EXIT RCTL(KC_X)
+#define SH_CLOSE RCTL(KC_D)
+#define SH_CLEARSCR RCTL(KC_L)
+#define SH_STOP RCTL(KC_C)
 
 // Obsidian shortcuts
 // ==================
