@@ -51,6 +51,9 @@ enum custom_keycodes {
   SCREEN_NUMBER,
   SCREEN_KILL,
 
+  SCREEN_MOVE_LEFT,
+  SCREEN_MOVE_RIGHT,
+
   SCREEN_0,
   SCREEN_1,
   SCREEN_2,

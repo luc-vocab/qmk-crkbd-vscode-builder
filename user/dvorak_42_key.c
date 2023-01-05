@@ -77,6 +77,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SCREEN_TAB_RIGHT:
             SEND_STRING(SS_LCTL("a") "n");
             break;
+
+        case SCREEN_MOVE_LEFT:
+            SEND_STRING(SS_LCTL("a") ":number -1\n");
+            break;            
+        case SCREEN_MOVE_RIGHT:
+            SEND_STRING(SS_LCTL("a") ":number +1\n");
+            break;                        
+            
         case SCREEN_NEW_TAB:
             SEND_STRING(SS_LCTL("a") "c");
             break;
