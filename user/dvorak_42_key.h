@@ -78,11 +78,8 @@ enum custom_keycodes {
   // Windows 10 macros
   WINDOWS10_WORKSPACE_LEFT,
   WINDOWS10_WORKSPACE_RIGHT,
-  WINDOWS10_TASK_VIEW,
+  WINDOWS10_TASK_VIEW
 
-  // TWS shortcuts
-  TWS_OIMODE_O,
-  TWS_OIMODE_A
 
 };
 
