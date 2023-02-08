@@ -122,6 +122,10 @@ enum custom_keycodes {
 #define CO_WS_LEFT RGUI(KC_LBRC)
 #define CO_WS_RIGHT RGUI(KC_RBRC)
 
+// Microsoft Teams shortcuts
+// =========================
+#define TM_ITEM_UP LALT(KC_UP)
+#define TM_ITEM_DN LALT(KC_DOWN)
 
 // Android Studio shortcuts
 #define AS_TABLEFT LALT(KC_LEFT)
