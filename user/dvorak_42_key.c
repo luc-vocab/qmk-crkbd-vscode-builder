@@ -155,6 +155,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SCREEN_PASTEREG_3:
             SEND_STRING(SS_LCTL("a") ":paste 3\n");
             break;
+        case TWS_OIMODE_O:
+            tap_code16(KC_O);
+            tap_code16(KC_ENTER);
+            tap_code16(KC_DOWN);
+            break;
+        case TWS_OIMODE_A:
+            tap_code16(KC_A);
+            tap_code16(KC_ENTER);
+            tap_code16(KC_DOWN);
+            break;            
     }
   }
 

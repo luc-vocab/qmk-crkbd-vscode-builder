@@ -80,6 +80,10 @@ enum custom_keycodes {
   WINDOWS10_WORKSPACE_RIGHT,
   WINDOWS10_TASK_VIEW,
 
+  // TWS shortcuts
+  TWS_OIMODE_O,
+  TWS_OIMODE_A
+
 };
 
 
