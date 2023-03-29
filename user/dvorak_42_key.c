@@ -97,6 +97,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SCREEN_NUMBER:
             SEND_STRING(SS_LCTL("a") ":number ");
             break;
+        case SCREEN_WINDOWS:
+            SEND_STRING(SS_LCTL("a") "\"");
+            break;            
         case SCREEN_0:
             SEND_STRING(SS_LCTL("a") "0");
             break;
