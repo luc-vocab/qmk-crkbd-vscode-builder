@@ -15,8 +15,6 @@ ARG UID=1000
 ARG GID=1000
 ARG QMK_TAG=0.19.4
 
-# use ubuntu mirrors
-RUN sed -i -e 's|archive\.ubuntu\.com|mirrors\.xtom\.com\.hk|g' /etc/apt/sources.list
 # install packages first
 # https://github.com/samhocevar-forks/qmk-firmware/blob/master/docs/getting_started_build_tools.md
 RUN apt-get update -y && apt-get install -y python3-pip git gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-programmer dfu-util gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi
