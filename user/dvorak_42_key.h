@@ -19,6 +19,7 @@ enum layer_names {
     ANDROID_STUDIO,  // android studio specific layer
     VSCODE,          // visual studio code specific layer
     SHORTCUTS,       // shortcuts to be intercepted by autohotkey
+    FKEYS,           // function keys
 };
 
 enum custom_keycodes {

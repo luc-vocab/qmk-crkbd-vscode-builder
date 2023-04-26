@@ -125,9 +125,21 @@ KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), WINDOWS10_WORKSPACE_LEFT, WINDOWS10_W
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), MEH(KC_1),       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,                 KC_TRNS, TO(SHORTCUTS), TO(BASE)
+                                        TO(FKEYS),  KC_TRNS, KC_TRNS,                 KC_TRNS, TO(SHORTCUTS), TO(BASE)
                                       //`--------------------------'             `--------------------------'
   ),
+
+  [FKEYS] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                             ,-----------------------------------------------------.
+    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                              KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
+    KC_F1,      KC_F2,  KC_F3,    KC_F4,   KC_F5,  KC_F6,                                KC_F7,     KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
+KC_TRNS, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_TRNS,            KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
+                                        TO(BASE),  KC_TRNS, KC_TRNS,                 KC_TRNS, KC_TRNS, KC_TRNS
+                                      //`--------------------------'             `--------------------------'
+  ),  
 
   /*
   // empty layer
@@ -187,6 +199,7 @@ void oled_render_layer_state(void) {
       return;
   }        
   DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
+  DISPLAY_LAYER_NAME(FKEYS, "F-KEYS");
   DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
   DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
   DISPLAY_LAYER_NAME(BROWSER_CONTROL, "BROWSER");
@@ -289,7 +302,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(3, layer_state_cmp(state, SHELL_NAV));    
     rgblight_set_layer_state(4, layer_state_cmp(state, SHELL_SCREEN));
     
-    rgblight_set_layer_state(5, layer_state_cmp(state, SHORTCUTS));
+    rgblight_set_layer_state(5, layer_state_cmp(state, SHORTCUTS) || layer_state_cmp(state, FKEYS));
     
     rgblight_set_layer_state(6, layer_state_cmp(state, VSCODE));
     
