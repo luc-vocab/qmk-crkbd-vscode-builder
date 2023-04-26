@@ -137,7 +137,7 @@ MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), MEH(KC_1)
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 KC_TRNS, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_TRNS,            KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
-                                        TO(BASE),  KC_TRNS, KC_TRNS,                 KC_TRNS, KC_TRNS, KC_TRNS
+                                        TO(BASE),  KC_TRNS, KC_TRNS,                 KC_TRNS, KC_TRNS, TO(BASE)
                                       //`--------------------------'             `--------------------------'
   ),  
 
