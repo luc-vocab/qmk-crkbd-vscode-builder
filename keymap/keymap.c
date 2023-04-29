@@ -145,11 +145,11 @@ KC_TRNS, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_TRNS,   
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
     KC_TRNS,   KC_TRNS, KC_Q,    KC_W,    KC_E,    KC_R,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-    KC_TRNS,   KC_TRNS, KC_A,    KC_S,    KC_D,    KC_F,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS,   KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_SPACE,     KC_TRNS, KC_TRNS, TO(BASE)
+                                        KC_LCTL,  KC_LALT, KC_SPACE,     KC_TRNS, KC_TRNS, TO(BASE)
                                       //`--------------------------'  `--------------------------'
   ),  
 
