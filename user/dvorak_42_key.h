@@ -20,6 +20,7 @@ enum layer_names {
     VSCODE,          // visual studio code specific layer
     SHORTCUTS,       // shortcuts to be intercepted by autohotkey
     FKEYS,           // function keys
+    GAME,            // game layer
 };
 
 enum custom_keycodes {

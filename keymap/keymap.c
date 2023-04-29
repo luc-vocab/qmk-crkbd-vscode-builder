@@ -125,7 +125,7 @@ KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), WINDOWS10_WORKSPACE_LEFT, WINDOWS10_W
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), MEH(KC_1),       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
-                                        TO(FKEYS),  KC_TRNS, KC_TRNS,                 KC_TRNS, TO(SHORTCUTS), TO(BASE)
+                                        TO(FKEYS),  KC_TRNS, KC_TRNS,                 TO(GAME), TO(SHORTCUTS), TO(BASE)
                                       //`--------------------------'             `--------------------------'
   ),
 
@@ -139,6 +139,18 @@ KC_TRNS, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_TRNS,   
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
                                         TO(BASE),  KC_TRNS, KC_TRNS,                 KC_TRNS, KC_TRNS, TO(BASE)
                                       //`--------------------------'             `--------------------------'
+  ),  
+
+  [GAME] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+    KC_TRNS,   KC_TRNS, KC_Q,    KC_W,    KC_E,    KC_R,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+    KC_TRNS,   KC_TRNS, KC_A,    KC_S,    KC_D,    KC_F,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                        KC_TRNS,  KC_TRNS, KC_SPACE,     KC_TRNS, KC_TRNS, TO(BASE)
+                                      //`--------------------------'  `--------------------------'
   ),  
 
   /*
@@ -200,6 +212,7 @@ void oled_render_layer_state(void) {
   }        
   DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
   DISPLAY_LAYER_NAME(FKEYS, "F-KEYS");
+  DISPLAY_LAYER_NAME(GAME, "GAME");
   DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
   DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
   DISPLAY_LAYER_NAME(BROWSER_CONTROL, "BROWSER");
