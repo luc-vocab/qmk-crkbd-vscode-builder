@@ -20,3 +20,4 @@ ${DOCKER_IMAGE} \
 sh -c "cd /workspace/qmk_firmware && qmk compile -kb crkbd -km luc && cp *.hex /firmware" || exit 1
 
 rclone copy ~/keyboard/firmware/*.hex dropbox:Keyboard/firmware
+rclone copy ~/keyboard/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode
