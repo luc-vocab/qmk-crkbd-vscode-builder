@@ -19,4 +19,4 @@ docker run --rm -it \
 ${DOCKER_IMAGE} \
 sh -c "cd /workspace/qmk_firmware && qmk compile -kb crkbd -km luc && cp *.hex /firmware" || exit 1
 
-$HOME/scripts/copy_qmk_firmware_to_dropbox.sh
+rclone copy ~/keyboard/firmware/*.hex dropbox:Keyboard/firmware
