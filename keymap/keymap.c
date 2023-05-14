@@ -80,13 +80,13 @@ TO(BASE),KC_TRNS,SCREEN_PASTEREG_3,SCREEN_PASTEREG_2,SCREEN_PASTEREG_1,SCREEN_DE
 
   [VSCODE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                             ,-----------------------------------------------------.
-TO(BASE), VS_GO_TO_TOP, VS_FIND_FILES, VS_CMT_BLOCK, VS_CMT_LINE, VS_BM_LISTALL,                     VS_COPYLINEDOWN, VS_REFERENCES, VS_DEFINITION, VS_IMPLEMENTATION, VS_LINE,   VS_BRACKET,
+TO(BASE), VS_GO_TO_TOP, VS_FIND_FILES, VS_CMT_BLOCK, VS_CMT_LINE, KC_TRNS,         VS_COPYLINEDOWN, VS_REFERENCES, VS_DEFINITION, VS_IMPLEMENTATION, VS_LINE,   VS_BRACKET,
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-KC_TRNS, KC_TRNS, VS_TOGGLE_TERMINAL, VS_FOCUS_TERMINAL, VS_FOCUS_EDITOR, VS_BM_LIST,    VS_CLOSETAB,     VS_TABLEFT,    VS_TABRIGHT,   VS_SYMBOLEDITOR,   VS_FILE,   VS_BACK,
+KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                             VS_CLOSETAB, VS_TABLEFT, VS_TABRIGHT, VS_SYMBOLEDITOR, VS_FILE,  VS_BACK,
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, VS_BM_CLEARALL,                             VS_JUMPY,        VS_BM_PREV,    VS_BM_NEXT,    VS_GROUP_1,        VS_GROUP_2, VS_BM_TOGGLE,
+KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                             VS_BM_CLEARALL,  VS_BM_PREV, VS_BM_NEXT,  VS_GROUP_1, VS_GROUP_2, VS_BM_TOGGLE,
 //|--------+--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  VS_DEL_LEFT, VS_DEL_RIGHT,                VS_DEL_LINE, VS_JUMPY, VS_COMMANDS
+                                        KC_TRNS,  VS_DEL_LEFT, VS_DEL_RIGHT,      VS_DEL_LINE, VS_BM_LIST, VS_COMMANDS
                                       //`--------------------------'            `--------------------------'
   ),
   

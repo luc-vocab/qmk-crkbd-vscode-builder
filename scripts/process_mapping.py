@@ -12,7 +12,9 @@ class Modifier(enum.Enum):
     def __init__(self, vscode_shorcut):
         self.vscode_shortcut = vscode_shorcut
 
+
 class Mapping(enum.Enum):
+    VS_BM_TOGGLE        = (Modifier.MEH,  'a', 'bookmarks.toggle')
     VS_COMMANDS         = (Modifier.MEH,  'b', 'workbench.action.showCommands')
     VS_LINE             = (Modifier.MEH,  'c', 'workbench.action.gotoLine')
     VS_DEFINITION       = (Modifier.MEH,  'e', 'editor.action.revealDefinition')
@@ -31,14 +33,9 @@ class Mapping(enum.Enum):
     VS_COPYLINEDOWN     = (Modifier.MEH,  'r', 'editor.action.copyLinesDownAction')
     VS_BM_PREV          = (Modifier.MEH,  's', 'bookmarks.jumpToPrevious')
     VS_BM_NEXT          = (Modifier.MEH,  't', 'bookmarks.jumpToNext')
-    VS_BM_TOGGLE        = (Modifier.MEH,  'u', 'bookmarks.toggle')
+    # meh + u seems to not work well in chromeos
     VS_BM_CLEARALL      = (Modifier.MEH,  'v', 'bookmarks.clearFromAllFiles')
     VS_BM_LIST          = (Modifier.MEH,  'w', 'bookmarks.list')
-    VS_BM_LISTALL       = (Modifier.MEH,  'x', 'bookmarks.listFromAllFiles')
-    VS_JUMPY            = (Modifier.MEH,  'y', 'extension.jumpy-word')
-    VS_FOCUS_EDITOR     = (Modifier.MEH,  'z', 'workbench.action.focusActiveEditorGroup')
-    VS_FOCUS_TERMINAL   = (Modifier.MEH,  '0', 'workbench.action.terminal.focus')
-    VS_TOGGLE_TERMINAL  = (Modifier.MEH,  '1', 'workbench.action.terminal.toggleTerminal')
     VS_DEL_LEFT         = (Modifier.MEH,  '2', 'deleteAllLeft')
     VS_DEL_RIGHT        = (Modifier.MEH,  '3', 'deleteAllRight')
     VS_FIND_FILES       = (Modifier.MEH,  '4', 'workbench.action.findInFiles')
