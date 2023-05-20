@@ -28,6 +28,7 @@ enum layer_names {
 enum os_shortcut_mode {
     OS_MODE_WIN10 = 0,
     OS_MODE_LINUX,
+    OS_MODE_CHROMEOS
 };
 
 // global variables
@@ -98,8 +99,11 @@ enum custom_keycodes {
   // generic OS shortcut macros
   KC_OS_MODE_WIN10,
   KC_OS_MODE_LINUX,
-  WS_LEFT,
+  KC_OS_MODE_CHROMEOS,
 
+  OS_WS_LEFT,  // go to left workspace
+  OS_WS_RIGHT, // go to right workspace
+  OS_WS_SHOW   // show workspaces
 
 };
 

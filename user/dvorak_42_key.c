@@ -5,6 +5,23 @@
 
 char current_os_shortcut_mode = OS_MODE_WIN10;
 
+#define OS_SHORTCUT(KEYCODE, WIN10_CODE, LINUX_CODE, CHROMEOS_CODE) \
+case KEYCODE:\
+    switch (current_os_shortcut_mode) {\
+        case OS_MODE_WIN10:\
+            tap_code16(WIN10_CODE);\
+            break;\
+        case OS_MODE_LINUX:\
+            tap_code16(LINUX_CODE);\
+            break;\
+        case OS_MODE_CHROMEOS:\
+            tap_code16(CHROMEOS_CODE);\
+            break;\
+        default:\
+            break;\
+    }\
+    break;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // tap dance processing
     qk_tap_dance_action_t *action;
@@ -26,7 +43,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case KC_OS_MODE_LINUX:
             current_os_shortcut_mode = OS_MODE_LINUX;
-            break;            
+            break;
+        case KC_OS_MODE_CHROMEOS:
+            current_os_shortcut_mode = OS_MODE_CHROMEOS;
+            break;
+
+        OS_SHORTCUT(OS_WS_LEFT,  C(G(KC_LEFT)),  C(G(KC_LEFT)),  G(KC_LBRC) );
+        OS_SHORTCUT(OS_WS_RIGHT, C(G(KC_RIGHT)), C(G(KC_RIGHT)), G(KC_RBRC) );
+        OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,      G(KC_RBRC) );
+
 
         case SHELL_LS:
             SEND_STRING("ls\n");

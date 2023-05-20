@@ -110,7 +110,7 @@ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           
   //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
   CO_WS_LEFT, TM_ITEM_DN, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,                                    KC_DOWN, RCTL(KC_PGUP), RCTL(KC_PGDN), KC_MS_WH_DOWN, LALT(KC_LEFT), CO_WS_RIGHT,
   //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), W10_WS_LEFT, W10_WS_RIGHT, W10_TASKS,                 KC_TRNS, RCTL(KC_1),   RCTL(KC_9), LCTL(KC_L), KC_F5, KC_TRNS,
+KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), OS_WS_LEFT, OS_WS_RIGHT, OS_WS_SHOW,                 KC_TRNS, RCTL(KC_1),   RCTL(KC_9), LCTL(KC_L), KC_F5, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------+--------|
                                         KC_TRNS,  KC_TRNS, KC_TRNS,                         RCTL(KC_W), RCTL(KC_T), KC_TRNS
                                       //`--------------------------'                   `--------------------------'
@@ -123,7 +123,7 @@ KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), W10_WS_LEFT, W10_WS_RIGHT, W10_TASKS,
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
   MEH(KC_F20), MEH(KC_F21),  MEH(KC_F22), MEH(KC_F23), MEH(KC_F24), KC_OS_MODE_LINUX,        MEH(KC_F7), CO_WS_1,    CO_WS_2,    CO_WS_3,    CO_WS_4,    MEH(KC_F13),
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), MEH(KC_1),       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
+MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_OS_MODE_CHROMEOS,       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
                                         TO(FKEYS),  KC_TRNS, KC_TRNS,                 TO(GAME), TO(SHORTCUTS), TO(BASE)
                                       //`--------------------------'             `--------------------------'
@@ -234,11 +234,14 @@ void oled_render_layer_state(void) {
   // which OS mode are we in ?
   switch(current_os_shortcut_mode) {
     case OS_MODE_WIN10:
-      oled_write_ln_P(PSTR("WIN10"), false);
+      oled_write_ln_P(PSTR("WINDOWS 10"), false);
       break;
     case OS_MODE_LINUX:
       oled_write_ln_P(PSTR("LINUX"), false);
       break;      
+    case OS_MODE_CHROMEOS:
+      oled_write_ln_P(PSTR("CHROME OS"), false);
+      break;            
     default:
       break;
   }
