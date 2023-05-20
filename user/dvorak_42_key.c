@@ -48,9 +48,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             current_os_shortcut_mode = OS_MODE_CHROMEOS;
             break;
 
-        OS_SHORTCUT(OS_WS_LEFT,  C(G(KC_LEFT)),  C(G(KC_LEFT)),  G(KC_LBRC) );
-        OS_SHORTCUT(OS_WS_RIGHT, C(G(KC_RIGHT)), C(G(KC_RIGHT)), G(KC_RBRC) );
-        OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,      G(KC_RBRC) );
+        OS_SHORTCUT(OS_WS_LEFT,  C(G(KC_LEFT)),  G(KC_PGUP),  G(KC_LBRC) );
+        OS_SHORTCUT(OS_WS_RIGHT, C(G(KC_RIGHT)), G(KC_PGDN),  G(KC_RBRC) );
+        OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,     A(KC_TAB) );
 
 
         case SHELL_LS:
