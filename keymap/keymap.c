@@ -202,7 +202,7 @@ void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(BASE, "BASE");
 }
 
-void oled_render_layer_state(void) {
+void display_oneshot_mods(void) {
   // if caps word is enabled, show
   if(is_caps_word_on()) {
       oled_write_ln_P(PSTR("MOD: CAPS WORD"), false);
@@ -225,6 +225,10 @@ void oled_render_layer_state(void) {
       return;
   }        
 
+  oled_write_ln_P(PSTR(""), false);
+}
+
+void oled_render_layer_state(void) {
   // first line: display layer name
   display_current_layer_name();
   // which OS mode are we in ?
@@ -238,6 +242,8 @@ void oled_render_layer_state(void) {
     default:
       break;
   }
+  // display mods
+  display_oneshot_mods();
 
 }
 
