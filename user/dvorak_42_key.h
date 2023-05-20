@@ -103,7 +103,11 @@ enum custom_keycodes {
 
   OS_WS_LEFT,  // go to left workspace
   OS_WS_RIGHT, // go to right workspace
-  OS_WS_SHOW   // show workspaces
+  OS_WS_SHOW,   // show workspaces
+  OS_WS_1,     // workspace/app 1 
+  OS_WS_2,
+  OS_WS_3,
+  OS_WS_4
 
 };
 

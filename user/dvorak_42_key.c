@@ -52,6 +52,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         OS_SHORTCUT(OS_WS_LEFT,  C(G(KC_LEFT)),  G(KC_PGUP),  G(KC_LBRC) );
         OS_SHORTCUT(OS_WS_RIGHT, C(G(KC_RIGHT)), G(KC_PGDN),  G(KC_RBRC) );
         OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,     A(KC_TAB) );
+        OS_SHORTCUT(OS_WS_1,     MEH(KC_F8),     KC_NO,       RGUI(LSFT(KC_1)) );
+        OS_SHORTCUT(OS_WS_2,     MEH(KC_F9),     KC_NO,       RGUI(LSFT(KC_2)) );
+        OS_SHORTCUT(OS_WS_3,     MEH(KC_F10),    KC_NO,       RGUI(LSFT(KC_3)) );
+        OS_SHORTCUT(OS_WS_4,     MEH(KC_F12),    KC_NO,       RGUI(LSFT(KC_4)) );
 
 
         case SHELL_LS:

@@ -121,7 +121,7 @@ KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), OS_WS_LEFT, OS_WS_RIGHT, OS_WS_SHOW, 
   //,-----------------------------------------------------.                             ,-----------------------------------------------------.
   MEH(KC_F14), MEH(KC_F15),  MEH(KC_F16), MEH(KC_F17), MEH(KC_F18), KC_OS_MODE_WIN10,        MEH(KC_F1), MEH(KC_F2), MEH(KC_F3), MEH(KC_F4), MEH(KC_F5), MEH(KC_F6),
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-  MEH(KC_F20), MEH(KC_F21),  MEH(KC_F22), MEH(KC_F23), MEH(KC_F24), KC_OS_MODE_LINUX,        MEH(KC_F7), CO_WS_1,    CO_WS_2,    CO_WS_3,    CO_WS_4,    MEH(KC_F13),
+  MEH(KC_F20), MEH(KC_F21),  MEH(KC_F22), MEH(KC_F23), MEH(KC_F24), KC_OS_MODE_LINUX,        MEH(KC_F7), OS_WS_1,    OS_WS_2,    OS_WS_3,    OS_WS_4,    MEH(KC_F13),
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_OS_MODE_CHROMEOS,       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
