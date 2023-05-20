@@ -3,6 +3,8 @@
 
 #include "dvorak_42_key.h"
 
+char current_os_shortcut_mode = OS_MODE_WIN10;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // tap dance processing
     qk_tap_dance_action_t *action;
@@ -18,6 +20,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // shell macros
   if(record->event.pressed) {
     switch (keycode) {
+        // generic desktop shortcut keycodes
+        case KC_OS_MODE_WIN10:
+            current_os_shortcut_mode = OS_MODE_WIN10;
+            break;
+        case KC_OS_MODE_LINUX:
+            current_os_shortcut_mode = OS_MODE_LINUX;
+            break;            
+
         case SHELL_LS:
             SEND_STRING("ls\n");
             break;

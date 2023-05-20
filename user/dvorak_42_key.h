@@ -5,6 +5,7 @@
 
 #include "quantum.h"
 
+
 // LAYERS
 // ======
 
@@ -22,6 +23,17 @@ enum layer_names {
     FKEYS,           // function keys
     GAME,            // game layer
 };
+
+
+enum os_shortcut_mode {
+    OS_MODE_WIN10 = 0,
+    OS_MODE_LINUX,
+};
+
+// global variables
+// ================
+
+extern char current_os_shortcut_mode;
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
@@ -81,7 +93,12 @@ enum custom_keycodes {
   // Windows 10 macros
   W10_WS_LEFT,
   W10_WS_RIGHT,
-  W10_TASKS
+  W10_TASKS,
+
+  // generic OS shortcut macros
+  KC_OS_MODE_WIN10,
+  KC_OS_MODE_LINUX,
+  WS_LEFT,
 
 
 };

@@ -106,7 +106,7 @@ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           
   // search key == windows key
   [BROWSER_CONTROL] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                                     ,-----------------------------------------------------.
-KC_TRNS, TM_ITEM_UP, KC_BTN3, KC_MS_U, KC_BTN1, KC_BTN2,                                         KC_UP, KC_PGUP, KC_PGDN, KC_MS_WH_UP, KC_TRNS, KC_TRNS,
+  KC_TRNS, TM_ITEM_UP, KC_BTN3, KC_MS_U, KC_BTN1, KC_BTN2,                                         KC_UP, KC_PGUP, KC_PGDN, KC_MS_WH_UP, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
   CO_WS_LEFT, TM_ITEM_DN, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,                                    KC_DOWN, RCTL(KC_PGUP), RCTL(KC_PGDN), KC_MS_WH_DOWN, LALT(KC_LEFT), CO_WS_RIGHT,
   //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
@@ -119,9 +119,9 @@ KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), W10_WS_LEFT, W10_WS_RIGHT, W10_TASKS,
 
   [SHORTCUTS] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                             ,-----------------------------------------------------.
-  MEH(KC_F14), MEH(KC_F15),  MEH(KC_F16), MEH(KC_F17), MEH(KC_F18), MEH(KC_F19),        MEH(KC_F1), MEH(KC_F2), MEH(KC_F3), MEH(KC_F4), MEH(KC_F5), MEH(KC_F6),
+  MEH(KC_F14), MEH(KC_F15),  MEH(KC_F16), MEH(KC_F17), MEH(KC_F18), KC_OS_MODE_WIN10,        MEH(KC_F1), MEH(KC_F2), MEH(KC_F3), MEH(KC_F4), MEH(KC_F5), MEH(KC_F6),
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-  MEH(KC_F20), MEH(KC_F21),  MEH(KC_F22), MEH(KC_F23), MEH(KC_F24), MEH(KC_F11),        MEH(KC_F7), CO_WS_1,    CO_WS_2,    CO_WS_3,    CO_WS_4,    MEH(KC_F13),
+  MEH(KC_F20), MEH(KC_F21),  MEH(KC_F22), MEH(KC_F23), MEH(KC_F24), KC_OS_MODE_LINUX,        MEH(KC_F7), CO_WS_1,    CO_WS_2,    CO_WS_3,    CO_WS_4,    MEH(KC_F13),
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), MEH(KC_1),       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
@@ -188,6 +188,20 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   }\
 
 
+void display_current_layer_name(void){
+  DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
+  DISPLAY_LAYER_NAME(FKEYS, "F-KEYS");
+  DISPLAY_LAYER_NAME(GAME, "GAME");
+  DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
+  DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
+  DISPLAY_LAYER_NAME(BROWSER_CONTROL, "BROWSER");
+  DISPLAY_LAYER_NAME(SHELL_SCREEN, "SHELL SCREEN");
+  DISPLAY_LAYER_NAME(SHELL_NAV, "SHELL NAV");
+  DISPLAY_LAYER_NAME(KEYSEL, "KEYSEL");
+  DISPLAY_LAYER_NAME(KEYNAV, "KEYNAV");
+  DISPLAY_LAYER_NAME(BASE, "BASE");
+}
+
 void oled_render_layer_state(void) {
   // if caps word is enabled, show
   if(is_caps_word_on()) {
@@ -210,17 +224,20 @@ void oled_render_layer_state(void) {
       oled_write_ln_P(PSTR("MOD: GUI"), false);
       return;
   }        
-  DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
-  DISPLAY_LAYER_NAME(FKEYS, "F-KEYS");
-  DISPLAY_LAYER_NAME(GAME, "GAME");
-  DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
-  DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
-  DISPLAY_LAYER_NAME(BROWSER_CONTROL, "BROWSER");
-  DISPLAY_LAYER_NAME(SHELL_SCREEN, "SHELL SCREEN");
-  DISPLAY_LAYER_NAME(SHELL_NAV, "SHELL NAV");
-  DISPLAY_LAYER_NAME(KEYSEL, "KEYSEL");
-  DISPLAY_LAYER_NAME(KEYNAV, "KEYNAV");
-  DISPLAY_LAYER_NAME(BASE, "BASE");
+
+  // first line: display layer name
+  display_current_layer_name();
+  // which OS mode are we in ?
+  switch(current_os_shortcut_mode) {
+    case OS_MODE_WIN10:
+      oled_write_ln_P(PSTR("WIN10"), false);
+      break;
+    case OS_MODE_LINUX:
+      oled_write_ln_P(PSTR("LINUX"), false);
+      break;      
+    default:
+      break;
+  }
 
 }
 
