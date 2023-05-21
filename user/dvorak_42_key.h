@@ -146,21 +146,6 @@ enum custom_keycodes {
 // ===================
 #define NP_DUPE_LINE LCTL(KC_D)
 
-// ChromeOS shortcuts
-// ==================
-#define CO_WS_LEFT RGUI(KC_LBRC)
-#define CO_WS_RIGHT RGUI(KC_RBRC)
-
-#define CO_WS_1 RGUI(LSFT(KC_1))
-#define CO_WS_2 RGUI(LSFT(KC_2))
-#define CO_WS_3 RGUI(LSFT(KC_3))
-#define CO_WS_4 RGUI(LSFT(KC_4))
-
-// Microsoft Teams shortcuts
-// =========================
-#define TM_ITEM_UP LALT(KC_UP)
-#define TM_ITEM_DN LALT(KC_DOWN)
-
 // Android Studio shortcuts
 #define AS_TABLEFT LALT(KC_LEFT)
 #define AS_TABRIGHT LALT(KC_RIGHT)
