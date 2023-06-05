@@ -36,12 +36,12 @@ class Mapping(enum.Enum):
     # meh + u seems to not work well in chromeos
     VS_BM_CLEARALL      = (Modifier.MEH,  'v', 'bookmarks.clearFromAllFiles')
     VS_BM_LIST          = (Modifier.MEH,  'w', 'bookmarks.list')
-    VS_DEL_LEFT         = (Modifier.MEH,  '2', 'deleteAllLeft')
-    VS_DEL_RIGHT        = (Modifier.MEH,  '3', 'deleteAllRight')
+    VS_SEL_BRACKET      = (Modifier.MEH,  '1', 'editor.action.selectToBracket')
     VS_FIND_FILES       = (Modifier.MEH,  '4', 'workbench.action.findInFiles')
     VS_FILE             = (Modifier.MEH,  '5', 'workbench.action.quickOpen')    
     VS_SYMBOLEDITOR     = (Modifier.MEH,  '6', 'workbench.action.gotoSymbol')
     VS_GO_TO_TOP        = (Modifier.MEH,  '7', 'cursorTop')
+    VS_GO_TO_BOTTOM     = (Modifier.MEH,  '8', 'cursorBottom')
 
     def __init__(self, modifier, keycode, command):
         self.modifier = modifier
