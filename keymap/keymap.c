@@ -125,7 +125,7 @@ KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), OS_WS_LEFT, OS_WS_RIGHT, OS_WS_SHOW, 
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
 MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_OS_MODE_CHROMEOS,       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
-                                        TO(FKEYS),  OSL(FKEYS), KC_TRNS,                 TO(GAME), TO(SHORTCUTS), TO(BASE)
+                                        OSL(FKEYS),  TO(FKEYS), KC_TRNS,                 TO(GAME), TO(SHORTCUTS), TO(BASE)
                                       //`--------------------------'             `--------------------------'
   ),
 
