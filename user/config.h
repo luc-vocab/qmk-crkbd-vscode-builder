@@ -5,8 +5,10 @@
 
 // oneshot settings
 // ===============
-#define ONESHOT_TIMEOUT 5000
-#define ONESHOT_TAP_TOGGLE 2
+#define ONESHOT_TIMEOUT 2000
+// no need to permanently activate
+// #define ONESHOT_TAP_TOGGLE 3
+
 
 // caps word settings
 // ==================
