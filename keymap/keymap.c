@@ -68,9 +68,9 @@ KC_TRNS,SHELL_SCREEN_LIST, SHELL_SCREENRD, SHELL_SCREEN_NEW, SHELL_TAILF, KC_TRN
 
   [SHELL_SCREEN] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                                 ,-----------------------------------------------------.
-TO(BASE),KC_TRNS, SCREEN_READREG_3, SCREEN_READREG_2, SCREEN_READREG_1,KC_TRNS,          KC_TRNS,         SCREEN_7, SCREEN_8, SCREEN_9, SCREEN_RENAME, KC_TRNS,
+TO(BASE),    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                    KC_TRNS, SCREEN_7, SCREEN_8, SCREEN_9, SCREEN_RENAME, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                                 |--------+--------+--------+--------+--------+--------|
-TO(BASE),KC_TRNS,SCREEN_PASTEREG_3,SCREEN_PASTEREG_2,SCREEN_PASTEREG_1,SCREEN_DETACH,    SCREEN_TAB_LEFT, SCREEN_4, SCREEN_5, SCREEN_6, SCREEN_TAB_RIGHT, SCREEN_COPY_MODE,
+TO(BASE), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, SCREEN_DETACH,                          SCREEN_TAB_LEFT, SCREEN_4, SCREEN_5, SCREEN_6, SCREEN_TAB_RIGHT, SCREEN_COPY_MODE,
   //|--------+--------+--------+--------+--------+--------|                                 |--------+--------+--------+--------+--------+--------|
     KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                             KC_TRNS,         SCREEN_1, SCREEN_2, SCREEN_3, SCREEN_NUMBER, SCREEN_PASTE,
   //|--------+--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------+--------|

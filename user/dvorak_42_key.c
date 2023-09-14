@@ -179,25 +179,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SCREEN_KILL:
             SEND_STRING(SS_LCTL("a") "ky");
             break;            
-        case SCREEN_READREG_1:
-            SEND_STRING(SS_LCTL("a") ":readreg 1\n");
-            break;
-        case SCREEN_READREG_2:
-            SEND_STRING(SS_LCTL("a") ":readreg 2\n");
-            break;
-        case SCREEN_READREG_3:
-            SEND_STRING(SS_LCTL("a") ":readreg 3\n");
-            break;
-
-        case SCREEN_PASTEREG_1:
-            SEND_STRING(SS_LCTL("a") ":paste 1\n");
-            break;
-        case SCREEN_PASTEREG_2:
-            SEND_STRING(SS_LCTL("a") ":paste 2\n");
-            break;
-        case SCREEN_PASTEREG_3:
-            SEND_STRING(SS_LCTL("a") ":paste 3\n");
-            break;
     }
   }
 
