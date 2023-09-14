@@ -101,15 +101,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("git status\n");
             break;            
 
-        case W10_WS_LEFT:
-            tap_code16(C(G(KC_LEFT)));
-            break;
-        case W10_WS_RIGHT:
-            tap_code16(C(G(KC_RIGHT)));
-            break;
-        case W10_TASKS:
-            tap_code16(G(KC_TAB));
-            break;
         // linux screen shortcuts
         case SCREEN_TAB_LEFT:
             SEND_STRING(SS_LCTL("a") "p");

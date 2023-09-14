@@ -84,11 +84,6 @@ enum custom_keycodes {
   SCREEN_COPY_MODE,
   SCREEN_PASTE,
 
-  // Windows 10 macros
-  W10_WS_LEFT,
-  W10_WS_RIGHT,
-  W10_TASKS,
-
   // generic OS shortcut macros
   KC_OS_MODE_WIN10,
   KC_OS_MODE_LINUX,
