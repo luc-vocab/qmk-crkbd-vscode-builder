@@ -56,9 +56,9 @@ KC_TRNS, OBS_CMD, OBS_QUICKSW, OBS_CHECKBOX, RCTL(KC_B), NP_DUPE_LINE,     KC_TR
 
   [SHELL_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                              ,-----------------------------------------------------.
-TO(BASE),SHELL_GIT_DIFF, SHELL_PGREP, SHELL_PLESS, SHELL_LESS, SH_EXIT,               SH_CLOSE, KC_HOME, KC_UP, KC_END, SH_CLEARSCR, SH_DEL_PATH,
+TO(BASE),KC_TRNS, SHELL_PGREP, SHELL_PLESS, SHELL_LESS, SH_EXIT,               SH_CLOSE, KC_HOME, KC_UP, KC_END, SH_CLEARSCR, SH_DEL_PATH,
   //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-OSL(SHELL_SCREEN),SHELL_GIT_STATUS,SHELL_CDPRE,SHELL_LSLTR,SHELL_LS, SHELL_LSLA,   SH_WORD_LEFT, KC_LEFT, KC_DOWN, KC_RIGHT, SH_WORD_RIGHT, SH_DEL_WORD,
+OSL(SHELL_SCREEN),KC_TRNS,SHELL_CDPRE,SHELL_LSLTR,SHELL_LS, SHELL_LSLA,   SH_WORD_LEFT, KC_LEFT, KC_DOWN, KC_RIGHT, SH_WORD_RIGHT, SH_DEL_WORD,
   //|--------+--------+--------+--------+--------+--------|                           |--------+--------+--------+--------+--------+--------|
 KC_TRNS,SHELL_SCREEN_LIST, SHELL_SCREENRD, SHELL_SCREEN_NEW, SHELL_TAILF, KC_TRNS,   SH_DEL_TO_START, SH_RECALL, SH_SEARCH, SH_PASTE, SH_DEL_TO_END, SH_STOP,
   //|--------+--------+--------+--------+--------+--------+--------|            |--------+--------+--------+--------+--------+--------+--------|

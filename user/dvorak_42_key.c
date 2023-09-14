@@ -93,14 +93,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("screen -list\n");
             break;
 
-        case SHELL_GIT_DIFF:
-            SEND_STRING("git diff\n");
-            break;
-
-        case SHELL_GIT_STATUS:
-            SEND_STRING("git status\n");
-            break;            
-
         // linux screen shortcuts
         case SCREEN_TAB_LEFT:
             SEND_STRING(SS_LCTL("a") "p");
