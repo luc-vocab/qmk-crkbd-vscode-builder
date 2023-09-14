@@ -17,7 +17,6 @@ enum layer_names {
     SHELL_SCREEN,    // linux screen shortcuts
     BROWSER_CONTROL, // control browser and mouse
     COMBINED,        // combined numbers and symbols layer
-    ANDROID_STUDIO,  // android studio specific layer
     VSCODE,          // visual studio code specific layer
     SHORTCUTS,       // shortcuts to be intercepted by autohotkey
     FKEYS,           // function keys
@@ -125,33 +124,6 @@ enum custom_keycodes {
 #define OBS_CMD RCTL(KC_P)
 #define OBS_QUICKSW RCTL(KC_O)
 #define OBS_CHECKBOX RCTL(KC_L)
-
-
-// Notepad++ shortcuts
-// ===================
-#define NP_DUPE_LINE LCTL(KC_D)
-
-// Android Studio shortcuts
-#define AS_TABLEFT LALT(KC_LEFT)
-#define AS_TABRIGHT LALT(KC_RIGHT)
-#define AS_SYMBOL LCTL(LALT(KC_N))
-#define AS_CLASS LCTL(KC_N)
-#define AS_FINDUSAGE LALT(KC_F7)
-#define AS_BACK LCTL(LALT(KC_LEFT))
-#define AS_BRACKET LCTL(LSFT(KC_M))
-#define AS_GO_DECLARATION LCTL(KC_B)
-#define AS_GO_IMPLEMENTATION LCTL(LALT(KC_B))
-#define AS_CLOSETAB LCTL(KC_F4)
-#define AS_CLOSETOOLWINDOW LCTL(LSFT(KC_F4))
-#define AS_COPYLINEDOWN LCTL(KC_D)
-#define AS_DEL_LINE LCTL(KC_Y)
-#define AS_LINE LCTL(KC_G)
-#define AS_CMT_BLOCK LCTL(LSFT(KC_SLSH))
-#define AS_CMT_LINE LCTL(KC_SLSH)
-#define AS_BM_PREV LALT(KC_P)
-#define AS_BM_NEXT LALT(KC_N)
-#define AS_BM_TOGGLE KC_F11
-#define AS_BM_LIST LSFT(KC_F11)
 
 // visual studio code shortcuts
 // ============================
