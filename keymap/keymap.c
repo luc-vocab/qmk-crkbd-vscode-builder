@@ -106,9 +106,9 @@ KC_TRNS, VS_GO_TO_BOTTOM, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   
   // search key == windows key
   [BROWSER_CONTROL] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                                     ,-----------------------------------------------------.
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                         KC_UP, KC_PGUP, KC_PGDN, KC_MS_WH_UP, KC_TRNS, KC_TRNS,
+  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                       KC_DOWN, RCTL(KC_PGUP), RCTL(KC_PGDN), KC_MS_WH_DOWN, LALT(KC_LEFT), KC_TRNS,
+  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                         KC_TRNS, RCTL(KC_PGUP), RCTL(KC_PGDN), KC_TRNS, LALT(KC_LEFT), KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
 KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), OS_WS_LEFT, OS_WS_RIGHT, OS_WS_SHOW,                 KC_TRNS, RCTL(KC_1),   RCTL(KC_9), LCTL(KC_L), KC_F5, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------+--------|
