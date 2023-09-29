@@ -15,11 +15,11 @@ enum layer_names {
     KEYSEL,          // arrow navigation + shift (allow text selection)
     SHELL_NAV,       // bash shortcuts
     SHELL_SCREEN,    // linux screen shortcuts
-    BROWSER_CONTROL, // control browser and mouse
     COMBINED,        // combined numbers and symbols layer
     VSCODE,          // visual studio code specific layer
-    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
     FKEYS,           // function keys
+    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
+    BROWSER_CONTROL, // control browser and mouse
     GAME,            // game layer
 };
 

@@ -116,6 +116,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     __EMPTY_2__,  KC_TRNS, KC_0
   ),
 
+  [FKEYS] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __FKEYS_L1__, __FKEYS_R1__,
+    __FKEYS_L2__, __FKEYS_R2__,
+    __FKEYS_L3__, __FKEYS_R3__,
+    __EMPTY_2__,  __EMPTY_2__
+  ),  
 
 };
 
