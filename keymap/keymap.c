@@ -46,16 +46,11 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __EMPTY_3__,   __EMPTY_3__
   ),
 
-  [SHELL_SCREEN] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                                 ,-----------------------------------------------------.
-TO(BASE),    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                    KC_TRNS, SCREEN_7, SCREEN_8, SCREEN_9, SCREEN_RENAME, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                                 |--------+--------+--------+--------+--------+--------|
-TO(BASE), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, SCREEN_DETACH,                          SCREEN_TAB_LEFT, SCREEN_4, SCREEN_5, SCREEN_6, SCREEN_TAB_RIGHT, SCREEN_COPY_MODE,
-  //|--------+--------+--------+--------+--------+--------|                                 |--------+--------+--------+--------+--------+--------|
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                             KC_TRNS,         SCREEN_1, SCREEN_2, SCREEN_3, SCREEN_NUMBER, SCREEN_PASTE,
-  //|--------+--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,                     SCREEN_KILL, SCREEN_NEW_TAB, SCREEN_0
-                                      //`--------------------------'                `--------------------------'
+  [SHELL_SCREEN] = LAYOUT_wrapper(
+    __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
+    __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
+    __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
+    __EMPTY_3__,   __EMPTY_3__
   ),
 
   [VSCODE] = LAYOUT_split_3x6_3(
