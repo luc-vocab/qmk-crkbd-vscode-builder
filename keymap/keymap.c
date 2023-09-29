@@ -60,16 +60,11 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __EMPTY_3__,   __EMPTY_3__
   ),
   
-  [COMBINED] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-    KC_TILD,   KC_EXLM, KC_AT,   KC_HASH, KC_DLR, KC_PERC,                        KC_PLUS,   KC_7,  KC_8,   KC_9,  KC_ASTR,  KC_PIPE,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
- KC_GRAVE,  KC_LPRN, KC_RPRN, KC_LBRC, KC_RBRC, KC_UNDS,                  KC_MINUS, KC_4,  KC_5,   KC_6,  KC_SLSH,  KC_BSLS,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
- KC_CIRC,  KC_COLN,  KC_DQUO,   KC_LCBR,   KC_RCBR,     KC_AMPR,                  KC_EQUAL,  KC_1,  KC_2,   KC_3,  KC_QUES,  KC_DOT,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_0
-                                      //`--------------------------'  `--------------------------'
+  [COMBINED] = LAYOUT_wrapper(
+    __COMBINED_L1__, __COMBINED_R1__,
+    __COMBINED_L2__, __COMBINED_R2__,
+    __COMBINED_L3__, __COMBINED_R3__,
+    __EMPTY_3__,   KC_TRNS, KC_TRNS, KC_0
   ),
 
   // chrome OS keyboard shortcuts: https://support.google.com/chromebook/answer/183101?hl=en
