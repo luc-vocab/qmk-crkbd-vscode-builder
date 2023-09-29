@@ -5,6 +5,9 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include "dvorak_42_key.h"
+#include "dvorak_42_keymap_common.h"
+
+#define LAYOUT_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 
 // to build: qmk compile -kb crkbd/rev1 -km dvorak_42_key
 
@@ -15,9 +18,9 @@ static bool g_oneshot_gui = false;
 static bool g_capsword = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [BASE] = LAYOUT_split_3x6_3(
+  [BASE] = LAYOUT_wrapper(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-   OSL(VSCODE), KC_QUOTE, KC_COMMA, KC_DOT,  KC_P,   KC_Y,                         KC_F,   KC_G,   KC_C,     KC_R,  KC_L,    KC_TAB,
+                   __BASE_L1__ ,                                                   KC_F,   KC_G,   KC_C,     KC_R,  KC_L,    KC_TAB,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 OSL(SHELL_NAV), KC_A,     KC_O,     KC_E,    KC_U,   KC_I,                         KC_D,   KC_H,   KC_T,     KC_N,  KC_S,   LCTL(KC_BSPC),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
