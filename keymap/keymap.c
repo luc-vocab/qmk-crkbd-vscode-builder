@@ -39,16 +39,11 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __EMPTY_3__,   __EMPTY_3__
   ),
 
-  [SHELL_NAV] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                              ,-----------------------------------------------------.
-TO(BASE),KC_TRNS, SHELL_PGREP, SHELL_PLESS, SHELL_LESS, SH_EXIT,               SH_CLOSE, KC_HOME, KC_UP, KC_END, SH_CLEARSCR, SH_DEL_PATH,
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-OSL(SHELL_SCREEN),KC_TRNS,SHELL_CDPRE,SHELL_LSLTR,SHELL_LS, SHELL_LSLA,   SH_WORD_LEFT, KC_LEFT, KC_DOWN, KC_RIGHT, SH_WORD_RIGHT, SH_DEL_WORD,
-  //|--------+--------+--------+--------+--------+--------|                           |--------+--------+--------+--------+--------+--------|
-KC_TRNS,SHELL_SCREEN_LIST, SHELL_SCREENRD, SHELL_SCREEN_NEW, SHELL_TAILF, KC_TRNS,   SH_DEL_TO_START, SH_RECALL, SH_SEARCH, SH_PASTE, SH_DEL_TO_END, SH_STOP,
-  //|--------+--------+--------+--------+--------+--------+--------|            |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,              KC_TRNS, KC_TRNS, KC_TRNS
-                                      //`--------------------------'            `--------------------------'
+  [SHELL_NAV] = LAYOUT_wrapper(
+    __SHELL_NAV_L1__, __SHELL_NAV_R1__,
+    __SHELL_NAV_L2__, __SHELL_NAV_R2__,
+    __SHELL_NAV_L3__, __SHELL_NAV_R3__,
+    __EMPTY_3__,   __EMPTY_3__
   ),
 
   [SHELL_SCREEN] = LAYOUT_split_3x6_3(
