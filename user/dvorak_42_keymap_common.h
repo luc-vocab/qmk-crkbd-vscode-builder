@@ -80,6 +80,9 @@
 #define __VSCODE_R2__ VS_CLOSETAB, VS_TABLEFT, VS_TABRIGHT, VS_SYMBOLEDITOR, VS_FILE,  VS_BACK
 #define __VSCODE_R3__ VS_BM_CLEARALL,  VS_BM_PREV, VS_BM_NEXT,  VS_GROUP_1, VS_GROUP_2, VS_BM_TOGGLE
 
+#define __VSCODE_R4_3__ VS_DEL_LINE, VS_BM_LIST, VS_COMMANDS
+#define __VSCODE_R4_2__ VS_DEL_LINE, VS_COMMANDS
+
 // COMBINED layer
 // ==============
 
@@ -90,3 +93,14 @@
 #define __COMBINED_R1__ KC_PLUS,   KC_7,  KC_8,   KC_9,  KC_ASTR,  KC_PIPE
 #define __COMBINED_R2__ KC_MINUS, KC_4,  KC_5,   KC_6,  KC_SLSH,  KC_BSLS                        
 #define __COMBINED_R3__ KC_EQUAL,  KC_1,  KC_2,   KC_3,  KC_QUES,  KC_DOT
+
+// F-KEYS layer
+// ============
+
+#define __FKEYS_L1__ KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+#define __FKEYS_L2__ KC_F1,      KC_F2,  KC_F3,    KC_F4,   KC_F5,  KC_F6
+#define __FKEYS_L3__ KC_TRNS, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_TRNS
+
+#define __FKEYS_R1__ KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+#define __FKEYS_R2__ KC_F7,     KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12                             
+#define __FKEYS_R3__ KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS

@@ -57,7 +57,7 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __VSCODE_L1__, __VSCODE_R1__,
     __VSCODE_L2__, __VSCODE_R2__,
     __VSCODE_L3__, __VSCODE_R3__,
-    __EMPTY_3__,   __EMPTY_3__
+    __EMPTY_3__,   __VSCODE_R4_3__
   ),
   
   [COMBINED] = LAYOUT_wrapper(
@@ -94,16 +94,11 @@ MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_OS_MOD
                                       //`--------------------------'             `--------------------------'
   ),
 
-  [FKEYS] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                             ,-----------------------------------------------------.
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                              KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-    KC_F1,      KC_F2,  KC_F3,    KC_F4,   KC_F5,  KC_F6,                                KC_F7,     KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-KC_TRNS, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_TRNS,            KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
-                                        TO(BASE),  KC_TRNS, KC_TRNS,                 KC_TRNS, KC_TRNS, TO(BASE)
-                                      //`--------------------------'             `--------------------------'
+  [FKEYS] = LAYOUT_wrapper(
+    __FKEYS_L1__, __FKEYS_R1__,
+    __FKEYS_L2__, __FKEYS_R2__,
+    __FKEYS_L3__, __FKEYS_R3__,
+ TO(BASE), KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, TO(BASE)
   ),  
 
   [GAME] = LAYOUT_split_3x6_3(

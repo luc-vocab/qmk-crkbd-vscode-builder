@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     __VSCODE_L1__, __VSCODE_R1__,
     __VSCODE_L2__, __VSCODE_R2__,
     __VSCODE_L3__, __VSCODE_R3__,
-    __EMPTY_2__,   __EMPTY_2__
+    __EMPTY_2__,   __VSCODE_R4_2__
   ),
   
   [COMBINED] = LAYOUT_wrapper(
