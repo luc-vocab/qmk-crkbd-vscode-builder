@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [KEYNAV] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
+    __KEYNAV_L0__, __KEYNAV_R0__,
     __KEYNAV_L1__, __KEYNAV_R1__,
     __KEYNAV_L2__, __KEYNAV_R2__,
     __KEYNAV_L3__, __KEYNAV_R3__,
