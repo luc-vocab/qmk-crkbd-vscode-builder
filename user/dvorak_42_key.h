@@ -96,6 +96,14 @@ enum custom_keycodes {
 };
 
 
+// browser shortcuts
+// =================
+
+#define BR_TAB_LEFT RCTL(KC_PGUP)
+#define BR_TAB_RIGHT RCTL(KC_PGDN)
+#define BR_TAB_CLOSE RCTL(KC_W)
+#define BR_TAB_NEW RCTL(KC_T)
+
 
 // shell shortcuts
 // ===============
