@@ -1,7 +1,7 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
-#include "keycodes.h"
+// #include "keycodes.h"
 
 #define __BASE_L1__ OSL(VSCODE), KC_QUOTE, KC_COMMA, KC_DOT,  KC_P,   KC_Y
 #define __BASE_L2__ OSL(SHELL_NAV), KC_A,     KC_O,     KC_E,    KC_U,   KC_I
