@@ -10,7 +10,7 @@
 // BASE layer
 // ==========
 
-#define __BASE_L0__ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+#define __BASE_L0__ KC_TRNS, KC_TRNS, BR_TAB_CLOSE, BR_TAB_LEFT, BR_TAB_RIGHT, BR_TAB_NEW
 #define __BASE_L1__ OSL(VSCODE), KC_QUOTE, KC_COMMA, KC_DOT,  KC_P,   KC_Y
 #define __BASE_L2__ OSL(SHELL_NAV), KC_A,     KC_O,     KC_E,    KC_U,   KC_I
 #define __BASE_L3__ OSM(MOD_LSFT),KC_SEMICOLON, KC_Q,  KC_J,    KC_K,   KC_X
