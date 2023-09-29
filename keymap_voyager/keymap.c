@@ -61,7 +61,7 @@ enum tap_dance_codes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
+    __BASE_L0__, __BASE_R0__,
     __BASE_L1__, __BASE_R1__,
     __BASE_L2__, __BASE_R2__,
     __BASE_L3__, __BASE_R3__,
