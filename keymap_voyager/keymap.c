@@ -60,12 +60,60 @@ enum tap_dance_codes {
 #define LAYOUT_wrapper(...) LAYOUT_voyager(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_wrapper(
-    TD(DANCE_0),    KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,       
+  [BASE] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
     __BASE_L1__, __BASE_R1__,
     __BASE_L2__, __BASE_R2__,
     __BASE_L3__, __BASE_R3__,
-__BASE_L_2THUMB__, __BASE_R_2THUMB__
+ __BASE_L_2THUMB__, __BASE_R_2THUMB__
+  ),
+
+  [KEYNAV] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __KEYNAV_L1__, __KEYNAV_R1__,
+    __KEYNAV_L2__, __KEYNAV_R2__,
+    __KEYNAV_L3__, __KEYNAV_R3__,
+    __EMPTY_2__,   __EMPTY_2__
+  ),
+
+  [KEYSEL] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __KEYSEL_L1__, __KEYSEL_R1__,
+    __KEYSEL_L2__, __KEYSEL_R2__,
+    __KEYSEL_L3__, __KEYSEL_R3__,
+    __EMPTY_2__,   __EMPTY_2__
+  ),
+
+  [SHELL_NAV] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __SHELL_NAV_L1__, __SHELL_NAV_R1__,
+    __SHELL_NAV_L2__, __SHELL_NAV_R2__,
+    __SHELL_NAV_L3__, __SHELL_NAV_R3__,
+    __EMPTY_2__,   __EMPTY_2__
+  ),
+
+  [SHELL_SCREEN] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
+    __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
+    __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
+    __EMPTY_2__,   __EMPTY_2__
+  ),
+
+  [VSCODE] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __VSCODE_L1__, __VSCODE_R1__,
+    __VSCODE_L2__, __VSCODE_R2__,
+    __VSCODE_L3__, __VSCODE_R3__,
+    __EMPTY_2__,   __EMPTY_2__
+  ),
+  
+  [COMBINED] = LAYOUT_wrapper(
+    __EMPTY_6__, __EMPTY_6__,
+    __COMBINED_L1__, __COMBINED_R1__,
+    __COMBINED_L2__, __COMBINED_R2__,
+    __COMBINED_L3__, __COMBINED_R3__,
+    __EMPTY_2__,  KC_TRNS, KC_0
   ),
 
 
