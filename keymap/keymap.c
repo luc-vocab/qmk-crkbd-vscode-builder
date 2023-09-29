@@ -53,16 +53,11 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __EMPTY_3__,   __EMPTY_3__
   ),
 
-  [VSCODE] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                             ,-----------------------------------------------------.
-TO(BASE), VS_GO_TO_TOP, VS_FIND_FILES, VS_CMT_BLOCK, VS_CMT_LINE, VS_RECENT,        VS_COPYLINEDOWN, VS_REFERENCES, VS_DEFINITION, VS_IMPLEMENTATION, VS_LINE,   VS_BRACKET,
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, VS_SEL_BRACKET,                            VS_CLOSETAB, VS_TABLEFT, VS_TABRIGHT, VS_SYMBOLEDITOR, VS_FILE,  VS_BACK,
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-KC_TRNS, VS_GO_TO_BOTTOM, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                             VS_BM_CLEARALL,  VS_BM_PREV, VS_BM_NEXT,  VS_GROUP_1, VS_GROUP_2, VS_BM_TOGGLE,
-//|--------+--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,      VS_DEL_LINE, VS_BM_LIST, VS_COMMANDS
-                                      //`--------------------------'            `--------------------------'
+  [VSCODE] = LAYOUT_wrapper(
+    __VSCODE_L1__, __VSCODE_R1__,
+    __VSCODE_L2__, __VSCODE_R2__,
+    __VSCODE_L3__, __VSCODE_R3__,
+    __EMPTY_3__,   __EMPTY_3__
   ),
   
   [COMBINED] = LAYOUT_split_3x6_3(
