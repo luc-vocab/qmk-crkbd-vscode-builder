@@ -19,16 +19,10 @@ static bool g_capsword = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_wrapper(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-                   __BASE_L1__ ,                                                   KC_F,   KC_G,   KC_C,     KC_R,  KC_L,    KC_TAB,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-OSL(SHELL_NAV), KC_A,     KC_O,     KC_E,    KC_U,   KC_I,                         KC_D,   KC_H,   KC_T,     KC_N,  KC_S,   LCTL(KC_BSPC),
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-OSM(MOD_LSFT),KC_SEMICOLON, KC_Q,  KC_J,    KC_K,   KC_X,                             KC_B,   KC_M,   KC_W,     KC_V,  KC_Z,   OSM(MOD_RSFT),
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                      MO(BROWSER_CONTROL), MO(COMBINED),MO(KEYNAV),     KC_ENTER, KC_SPACE, OSL(SHORTCUTS)
-                                      //`--------------------------'  `--------------------------'
-
+    __BASE_L1__, __BASE_R1__,
+    __BASE_L2__, __BASE_R2__,
+    __BASE_L3__, __BASE_R3__,
+MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
   ),
 
   [KEYNAV] = LAYOUT_split_3x6_3(
