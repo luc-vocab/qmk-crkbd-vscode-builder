@@ -25,16 +25,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
   ),
 
-  [KEYNAV] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-KC_ESC, RCTL(KC_ENTER), RCTL(KC_K), RCTL(KC_Z), RCTL(KC_S), RCTL(KC_N),          KC_TRNS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_DELETE,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-KC_TRNS, MO(KEYSEL), OBS_READMODE, RSFT(KC_TAB), KC_TAB, RCTL(KC_F),         LCTL(KC_LEFT), KC_LEFT, KC_DOWN, KC_RIGHT, LCTL(KC_RIGHT), KC_BSPC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-KC_TRNS, OBS_CMD, OBS_QUICKSW, OBS_CHECKBOX, RCTL(KC_B), KC_TRNS,            KC_TRNS, RCTL(KC_C), RCTL(KC_X), RCTL(KC_V), KC_PGDN, RCTL(KC_DELETE),
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
-                                      //`--------------------------'  `--------------------------'
+  [KEYNAV] = LAYOUT_wrapper(
+    __KEYNAV_L1__, __KEYNAV_R1__,
+    __KEYNAV_L2__, __KEYNAV_R2__,
+    __KEYNAV_L3__, __KEYNAV_R3__,
+KC_TRNS,  KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
   ),
 
 
