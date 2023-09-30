@@ -146,6 +146,6 @@
 #define __GAME_L4_3__ KC_LCTL,  KC_LALT, KC_SPACE
 
 #define __GAME_R1__ KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ESC
-#define __GAME_R2__ KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
-#define __GAME_R3__ KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+#define __GAME_R2__ __EMPTY_6__
+#define __GAME_R3__ __EMPTY_6__
 #define __GAME_R4_3__  KC_TRNS, KC_TRNS, TO(BASE)
