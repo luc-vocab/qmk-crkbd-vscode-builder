@@ -64,37 +64,35 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __COMBINED_L1__, __COMBINED_R1__,
     __COMBINED_L2__, __COMBINED_R2__,
     __COMBINED_L3__, __COMBINED_R3__,
-    __EMPTY_3__,   KC_TRNS, KC_TRNS, KC_0
+    __EMPTY_3__,   __COMBINED_R4_3__
   ),
 
-  // chrome OS keyboard shortcuts: https://support.google.com/chromebook/answer/183101?hl=en
-  // search key == windows key
   [BROWSER_CONTROL] = LAYOUT_wrapper(
     __BROWSER_CONTROL_L1__, __BROWSER_CONTROL_R1__,
     __BROWSER_CONTROL_L2__, __BROWSER_CONTROL_R2__,
     __BROWSER_CONTROL_L3__, __BROWSER_CONTROL_R3__,
-    __EMPTY_3__,   BR_TAB_CLOSE, BR_TAB_NEW, KC_TRNS
+    __EMPTY_3__, __BROWSER_CONTROL_R4_3__
   ),
 
   [SHORTCUTS] = LAYOUT_wrapper(
     __SHORTCUTS_L1__, __SHORTCUTS_R1__,
     __SHORTCUTS_L2__, __SHORTCUTS_R2__,
     __SHORTCUTS_L3__, __SHORTCUTS_R3__,
-    OSL(FKEYS), TO(FKEYS), KC_TRNS,  TO(GAME), TO(SHORTCUTS), TO(BASE)
+    __SHORTCUTS_L4_3__, __SHORTCUTS_R4_3__
   ),
 
   [FKEYS] = LAYOUT_wrapper(
     __FKEYS_L1__, __FKEYS_R1__,
     __FKEYS_L2__, __FKEYS_R2__,
     __FKEYS_L3__, __FKEYS_R3__,
- TO(BASE), KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, TO(BASE)
+  __FKEYS_L4_3__, __FKEYS_R4_3__
   ),  
 
   [GAME] = LAYOUT_wrapper(
     __GAME_L1__, __GAME_R1__,
     __GAME_L2__, __GAME_R2__,
     __GAME_L3__, __GAME_R3__,
-KC_LCTL,  KC_LALT, KC_SPACE,     KC_TRNS, KC_TRNS, TO(BASE)
+  __GAME_L4_3__, __GAME_R4_3__
   ),  
 
   /*
