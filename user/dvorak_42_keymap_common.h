@@ -20,8 +20,8 @@
 #define __BASE_R2__ KC_D,            KC_H,         KC_T,          KC_N,          KC_S,          LCTL(KC_BSPC)
 #define __BASE_R3__ KC_B,            KC_M,         KC_W,          KC_V,          KC_Z,          OSM(MOD_RSFT)
 
-#define __BASE_L_2THUMB__ MO(COMBINED),MO(KEYNAV)
-#define __BASE_R_2THUMB__ KC_ENTER, KC_SPACE
+#define __BASE_L_2THUMB__ MO(COMBINED), MO(KEYNAV)
+#define __BASE_R_2THUMB__ KC_ENTER,     KC_SPACE
 
 // KEYNAV layer
 // ============
@@ -110,7 +110,7 @@
 #define __FKEYS_R3__ KC_TRNS,    KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS
 
 #define __FKEYS_L4_3__ TO(BASE), KC_TRNS, KC_TRNS
-#define __FKEYS_R4_3__ KC_TRNS, KC_TRNS, TO(BASE)
+#define __FKEYS_R4_3__ KC_TRNS,  KC_TRNS, TO(BASE)
 
 // BROWSER_CONTROL layer
 // =====================
@@ -138,8 +138,8 @@
 #define __SHORTCUTS_R2__ MEH(KC_F7),     OS_WS_1,         OS_WS_2,          OS_WS_3,       OS_WS_4,       MEH(KC_F13)
 #define __SHORTCUTS_R3__ SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS
 
-#define __SHORTCUTS_L4_3__ OSL(FKEYS), TO(FKEYS), KC_TRNS
-#define __SHORTCUTS_R4_3__ TO(GAME), TO(SHORTCUTS), TO(BASE)
+#define __SHORTCUTS_L4_3__ OSL(FKEYS), TO(FKEYS),     KC_TRNS
+#define __SHORTCUTS_R4_3__ TO(GAME),   TO(SHORTCUTS), TO(BASE)
 
 // GAME layer
 // ==========
@@ -152,5 +152,5 @@
 #define __GAME_R2__ __EMPTY_6__
 #define __GAME_R3__ __EMPTY_6__
 
-#define __GAME_L4_3__ KC_LCTL,  KC_LALT, KC_SPACE
-#define __GAME_R4_3__  KC_TRNS, KC_TRNS, TO(BASE)
+#define __GAME_L4_3__  KC_LCTL,  KC_LALT, KC_SPACE
+#define __GAME_R4_3__  KC_TRNS,  KC_TRNS, TO(BASE)
