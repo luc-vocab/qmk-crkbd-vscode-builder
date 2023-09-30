@@ -69,18 +69,12 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
 
   // chrome OS keyboard shortcuts: https://support.google.com/chromebook/answer/183101?hl=en
   // search key == windows key
-  [BROWSER_CONTROL] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                                     ,-----------------------------------------------------.
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                         KC_TRNS, BR_TAB_LEFT, BR_TAB_RIGHT, KC_TRNS, LALT(KC_LEFT), KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-KC_TRNS, RCTL(LSFT(KC_TAB)), RCTL(KC_TAB), OS_WS_LEFT, OS_WS_RIGHT, OS_WS_SHOW,                 KC_TRNS, RCTL(KC_1),   RCTL(KC_9), LCTL(KC_L), KC_F5, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,                         BR_TAB_CLOSE, BR_TAB_NEW, KC_TRNS
-                                      //`--------------------------'                   `--------------------------'
+  [BROWSER_CONTROL] = LAYOUT_wrapper(
+    __BROWSER_CONTROL_L1__, __BROWSER_CONTROL_R1__,
+    __BROWSER_CONTROL_L2__, __BROWSER_CONTROL_R2__,
+    __BROWSER_CONTROL_L3__, __BROWSER_CONTROL_R3__,
+    __EMPTY_3__,   BR_TAB_CLOSE, BR_TAB_NEW, KC_TRNS
   ),
-
 
   [SHORTCUTS] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                             ,-----------------------------------------------------.
