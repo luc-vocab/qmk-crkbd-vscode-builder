@@ -43,14 +43,14 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __SHELL_NAV_L1__, __SHELL_NAV_R1__,
     __SHELL_NAV_L2__, __SHELL_NAV_R2__,
     __SHELL_NAV_L3__, __SHELL_NAV_R3__,
-    __EMPTY_3__,   __EMPTY_3__
+    __EMPTY_3__,      __EMPTY_3__
   ),
 
   [SHELL_SCREEN] = LAYOUT_wrapper(
     __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
     __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
     __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
-    __EMPTY_3__,   __EMPTY_3__
+    __EMPTY_3__,         __EMPTY_3__
   ),
 
   [VSCODE] = LAYOUT_wrapper(
@@ -64,20 +64,20 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __COMBINED_L1__, __COMBINED_R1__,
     __COMBINED_L2__, __COMBINED_R2__,
     __COMBINED_L3__, __COMBINED_R3__,
-    __EMPTY_3__,   __COMBINED_R4_3__
+    __EMPTY_3__,     __COMBINED_R4_3__
   ),
 
   [BROWSER_CONTROL] = LAYOUT_wrapper(
     __BROWSER_CONTROL_L1__, __BROWSER_CONTROL_R1__,
     __BROWSER_CONTROL_L2__, __BROWSER_CONTROL_R2__,
     __BROWSER_CONTROL_L3__, __BROWSER_CONTROL_R3__,
-    __EMPTY_3__, __BROWSER_CONTROL_R4_3__
+    __EMPTY_3__,            __BROWSER_CONTROL_R4_3__
   ),
 
   [SHORTCUTS] = LAYOUT_wrapper(
-    __SHORTCUTS_L1__, __SHORTCUTS_R1__,
-    __SHORTCUTS_L2__, __SHORTCUTS_R2__,
-    __SHORTCUTS_L3__, __SHORTCUTS_R3__,
+    __SHORTCUTS_L1__,   __SHORTCUTS_R1__,
+    __SHORTCUTS_L2__,   __SHORTCUTS_R2__,
+    __SHORTCUTS_L3__,   __SHORTCUTS_R3__,
     __SHORTCUTS_L4_3__, __SHORTCUTS_R4_3__
   ),
 
