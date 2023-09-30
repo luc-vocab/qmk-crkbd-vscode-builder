@@ -76,16 +76,11 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __EMPTY_3__,   BR_TAB_CLOSE, BR_TAB_NEW, KC_TRNS
   ),
 
-  [SHORTCUTS] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                             ,-----------------------------------------------------.
-  MEH(KC_F14), MEH(KC_F15),  MEH(KC_F16), MEH(KC_F17), MEH(KC_F18), KC_OS_MODE_WIN10,        MEH(KC_F1), MEH(KC_F2), MEH(KC_F3), MEH(KC_F4), MEH(KC_F5), MEH(KC_F6),
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-  MEH(KC_F20), MEH(KC_F21),  MEH(KC_F22), MEH(KC_F23), MEH(KC_F24), KC_OS_MODE_LINUX,        MEH(KC_F7), OS_WS_1,    OS_WS_2,    OS_WS_3,    OS_WS_4,    MEH(KC_F13),
-  //|--------+--------+--------+--------+--------+--------|                             |--------+--------+--------+--------+--------+--------|
-MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_OS_MODE_CHROMEOS,       SCREEN_NEW_TAB, SCREEN_TAB_LEFT, SCREEN_TAB_RIGHT, SCREEN_NUMBER, SCREEN_RENAME, SCREEN_WINDOWS,
-  //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+--------|
-                                        OSL(FKEYS),  TO(FKEYS), KC_TRNS,                 TO(GAME), TO(SHORTCUTS), TO(BASE)
-                                      //`--------------------------'             `--------------------------'
+  [SHORTCUTS] = LAYOUT_wrapper(
+    __SHORTCUTS_L1__, __SHORTCUTS_R1__,
+    __SHORTCUTS_L2__, __SHORTCUTS_R2__,
+    __SHORTCUTS_L3__, __SHORTCUTS_R3__,
+    OSL(FKEYS), TO(FKEYS), KC_TRNS,  TO(GAME), TO(SHORTCUTS), TO(BASE)
   ),
 
   [FKEYS] = LAYOUT_wrapper(
@@ -95,16 +90,11 @@ MEH(KC_0), OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), KC_OS_MOD
  TO(BASE), KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, TO(BASE)
   ),  
 
-  [GAME] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-    KC_TAB,    KC_TRNS, KC_Q,    KC_W,    KC_E,    KC_R,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ESC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-    KC_ENTER,  KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-    KC_TRNS,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_LCTL,  KC_LALT, KC_SPACE,     KC_TRNS, KC_TRNS, TO(BASE)
-                                      //`--------------------------'  `--------------------------'
+  [GAME] = LAYOUT_wrapper(
+    __GAME_L1__, __GAME_R1__,
+    __GAME_L2__, __GAME_R2__,
+    __GAME_L3__, __GAME_R3__,
+KC_LCTL,  KC_LALT, KC_SPACE,     KC_TRNS, KC_TRNS, TO(BASE)
   ),  
 
   /*
