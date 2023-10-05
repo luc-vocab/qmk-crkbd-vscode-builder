@@ -11,7 +11,15 @@
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 1
 
+// allow customizing LEDs
+#define VOYAGER_USER_LEDS
+
 #define RGB_MATRIX_STARTUP_SPD 60
+
+// we don't want any colors by default
+#define RGBLIGHT_DEFAULT_HUE 	0
+#define RGBLIGHT_DEFAULT_SAT 	0
+#define RGBLIGHT_DEFAULT_VAL  0
 
 #undef ENABLE_RGB_MATRIX_ALPHAS_MODS
 #undef ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN

@@ -52,7 +52,6 @@
 #define SE_SECT_MAC ALGR(KC_6)
 #define MOON_LED_LEVEL LED_LEVEL
 
-
 enum tap_dance_codes {
   DANCE_0,
 };
@@ -161,14 +160,47 @@ void rgb_matrix_indicators_user(void) {
   }
 }
 
+/*
+LED_1: red, left top
+LED_2: green, left bottom
+LED_3: red, right top
+LED_4: green, right bottom
+*/
+
+// callback when oneshot modifiers are enabled
+void oneshot_mods_changed_user(uint8_t mods) {
+  bool LED_1 = false;
+  bool LED_2 = false;
+  bool LED_3 = false;
+
+  if (mods & MOD_MASK_SHIFT) {
+    LED_2 = true;
+  }
+  if (mods & MOD_MASK_CTRL) {
+    LED_1 = true;
+  }
+  if (mods & MOD_MASK_ALT) {
+    LED_3 = true;
+  }
+  if (mods & MOD_MASK_GUI) {
+    // don't display
+  }
+
+  STATUS_LED_1(LED_1);
+  STATUS_LED_2(LED_2);
+  STATUS_LED_3(LED_3);
+}
+
+void caps_word_set_user(bool active) {
+  STATUS_LED_4(active);
+}
+
 
 const uint16_t PROGMEM combo0[] = { MT(MOD_RSFT, KC_QUOTE), MT(MOD_LSFT, KC_BSPACE), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_CAPSLOCK),
 };
-
-
 
 
 typedef struct {
