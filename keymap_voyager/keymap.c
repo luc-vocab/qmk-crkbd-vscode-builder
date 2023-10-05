@@ -145,6 +145,9 @@ void rgb_matrix_indicators_user(void) {
     case SHELL_SCREEN:
       rgb_matrix_set_color_all(RGB_ORANGE); 
       break;
+    case COMBINED:
+      rgb_matrix_set_color_all(RGB_OFF); // no lights
+      break;    
     case VSCODE:
       rgb_matrix_set_color_all(RGB_GREEN); 
       break;
