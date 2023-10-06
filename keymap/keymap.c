@@ -50,7 +50,7 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
     __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
     __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
-    __EMPTY_3__,         __EMPTY_3__
+    __EMPTY_3__,         __SHELL_SCREEN_R4_3__
   ),
 
   [VSCODE] = LAYOUT_wrapper(

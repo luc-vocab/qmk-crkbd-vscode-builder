@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
     __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
     __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
-    __EMPTY_2__,   __EMPTY_2__
+    __EMPTY_2__,         __SHELL_SCREEN_R4_2__
   ),
 
   [VSCODE] = LAYOUT_wrapper(
