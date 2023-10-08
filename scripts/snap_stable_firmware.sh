@@ -8,5 +8,7 @@ git push origin ${GIT_TAG}
 
 echo "qmk-crkbd-vscode-builder tag ${GIT_TAG}" > build_info.txt
 md5sum ~/keyboard/firmware/*.hex >> build_info.txt
+md5sum ~/keyboard/firmware/*.bin >> build_info.txt
 rclone copy ~/keyboard/firmware/*.hex dropbox:Keyboard/stable_firmware
+rclone copy ~/keyboard/firmware/*.bin dropbox:Keyboard/stable_firmware
 rclone copy build_info.txt dropbox:Keyboard/stable_firmware
