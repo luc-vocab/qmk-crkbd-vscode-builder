@@ -115,13 +115,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     __EMPTY_2__,  KC_TRNS, KC_0
   ),
 
-  [FKEYS] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
-    __FKEYS_L1__, __FKEYS_R1__,
-    __FKEYS_L2__, __FKEYS_R2__,
-    __FKEYS_L3__, __FKEYS_R3__,
-    __EMPTY_2__,  __EMPTY_2__
-  ),  
+  [BROWSER_CONTROL] = LAYOUT_wrapper(
+    __EMPTY_6__,            __EMPTY_6__,
+    __BROWSER_CONTROL_L1__, __BROWSER_CONTROL_R1__,
+    __BROWSER_CONTROL_L2__, __BROWSER_CONTROL_R2__,
+    __BROWSER_CONTROL_L3__, __BROWSER_CONTROL_R3__,
+    __EMPTY_2__,            __BROWSER_CONTROL_R4_2__
+  )
 
 };
 
@@ -153,6 +153,9 @@ void rgb_matrix_indicators_user(void) {
     case FKEYS:
       rgb_matrix_set_color_all(RGB_YELLOW); 
       break;      
+    case BROWSER_CONTROL:
+      rgb_matrix_set_color_all(RGB_PINK); 
+      break;            
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
       rgb_matrix_set_color_all(0, 0, 0);

@@ -10,10 +10,10 @@
 // BASE layer
 // ==========
 
-#define __BASE_L0__ KC_TRNS,         KC_TRNS,      OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), OSL(FKEYS)
-#define __BASE_L1__ OSL(VSCODE),     KC_QUOTE,     KC_COMMA,      KC_DOT,        KC_P,          KC_Y
-#define __BASE_L2__ OSL(SHELL_NAV),  KC_A,         KC_O,          KC_E,          KC_U,          KC_I
-#define __BASE_L3__ OSM(MOD_LSFT),   KC_SEMICOLON, KC_Q,          KC_J,          KC_K,          KC_X
+#define __BASE_L0__ KC_TRNS,         KC_TRNS,      KC_TRNS,       KC_TRNS,       MO(BROWSER_CONTROL), KC_TRNS
+#define __BASE_L1__ OSL(VSCODE),     KC_QUOTE,     KC_COMMA,      KC_DOT,        KC_P,                KC_Y
+#define __BASE_L2__ OSL(SHELL_NAV),  KC_A,         KC_O,          KC_E,          KC_U,                KC_I
+#define __BASE_L3__ OSM(MOD_LSFT),   KC_SEMICOLON, KC_Q,          KC_J,          KC_K,                KC_X
 
 #define __BASE_R0__ OS_WS_LEFT,      OS_WS_1,      OS_WS_2,       OS_WS_3,       OS_WS_4,       OS_WS_RIGHT
 #define __BASE_R1__ KC_F,            KC_G,         KC_C,          KC_R,          KC_L,          KC_TAB
@@ -31,7 +31,7 @@
 #define __KEYNAV_L2__ KC_TRNS,       MO(KEYSEL),     OBS_READMODE, RSFT(KC_TAB),     KC_TAB,           RCTL(KC_F)         
 #define __KEYNAV_L3__ KC_TRNS,       OBS_CMD,        OBS_QUICKSW,  OBS_CHECKBOX,     RCTL(KC_B),       KC_TRNS
 
-#define __KEYNAV_R0__ BR_TAB_NEW,    BR_TAB_LEFT,    BR_TAB_RIGHT, KC_TRNS,          KC_TRNS,          BR_TAB_CLOSE
+#define __KEYNAV_R0__ KC_TRNS,       KC_TRNS,        KC_TRNS,      KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __KEYNAV_R1__ KC_TRNS,       KC_HOME,        KC_UP,        KC_END,           KC_PGUP,          KC_DELETE
 #define __KEYNAV_R2__ LCTL(KC_LEFT), KC_LEFT,        KC_DOWN,      KC_RIGHT,         LCTL(KC_RIGHT),   KC_BSPC
 #define __KEYNAV_R3__ KC_TRNS,       RCTL(KC_C),     RCTL(KC_X),   RCTL(KC_V),       KC_PGDN,          RCTL(KC_DELETE)
@@ -128,6 +128,7 @@
 #define __BROWSER_CONTROL_R3__ KC_TRNS, RCTL(KC_1),         RCTL(KC_9),   LCTL(KC_L), KC_F5,         KC_TRNS
 
 #define __BROWSER_CONTROL_R4_3__ BR_TAB_CLOSE, BR_TAB_NEW, KC_TRNS
+#define __BROWSER_CONTROL_R4_2__ BR_TAB_CLOSE, BR_TAB_NEW
 
 // SHORTCUTS layer
 // ===============

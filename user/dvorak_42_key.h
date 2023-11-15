@@ -17,9 +17,9 @@ enum layer_names {
     SHELL_SCREEN,    // linux screen shortcuts
     COMBINED,        // combined numbers and symbols layer
     VSCODE,          // visual studio code specific layer
-    FKEYS,           // function keys
-    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
     BROWSER_CONTROL, // control browser and mouse
+    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
+    FKEYS,           // function keys
     GAME,            // game layer
 };
 
