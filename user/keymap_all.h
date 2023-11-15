@@ -3,3 +3,4 @@
 
 #include "keymap_base.h"
 #include "keymap_keynav.h"
+#include "keymap_desknav.h"
