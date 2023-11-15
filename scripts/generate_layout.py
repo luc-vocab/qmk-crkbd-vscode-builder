@@ -8,6 +8,9 @@ def print_crkbd_layer(layer_name):
 
 def print_layer_template(layer_name):
     print(f"""
+// {layer_name}
+// ============
+          
 #define __{layer_name}_L0__  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 #define __{layer_name}_L1__  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 #define __{layer_name}_L2__  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
@@ -42,5 +45,5 @@ if True:
         print_crkbd_layer(layer_name)
 
 if False:
-    print_layer_template('DESKNAV_DEFAULT')
+    print_layer_template('APPNAV_VSCODE')
 
