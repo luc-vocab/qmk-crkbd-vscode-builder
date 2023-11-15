@@ -23,15 +23,15 @@
 // KEYNAV_SHELL
 // ============
 
-#define __KEYNAV_SHELL_L0__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
-#define __KEYNAV_SHELL_L1__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
-#define __KEYNAV_SHELL_L2__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
-#define __KEYNAV_SHELL_L3__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
+#define __KEYNAV_SHELL_L0__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __KEYNAV_SHELL_L1__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __KEYNAV_SHELL_L2__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __KEYNAV_SHELL_L3__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
 
-#define __KEYNAV_SHELL_R0__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
-#define __KEYNAV_SHELL_R1__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
-#define __KEYNAV_SHELL_R2__ SH_WORD_LEFT, KC_TRNS,        KC_TRNS,       KC_TRNS,          SH_WORD_RIGHT,              KC_TRNS
-#define __KEYNAV_SHELL_R3__ KC_TRNS,      KC_TRNS,        KC_TRNS,       KC_TRNS,          KC_TRNS,                    KC_TRNS
+#define __KEYNAV_SHELL_R0__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __KEYNAV_SHELL_R1__ KC_TRNS,       KC_HOME,  KC_UP,         KC_END,     KC_PGUP,         KC_DELETE
+#define __KEYNAV_SHELL_R2__ SH_WORD_LEFT,  KC_LEFT,  KC_DOWN,       KC_RIGHT,   SH_WORD_RIGHT,   KC_BSPC
+#define __KEYNAV_SHELL_R3__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
 
 #define __KEYNAV_SHELL_L_2THUMB__ KC_TRNS, KC_TRNS
 #define __KEYNAV_SHELL_R_2THUMB__ KC_TRNS, KC_TRNS
