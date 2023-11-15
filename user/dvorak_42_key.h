@@ -10,17 +10,24 @@
 // ======
 
 enum layer_names {
-    BASE,            // base dvorak layer
-    KEYNAV,          // arrow navigation (right hand)
-    KEYSEL,          // arrow navigation + shift (allow text selection)
-    SHELL_NAV,       // bash shortcuts
-    SHELL_SCREEN,    // linux screen shortcuts
+    // base layers, will jump to the appropriate app layers
+    BASE_BROWSER,
+    BASE_SHELL,
+    BASE_VSCODE,
+    // keynav layers
+    KEYNAV_DEFAULT,
+    KEYNAV_SHELL,
+    // keysel layers
+    KEYSEL_DEFAULT,
+    // desknav layers (moving workspaces, etc)
+    DESKNAV_DEFAULT,
+    // appnav layers (app specific shortcuts)
+    APPNAV_BROWSER,
+    APPNAV_SHELL,
+    APPNAV_VSCODE,
+    // other
     COMBINED,        // combined numbers and symbols layer
-    VSCODE,          // visual studio code specific layer
-    FKEYS,           // function keys
-    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
-    BROWSER_CONTROL, // control browser and mouse
-    GAME,            // game layer
+    GAME           // game layer
 };
 
 
@@ -96,6 +103,10 @@ enum custom_keycodes {
 };
 
 
+// generic shortcuts
+// =================
+#define DEL_WORD LCTL(KC_BSPC)
+
 // browser shortcuts
 // =================
 
@@ -103,6 +114,9 @@ enum custom_keycodes {
 #define BR_TAB_RIGHT RCTL(KC_PGDN)
 #define BR_TAB_CLOSE RCTL(KC_W)
 #define BR_TAB_NEW RCTL(KC_T)
+#define BR_BACK LALT(KC_LEFT)
+#define BR_TAB_FIRST RCTL(KC_1)
+#define BR_TAB_LAST RCTL(KC_9)
 
 
 // shell shortcuts

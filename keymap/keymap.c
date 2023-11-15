@@ -5,9 +5,10 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include "dvorak_42_key.h"
-#include "dvorak_42_keymap_common.h"
+// #include "dvorak_42_keymap_common.h"
+#include "keymap_all.h"
 
-#define LAYOUT_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_WRAPPER_CRKBD(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 
 // to build: qmk compile -kb crkbd/rev1 -km dvorak_42_key
 
@@ -18,14 +19,26 @@ static bool g_oneshot_gui = false;
 static bool g_capsword = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [BASE] = LAYOUT_wrapper(
-    __BASE_L1__, __BASE_R1__,
-    __BASE_L2__, __BASE_R2__,
-    __BASE_L3__, __BASE_R3__,
-MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
+  [BASE_BROWSER] = LAYOUT_WRAPPER_CRKBD(
+    __BASE_BROWSER_L1__ , __BASE_BROWSER_R1__ ,
+    __BASE_BROWSER_L2__ , __BASE_BROWSER_R2__ ,
+    __BASE_BROWSER_L3__ , __BASE_BROWSER_R3__ ,
+    __BASE_BROWSER_L_3THUMB__ , __BASE_BROWSER_R_3THUMB__    
+  ),
+  [BASE_VSCODE] = LAYOUT_WRAPPER_CRKBD(
+    __BASE_VSCODE_L1__ , __BASE_VSCODE_R1__ ,
+    __BASE_VSCODE_L2__ , __BASE_VSCODE_R2__ ,
+    __BASE_VSCODE_L3__ , __BASE_VSCODE_R3__ ,
+    __BASE_VSCODE_L_3THUMB__ , __BASE_SHELL_R_3THUMB__
+  ),
+  [BASE_SHELL] = LAYOUT_WRAPPER_CRKBD(
+    __BASE_SHELL_L1__ , __BASE_SHELL_R1__ ,
+    __BASE_SHELL_L2__ , __BASE_SHELL_R2__ ,
+    __BASE_SHELL_L3__ , __BASE_SHELL_R3__ ,
+    __BASE_SHELL_L_3THUMB__ , __BASE_BROWSER_R_3THUMB__
   ),
 
-  [KEYNAV] = LAYOUT_wrapper(
+/*   [KEYNAV] = LAYOUT_wrapper(
     __KEYNAV_L1__, __KEYNAV_R1__,
     __KEYNAV_L2__, __KEYNAV_R2__,
     __KEYNAV_L3__, __KEYNAV_R3__,
@@ -93,7 +106,7 @@ MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
     __GAME_L2__, __GAME_R2__,
     __GAME_L3__, __GAME_R3__,
   __GAME_L4_3__, __GAME_R4_3__
-  ),  
+  ),   */
 
   /*
   // empty layer
@@ -131,17 +144,23 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 
 void display_current_layer_name(void){
-  DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
-  DISPLAY_LAYER_NAME(FKEYS, "F-KEYS");
   DISPLAY_LAYER_NAME(GAME, "GAME");
-  DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
   DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
-  DISPLAY_LAYER_NAME(BROWSER_CONTROL, "BROWSER");
-  DISPLAY_LAYER_NAME(SHELL_SCREEN, "SHELL SCREEN");
-  DISPLAY_LAYER_NAME(SHELL_NAV, "SHELL NAV");
-  DISPLAY_LAYER_NAME(KEYSEL, "KEYSEL");
-  DISPLAY_LAYER_NAME(KEYNAV, "KEYNAV");
-  DISPLAY_LAYER_NAME(BASE, "BASE");
+  // keysel
+  DISPLAY_LAYER_NAME(KEYSEL_DEFAULT, "KEYSEL_DEFAULT");
+  // keynav
+  DISPLAY_LAYER_NAME(KEYNAV_DEFAULT, "KEYNAV_DEFAULT");
+  DISPLAY_LAYER_NAME(KEYNAV_SHELL, "KEYNAV_SHELL");
+  // desknav
+  DISPLAY_LAYER_NAME(DESKNAV_DEFAULT, "DESKNAV_DEFAULT");
+  // appnav
+  DISPLAY_LAYER_NAME(APPNAV_BROWSER, "APPNAV_BROWSER");
+  DISPLAY_LAYER_NAME(APPNAV_SHELL, "APPNAV_SHELL");
+  DISPLAY_LAYER_NAME(APPNAV_VSCODE, "APPNAV_VSCODE");
+  // base
+  DISPLAY_LAYER_NAME(BASE_BROWSER, "BASE_BROWSER");
+  DISPLAY_LAYER_NAME(BASE_VSCODE, "BASE_VSCODE");
+  DISPLAY_LAYER_NAME(BASE_SHELL, "BASE_SHELL");
 }
 
 void display_oneshot_mods(void) {
@@ -274,18 +293,24 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
 layer_state_t layer_state_set_user(layer_state_t state) {
 
     // base layer must be here
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE));
+    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_BROWSER));
+    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_SHELL));
+    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_VSCODE));
 
-    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV));
-    rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL));    
+    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_DEFAULT));
+    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_SHELL));
+    rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL_DEFAULT));
 
     
-    rgblight_set_layer_state(3, layer_state_cmp(state, SHELL_NAV));    
-    rgblight_set_layer_state(4, layer_state_cmp(state, SHELL_SCREEN));
+    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER));
+    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_SHELL));
+    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_VSCODE));
+
+/*     rgblight_set_layer_state(4, layer_state_cmp(state, SHELL_SCREEN));
     
     rgblight_set_layer_state(5, layer_state_cmp(state, SHORTCUTS) || layer_state_cmp(state, FKEYS));
     
-    rgblight_set_layer_state(6, layer_state_cmp(state, VSCODE));
+    rgblight_set_layer_state(6, layer_state_cmp(state, VSCODE)); */
     
     return state;
 }
