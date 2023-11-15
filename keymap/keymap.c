@@ -344,17 +344,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_SHELL));
     rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL_DEFAULT));
 
-    
     rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER));
     rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_SHELL));
     rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_VSCODE));
 
-/*     rgblight_set_layer_state(4, layer_state_cmp(state, SHELL_SCREEN));
-    
-    rgblight_set_layer_state(5, layer_state_cmp(state, SHORTCUTS) || layer_state_cmp(state, FKEYS));
-    
-    rgblight_set_layer_state(6, layer_state_cmp(state, VSCODE)); */
-    
+    rgblight_set_layer_state(4, layer_state_cmp(state, DESKNAV_DEFAULT));
+
     return state;
 }
 
