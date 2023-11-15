@@ -37,7 +37,9 @@ layer_names = [
     'DESKNAV_DEFAULT',
     'APPNAV_BROWSER',
     'APPNAV_SHELL',
-    'APPNAV_VSCODE'
+    'APPNAV_VSCODE',
+    'SYMBOLS',
+    'GAME'
 ]
 
 if True:
@@ -45,5 +47,5 @@ if True:
         print_crkbd_layer(layer_name)
 
 if False:
-    print_layer_template('APPNAV_VSCODE')
+    print_layer_template('GAME')
 

@@ -26,7 +26,7 @@ enum layer_names {
     APPNAV_SHELL,
     APPNAV_VSCODE,
     // other
-    COMBINED,        // combined numbers and symbols layer
+    SYMBOLS,        // combined numbers and symbols layer
     GAME           // game layer
 };
 

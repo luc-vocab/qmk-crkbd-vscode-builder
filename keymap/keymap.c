@@ -69,6 +69,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
         __APPNAV_VSCODE_L3__ ,       __APPNAV_VSCODE_R3__ ,
         __APPNAV_VSCODE_L_3THUMB__ , __APPNAV_VSCODE_R_3THUMB__),
+[SYMBOLS] = LAYOUT_WRAPPER_CRKBD(
+        __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
+        __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
+        __SYMBOLS_L3__ ,       __SYMBOLS_R3__ ,
+        __SYMBOLS_L_3THUMB__ , __SYMBOLS_R_3THUMB__),
+[GAME] = LAYOUT_WRAPPER_CRKBD(
+        __GAME_L1__ ,       __GAME_R1__ ,
+        __GAME_L2__ ,       __GAME_R2__ ,
+        __GAME_L3__ ,       __GAME_R3__ ,
+        __GAME_L_3THUMB__ , __GAME_R_3THUMB__),
 
 
 /*   [KEYNAV] = LAYOUT_wrapper(
@@ -178,7 +188,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(GAME, "GAME");
-  DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
+  DISPLAY_LAYER_NAME(SYMBOLS, "SYMBOLS");
   // keysel
   DISPLAY_LAYER_NAME(KEYSEL_DEFAULT, "KEYSEL_DEFAULT");
   // keynav

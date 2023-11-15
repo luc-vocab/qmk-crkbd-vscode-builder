@@ -16,9 +16,9 @@
 #define __BASE_BROWSER_R2__  KC_D,                  KC_H,         KC_T,     KC_N,    KC_S,    DEL_WORD
 #define __BASE_BROWSER_R3__  KC_B,                  KC_M,         KC_W,     KC_V,    KC_Z,    OSM(MOD_RSFT)
 
-#define __BASE_BROWSER_L_2THUMB__  MO(COMBINED),   MO(KEYNAV_DEFAULT)
+#define __BASE_BROWSER_L_2THUMB__  MO(SYMBOLS),   MO(KEYNAV_DEFAULT)
 #define __BASE_BROWSER_R_2THUMB__  KC_ENTER,       KC_SPACE
-#define __BASE_BROWSER_L_3THUMB__  OSM(MOD_LALT),  MO(COMBINED),        MO(KEYNAV_DEFAULT)
+#define __BASE_BROWSER_L_3THUMB__  OSM(MOD_LALT),  MO(SYMBOLS),        MO(KEYNAV_DEFAULT)
 #define __BASE_BROWSER_R_3THUMB__  KC_ENTER,       KC_SPACE,            OSM(MOD_LCTL)
 
 // base layer - vscode
