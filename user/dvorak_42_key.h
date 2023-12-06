@@ -106,6 +106,8 @@ enum custom_keycodes {
 // generic shortcuts
 // =================
 #define DEL_WORD LCTL(KC_BSPC)
+#define SAVE LCTL(KC_S)
+#define UNDO LCTL(KC_Z)
 
 // browser shortcuts
 // =================
@@ -142,13 +144,6 @@ enum custom_keycodes {
 #define SH_CLEARSCR RCTL(KC_L)
 #define SH_STOP RCTL(KC_C)
 
-// Obsidian shortcuts
-// ==================
-
-#define OBS_READMODE RCTL(KC_E)
-#define OBS_CMD RCTL(KC_P)
-#define OBS_QUICKSW RCTL(KC_O)
-#define OBS_CHECKBOX RCTL(KC_L)
 
 // visual studio code shortcuts
 // ============================

@@ -6,9 +6,9 @@
 // ==========================
 
 #define __KEYNAV_DEFAULT_L0__  KC_TRNS,       KC_TRNS,            KC_TRNS,       KC_TRNS,       KC_TRNS,         KC_TRNS
-#define __KEYNAV_DEFAULT_L1__  KC_ESC,        KC_TRNS,            KC_TRNS,       KC_TRNS,       KC_TRNS,         KC_TRNS
-#define __KEYNAV_DEFAULT_L2__  KC_TRNS,       MO(KEYSEL_DEFAULT), KC_TRNS,       RSFT(KC_TAB),  KC_TAB,          RCTL(KC_F)         
-#define __KEYNAV_DEFAULT_L3__  KC_TRNS,       OBS_CMD,            OBS_QUICKSW,   OBS_CHECKBOX,  RCTL(KC_B),      KC_TRNS
+#define __KEYNAV_DEFAULT_L1__  KC_ESC,        KC_TRNS,            KC_TRNS,       UNDO,          SAVE,            KC_TRNS
+#define __KEYNAV_DEFAULT_L2__  KC_TRNS,       MO(KEYSEL_DEFAULT), KC_TRNS,       RSFT(KC_TAB),  KC_TAB,          KC_TRNS
+#define __KEYNAV_DEFAULT_L3__  KC_TRNS,       KC_TRNS,            KC_TRNS,       KC_TRNS,       KC_TRNS,         KC_TRNS
 
 #define __KEYNAV_DEFAULT_R0__  KC_TRNS,       KC_TRNS,            KC_TRNS,       KC_TRNS,       KC_TRNS,         KC_TRNS
 #define __KEYNAV_DEFAULT_R1__  KC_TRNS,       KC_HOME,            KC_UP,         KC_END,        KC_PGUP,         KC_DELETE
