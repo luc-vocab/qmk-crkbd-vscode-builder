@@ -12,8 +12,8 @@
 enum layer_names {
     // base layers, will jump to the appropriate app layers
     BASE_BROWSER,
-    BASE_SHELL,
     BASE_VSCODE,
+    BASE_SHELL,
     // keynav layers
     KEYNAV_DEFAULT,
     KEYNAV_SHELL,
