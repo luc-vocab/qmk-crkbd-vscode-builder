@@ -115,6 +115,9 @@ enum custom_keycodes {
 #define BR_TAB_CLOSE RCTL(KC_W)
 #define BR_TAB_NEW RCTL(KC_T)
 #define BR_BACK LALT(KC_LEFT)
+#define BR_RELOAD RCTL(KC_R)
+#define BR_SEARCH RCTL(KC_E)
+#define BR_URL_BAR RCTL(KC_L)
 #define BR_TAB_FIRST RCTL(KC_1)
 #define BR_TAB_LAST RCTL(KC_9)
 
