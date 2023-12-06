@@ -8,7 +8,7 @@
 #define FIRMWARE_VERSION u8"dAA/M7l"
 #define RAW_USAGE_PAGE 0xFF60
 #define RAW_USAGE_ID 0x61
-#define LAYER_STATE_8BIT
+#define LAYER_STATE_16BIT
 #define COMBO_COUNT 1
 
 // allow customizing LEDs
