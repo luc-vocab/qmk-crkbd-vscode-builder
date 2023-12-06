@@ -64,6 +64,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __APPNAV_SHELL_L2__ ,       __APPNAV_SHELL_R2__ ,
         __APPNAV_SHELL_L3__ ,       __APPNAV_SHELL_R3__ ,
         __APPNAV_SHELL_L_3THUMB__ , __APPNAV_SHELL_R_3THUMB__),
+[APPNAV_SCREEN] = LAYOUT_WRAPPER_CRKBD(
+        __APPNAV_SCREEN_L1__ ,       __APPNAV_SCREEN_R1__ ,
+        __APPNAV_SCREEN_L2__ ,       __APPNAV_SCREEN_R2__ ,
+        __APPNAV_SCREEN_L3__ ,       __APPNAV_SCREEN_R3__ ,
+        __APPNAV_SCREEN_L_3THUMB__ , __APPNAV_SCREEN_R_3THUMB__),        
 [APPNAV_VSCODE] = LAYOUT_WRAPPER_CRKBD(
         __APPNAV_VSCODE_L1__ ,       __APPNAV_VSCODE_R1__ ,
         __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
@@ -114,6 +119,7 @@ void display_current_layer_name(void){
   // appnav
   DISPLAY_LAYER_NAME(APPNAV_BROWSER, "APPNAV_BROWSER");
   DISPLAY_LAYER_NAME(APPNAV_SHELL, "APPNAV_SHELL");
+  DISPLAY_LAYER_NAME(APPNAV_SCREEN, "APPNAV_SCREEN");
   DISPLAY_LAYER_NAME(APPNAV_VSCODE, "APPNAV_VSCODE");
   // base
   DISPLAY_LAYER_NAME(BASE_BROWSER, "BASE_BROWSER");
@@ -264,6 +270,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_VSCODE));
 
     rgblight_set_layer_state(4, layer_state_cmp(state, DESKNAV_DEFAULT));
+
+    rgblight_set_layer_state(5, layer_state_cmp(state, APPNAV_SCREEN));
 
     return state;
 }

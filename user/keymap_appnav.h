@@ -21,20 +21,39 @@
 // APPNAV_SHELL
 // ============
 
-#define __APPNAV_SHELL_L0__  KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
-#define __APPNAV_SHELL_L1__  KC_TRNS,            KC_TRNS,           SHELL_PGREP,       SHELL_PLESS,       SHELL_LESS,       SH_EXIT
-#define __APPNAV_SHELL_L2__  TO(BASE_SHELL),     KC_TRNS,           SHELL_CDPRE,       SHELL_LSLTR,       SHELL_LS,         SHELL_LSLA
-#define __APPNAV_SHELL_L3__  KC_TRNS,            SHELL_SCREEN_LIST, SHELL_SCREENRD,    SHELL_SCREEN_NEW,  SHELL_TAILF,      KC_TRNS
+#define __APPNAV_SHELL_L0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
+#define __APPNAV_SHELL_L1__  KC_TRNS,            KC_TRNS,            SHELL_PGREP,       SHELL_PLESS,       SHELL_LESS,       SH_EXIT
+#define __APPNAV_SHELL_L2__  TO(BASE_SHELL),     OSL(APPNAV_SCREEN), SHELL_CDPRE,       SHELL_LSLTR,       SHELL_LS,         SHELL_LSLA
+#define __APPNAV_SHELL_L3__  KC_TRNS,            SHELL_SCREEN_LIST,  SHELL_SCREENRD,    SHELL_SCREEN_NEW,  SHELL_TAILF,      KC_TRNS
 
-#define __APPNAV_SHELL_R0__  KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
-#define __APPNAV_SHELL_R1__  SCREEN_PASTE,       KC_TRNS,           KC_TRNS,           KC_TRNS,           SH_CLEARSCR,      SH_DEL_PATH
-#define __APPNAV_SHELL_R2__  SCREEN_COPY_MODE,   SCREEN_TAB_LEFT,   SCREEN_TAB_RIGHT,  SCREEN_NUMBER,     SCREEN_RENAME,    SH_DEL_WORD
-#define __APPNAV_SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,         SH_SEARCH,         SH_PASTE,          SH_DEL_TO_END,    SH_STOP
+#define __APPNAV_SHELL_R0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
+#define __APPNAV_SHELL_R1__  SCREEN_PASTE,       KC_TRNS,            KC_TRNS,           KC_TRNS,           SH_CLEARSCR,      SH_DEL_PATH
+#define __APPNAV_SHELL_R2__  SCREEN_COPY_MODE,   SCREEN_TAB_LEFT,    SCREEN_TAB_RIGHT,  SCREEN_NUMBER,     SCREEN_RENAME,    SH_DEL_WORD
+#define __APPNAV_SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,          SH_SEARCH,         SH_PASTE,          SH_DEL_TO_END,    SH_STOP
 
 #define __APPNAV_SHELL_L_2THUMB__  KC_TRNS,     KC_TRNS
 #define __APPNAV_SHELL_R_2THUMB__  SCREEN_KILL, SCREEN_NEW_TAB
 #define __APPNAV_SHELL_L_3THUMB__  KC_TRNS,     KC_TRNS,           KC_TRNS
 #define __APPNAV_SHELL_R_3THUMB__  SCREEN_KILL, SCREEN_NEW_TAB,    KC_TRNS
+
+
+// APPNAV_SCREEN
+// =============
+#define __APPNAV_SCREEN_L0__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
+#define __APPNAV_SCREEN_L1__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
+#define __APPNAV_SCREEN_L2__  TO(BASE_SHELL),   KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          SCREEN_DETACH
+#define __APPNAV_SCREEN_L3__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
+
+#define __APPNAV_SCREEN_R0__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
+#define __APPNAV_SCREEN_R1__  KC_TRNS,          SCREEN_7,   SCREEN_8,  SCREEN_9,  SCREEN_RENAME,    KC_TRNS
+#define __APPNAV_SCREEN_R2__  SCREEN_TAB_LEFT,  SCREEN_4,   SCREEN_5,  SCREEN_6,  SCREEN_TAB_RIGHT, SCREEN_COPY_MODE                              
+#define __APPNAV_SCREEN_R3__  KC_TRNS,          SCREEN_1,   SCREEN_2,  SCREEN_3,  SCREEN_NUMBER,    SCREEN_PASTE
+
+#define __APPNAV_SCREEN_L_2THUMB__  KC_TRNS,       KC_TRNS
+#define __APPNAV_SCREEN_L_3THUMB__  KC_TRNS,       KC_TRNS,           KC_TRNS
+#define __APPNAV_SCREEN_R_2THUMB__  SCREEN_DETACH, SCREEN_NEW_TAB
+#define __APPNAV_SCREEN_R_3THUMB__  SCREEN_DETACH, SCREEN_NEW_TAB,    KC_TRNS
+
 
 // APPNAV_VSCODE
 // ============

@@ -24,6 +24,7 @@ enum layer_names {
     // appnav layers (app specific shortcuts)
     APPNAV_BROWSER,
     APPNAV_SHELL,
+    APPNAV_SCREEN,
     APPNAV_VSCODE,
     // other
     SYMBOLS,        // combined numbers and symbols layer
