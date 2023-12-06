@@ -27,8 +27,8 @@
 #define __APPNAV_SHELL_L3__  KC_TRNS,            SHELL_SCREEN_LIST,  SHELL_SCREENRD,    SHELL_SCREEN_NEW,  SHELL_TAILF,      KC_TRNS
 
 #define __APPNAV_SHELL_R0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
-#define __APPNAV_SHELL_R1__  SCREEN_PASTE,       KC_TRNS,            KC_TRNS,           KC_TRNS,           SH_CLEARSCR,      SH_DEL_PATH
-#define __APPNAV_SHELL_R2__  SCREEN_COPY_MODE,   SCREEN_TAB_LEFT,    SCREEN_TAB_RIGHT,  SCREEN_NUMBER,     SCREEN_RENAME,    SH_DEL_WORD
+#define __APPNAV_SHELL_R1__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,           SH_CLEARSCR,      SH_DEL_PATH
+#define __APPNAV_SHELL_R2__  KC_TRNS,            SCREEN_TAB_LEFT,    SCREEN_TAB_RIGHT,  SCREEN_NUMBER,     SCREEN_RENAME,    SH_DEL_WORD
 #define __APPNAV_SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,          SH_SEARCH,         SH_PASTE,          SH_DEL_TO_END,    SH_STOP
 
 #define __APPNAV_SHELL_L_2THUMB__  KC_TRNS,     KC_TRNS
