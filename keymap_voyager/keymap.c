@@ -31,7 +31,7 @@
 #include "keymap_slovak.h"
 
 #include "dvorak_42_key.h"
-#include "dvorak_42_keymap_common.h"
+#include "keymap_all.h"
 
 
 #define KC_MAC_UNDO LGUI(KC_Z)
@@ -56,108 +56,129 @@ enum tap_dance_codes {
   DANCE_0,
 };
 
-#define LAYOUT_wrapper(...) LAYOUT_voyager(__VA_ARGS__)
+#define LAYOUT_WRAPPER_VOYAGER(...) LAYOUT_voyager(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [BASE] = LAYOUT_wrapper(
-    __BASE_L0__, __BASE_R0__,
-    __BASE_L1__, __BASE_R1__,
-    __BASE_L2__, __BASE_R2__,
-    __BASE_L3__, __BASE_R3__,
- __BASE_L_2THUMB__, __BASE_R_2THUMB__
-  ),
-
-  [KEYNAV] = LAYOUT_wrapper(
-    __KEYNAV_L0__, __KEYNAV_R0__,
-    __KEYNAV_L1__, __KEYNAV_R1__,
-    __KEYNAV_L2__, __KEYNAV_R2__,
-    __KEYNAV_L3__, __KEYNAV_R3__,
-    __EMPTY_2__,   __EMPTY_2__
-  ),
-
-  [KEYSEL] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
-    __KEYSEL_L1__, __KEYSEL_R1__,
-    __KEYSEL_L2__, __KEYSEL_R2__,
-    __KEYSEL_L3__, __KEYSEL_R3__,
-    __EMPTY_2__,   __EMPTY_2__
-  ),
-
-  [SHELL_NAV] = LAYOUT_wrapper(
-    __SHELL_NAV_L0__, __SHELL_NAV_R0__,
-    __SHELL_NAV_L1__, __SHELL_NAV_R1__,
-    __SHELL_NAV_L2__, __SHELL_NAV_R2__,
-    __SHELL_NAV_L3__, __SHELL_NAV_R3__,
-    __EMPTY_2__,   __EMPTY_2__
-  ),
-
-  [SHELL_SCREEN] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
-    __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
-    __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
-    __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
-    __EMPTY_2__,         __SHELL_SCREEN_R4_2__
-  ),
-
-  [VSCODE] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
-    __VSCODE_L1__, __VSCODE_R1__,
-    __VSCODE_L2__, __VSCODE_R2__,
-    __VSCODE_L3__, __VSCODE_R3__,
-    __EMPTY_2__,   __VSCODE_R4_2__
-  ),
-  
-  [COMBINED] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
-    __COMBINED_L1__, __COMBINED_R1__,
-    __COMBINED_L2__, __COMBINED_R2__,
-    __COMBINED_L3__, __COMBINED_R3__,
-    __EMPTY_2__,  KC_TRNS, KC_0
-  ),
-
-  [FKEYS] = LAYOUT_wrapper(
-    __EMPTY_6__, __EMPTY_6__,
-    __FKEYS_L1__, __FKEYS_R1__,
-    __FKEYS_L2__, __FKEYS_R2__,
-    __FKEYS_L3__, __FKEYS_R3__,
-    __EMPTY_2__,  __EMPTY_2__
-  ),  
+[BASE_BROWSER] = LAYOUT_WRAPPER_VOYAGER(
+        __BASE_BROWSER_L0__ ,       __BASE_BROWSER_R0__ ,
+        __BASE_BROWSER_L1__ ,       __BASE_BROWSER_R1__ ,
+        __BASE_BROWSER_L2__ ,       __BASE_BROWSER_R2__ ,
+        __BASE_BROWSER_L3__ ,       __BASE_BROWSER_R3__ ,
+        __BASE_BROWSER_L_2THUMB__ , __BASE_BROWSER_R_2THUMB__),
+[BASE_SHELL] = LAYOUT_WRAPPER_VOYAGER(
+        __BASE_SHELL_L0__ ,       __BASE_SHELL_R0__ ,
+        __BASE_SHELL_L1__ ,       __BASE_SHELL_R1__ ,
+        __BASE_SHELL_L2__ ,       __BASE_SHELL_R2__ ,
+        __BASE_SHELL_L3__ ,       __BASE_SHELL_R3__ ,
+        __BASE_SHELL_L_2THUMB__ , __BASE_SHELL_R_2THUMB__),
+[BASE_VSCODE] = LAYOUT_WRAPPER_VOYAGER(
+        __BASE_VSCODE_L0__ ,       __BASE_VSCODE_R0__ ,
+        __BASE_VSCODE_L1__ ,       __BASE_VSCODE_R1__ ,
+        __BASE_VSCODE_L2__ ,       __BASE_VSCODE_R2__ ,
+        __BASE_VSCODE_L3__ ,       __BASE_VSCODE_R3__ ,
+        __BASE_VSCODE_L_2THUMB__ , __BASE_VSCODE_R_2THUMB__),
+[KEYNAV_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
+        __KEYNAV_DEFAULT_L0__ ,       __KEYNAV_DEFAULT_R0__ ,
+        __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
+        __KEYNAV_DEFAULT_L2__ ,       __KEYNAV_DEFAULT_R2__ ,
+        __KEYNAV_DEFAULT_L3__ ,       __KEYNAV_DEFAULT_R3__ ,
+        __KEYNAV_DEFAULT_L_2THUMB__ , __KEYNAV_DEFAULT_R_2THUMB__),
+[KEYNAV_SHELL] = LAYOUT_WRAPPER_VOYAGER(
+        __KEYNAV_SHELL_L0__ ,       __KEYNAV_SHELL_R0__ ,
+        __KEYNAV_SHELL_L1__ ,       __KEYNAV_SHELL_R1__ ,
+        __KEYNAV_SHELL_L2__ ,       __KEYNAV_SHELL_R2__ ,
+        __KEYNAV_SHELL_L3__ ,       __KEYNAV_SHELL_R3__ ,
+        __KEYNAV_SHELL_L_2THUMB__ , __KEYNAV_SHELL_R_2THUMB__),
+[KEYSEL_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
+        __KEYSEL_DEFAULT_L0__ ,       __KEYSEL_DEFAULT_R0__ ,
+        __KEYSEL_DEFAULT_L1__ ,       __KEYSEL_DEFAULT_R1__ ,
+        __KEYSEL_DEFAULT_L2__ ,       __KEYSEL_DEFAULT_R2__ ,
+        __KEYSEL_DEFAULT_L3__ ,       __KEYSEL_DEFAULT_R3__ ,
+        __KEYSEL_DEFAULT_L_2THUMB__ , __KEYSEL_DEFAULT_R_2THUMB__),
+[DESKNAV_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
+        __DESKNAV_DEFAULT_L0__ ,       __DESKNAV_DEFAULT_R0__ ,
+        __DESKNAV_DEFAULT_L1__ ,       __DESKNAV_DEFAULT_R1__ ,
+        __DESKNAV_DEFAULT_L2__ ,       __DESKNAV_DEFAULT_R2__ ,
+        __DESKNAV_DEFAULT_L3__ ,       __DESKNAV_DEFAULT_R3__ ,
+        __DESKNAV_DEFAULT_L_2THUMB__ , __DESKNAV_DEFAULT_R_2THUMB__),
+[APPNAV_BROWSER] = LAYOUT_WRAPPER_VOYAGER(
+        __APPNAV_BROWSER_L0__ ,       __APPNAV_BROWSER_R0__ ,
+        __APPNAV_BROWSER_L1__ ,       __APPNAV_BROWSER_R1__ ,
+        __APPNAV_BROWSER_L2__ ,       __APPNAV_BROWSER_R2__ ,
+        __APPNAV_BROWSER_L3__ ,       __APPNAV_BROWSER_R3__ ,
+        __APPNAV_BROWSER_L_2THUMB__ , __APPNAV_BROWSER_R_2THUMB__),
+[APPNAV_SHELL] = LAYOUT_WRAPPER_VOYAGER(
+        __APPNAV_SHELL_L0__ ,       __APPNAV_SHELL_R0__ ,
+        __APPNAV_SHELL_L1__ ,       __APPNAV_SHELL_R1__ ,
+        __APPNAV_SHELL_L2__ ,       __APPNAV_SHELL_R2__ ,
+        __APPNAV_SHELL_L3__ ,       __APPNAV_SHELL_R3__ ,
+        __APPNAV_SHELL_L_2THUMB__ , __APPNAV_SHELL_R_2THUMB__),
+[APPNAV_VSCODE] = LAYOUT_WRAPPER_VOYAGER(
+        __APPNAV_VSCODE_L0__ ,       __APPNAV_VSCODE_R0__ ,
+        __APPNAV_VSCODE_L1__ ,       __APPNAV_VSCODE_R1__ ,
+        __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
+        __APPNAV_VSCODE_L3__ ,       __APPNAV_VSCODE_R3__ ,
+        __APPNAV_VSCODE_L_2THUMB__ , __APPNAV_VSCODE_R_2THUMB__),
+[SYMBOLS] = LAYOUT_WRAPPER_VOYAGER(
+        __SYMBOLS_L0__ ,       __SYMBOLS_R0__ ,
+        __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
+        __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
+        __SYMBOLS_L3__ ,       __SYMBOLS_R3__ ,
+        __SYMBOLS_L_2THUMB__ , __SYMBOLS_R_2THUMB__),
 
 };
 
+/*
+LED_1: red, left top
+LED_2: green, left bottom
+LED_3: red, right top
+LED_4: green, right bottom
+*/
 
 void rgb_matrix_indicators_user(void) {
+  bool LED_3 = false;
+  bool LED_4 = false;
+
   if (keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
-    case BASE:
-      rgb_matrix_set_color_all(RGB_OFF); // no lights
-      break;
-    case KEYNAV:
-      rgb_matrix_set_color_all(RGB_BLUE); // blue
-      break;
-    case KEYSEL:
-      rgb_matrix_set_color_all(RGB_PURPLE); // purple
-      break;
-    case SHELL_NAV:
-      rgb_matrix_set_color_all(RGB_RED); 
-      break;      
-    case SHELL_SCREEN:
-      rgb_matrix_set_color_all(RGB_ORANGE); 
-      break;
-    case COMBINED:
+    case BASE_BROWSER:
       rgb_matrix_set_color_all(RGB_OFF); // no lights
       break;    
-    case VSCODE:
+    case BASE_SHELL:
+      rgb_matrix_set_color_all(RGB_OFF); // no lights
+      LED_3 = true;
+      break;    
+    case BASE_VSCODE:
+      rgb_matrix_set_color_all(RGB_OFF); // no lights
+      LED_4 = true;
+      break;
+    case KEYNAV_DEFAULT:
+    case KEYNAV_SHELL:
+      rgb_matrix_set_color_all(RGB_BLUE); // blue
+      break;
+    case KEYSEL_DEFAULT:
+      rgb_matrix_set_color_all(RGB_PURPLE); // purple
+      break;
+    case APPNAV_SHELL:
+      rgb_matrix_set_color_all(RGB_RED); 
+      break;      
+    case DESKNAV_DEFAULT:
+      rgb_matrix_set_color_all(RGB_ORANGE); 
+      break;
+    case SYMBOLS:
+      rgb_matrix_set_color_all(RGB_OFF); // no lights
+      break;    
+    case APPNAV_VSCODE:
       rgb_matrix_set_color_all(RGB_GREEN); 
       break;
-    case FKEYS:
-      rgb_matrix_set_color_all(RGB_YELLOW); 
-      break;      
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
       rgb_matrix_set_color_all(0, 0, 0);
     break;
   }
+
+  STATUS_LED_3(LED_3);  
+  STATUS_LED_4(LED_4);
 }
 
 /*
@@ -169,30 +190,26 @@ LED_4: green, right bottom
 
 // callback when oneshot modifiers are enabled
 void oneshot_mods_changed_user(uint8_t mods) {
-  bool LED_1 = false;
   bool LED_2 = false;
-  bool LED_3 = false;
 
   if (mods & MOD_MASK_SHIFT) {
     LED_2 = true;
   }
   if (mods & MOD_MASK_CTRL) {
-    LED_1 = true;
+    LED_2 = true;
   }
   if (mods & MOD_MASK_ALT) {
-    LED_3 = true;
+    LED_2 = true;
   }
   if (mods & MOD_MASK_GUI) {
-    // don't display
+    LED_2 = true;
   }
 
-  STATUS_LED_1(LED_1);
   STATUS_LED_2(LED_2);
-  STATUS_LED_3(LED_3);
 }
 
 void caps_word_set_user(bool active) {
-  STATUS_LED_4(active);
+  STATUS_LED_1(active);
 }
 
 
