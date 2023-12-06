@@ -24,7 +24,7 @@
 // ============
 
 #define __KEYNAV_SHELL_L0__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __KEYNAV_SHELL_L1__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __KEYNAV_SHELL_L1__ KC_ESC,        KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
 #define __KEYNAV_SHELL_L2__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
 #define __KEYNAV_SHELL_L3__ KC_TRNS,       KC_TRNS,  KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS
 
