@@ -162,6 +162,9 @@ void rgb_matrix_indicators_user(void) {
     case APPNAV_SHELL:
       rgb_matrix_set_color_all(RGB_RED); 
       break;      
+    case APPNAV_SCREEN:
+      rgb_matrix_set_color_all(RGB_YELLOW); 
+      break;            
     case DESKNAV_DEFAULT:
       rgb_matrix_set_color_all(RGB_ORANGE); 
       break;
