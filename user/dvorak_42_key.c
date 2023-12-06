@@ -29,16 +29,19 @@ case KEYCODE:\
             tap_code16(WIN10_CODE);\
             default_layer_set(DEFAULT_LAYER);\
             layer_move(DEFAULT_LAYER);\
+            return false;\
             break;\
         case OS_MODE_LINUX:\
             tap_code16(LINUX_CODE);\
             default_layer_set(DEFAULT_LAYER);\
             layer_move(DEFAULT_LAYER);\
+            return false;\
             break;\
         case OS_MODE_CHROMEOS:\
             tap_code16(CHROMEOS_CODE);\
             default_layer_set(DEFAULT_LAYER);\
             layer_move(DEFAULT_LAYER);\
+            return false;\
             break;\
         default:\
             break;\
@@ -46,6 +49,15 @@ case KEYCODE:\
     break;    
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if(record->event.pressed) {
+    switch (keycode) {
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_1,     MEH(KC_F8),     LALT(LCTL(KC_1)), RGUI(LSFT(KC_1)),  BASE_BROWSER );
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)),  BASE_VSCODE);
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)),  BASE_SHELL);
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_BROWSER );
+    }
+  }
+
 
   // shell macros
   if(record->event.pressed) {
@@ -66,11 +78,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         OS_SHORTCUT(OS_WS_RIGHT, C(G(KC_RIGHT)), G(KC_PGDN),       G(KC_RBRC) );
         OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,          A(KC_TAB) );
         //                           KEYCODE      WINDOW 10       LINUX             CHROME OS          DEFAULT LAYER
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_1,     MEH(KC_F8),     LALT(LCTL(KC_1)), RGUI(LSFT(KC_1)),  BASE_BROWSER );
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)),  BASE_VSCODE);
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)),  BASE_SHELL);
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_BROWSER );
-
 
         case SHELL_LS:
             SEND_STRING("ls\n");
