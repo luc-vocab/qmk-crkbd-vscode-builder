@@ -256,18 +256,34 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
 
-    // base layer must be here
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_BROWSER));
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_SHELL));
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_VSCODE));
+/*     switch (get_highest_layer(state)) {
+      case BASE_BROWSER:
+      case BASE_SHELL:
+      case BASE_VSCODE:
+        rgblight_set_layer_state(0, true); // no lights
+        break;
+      case KEYNAV_DEFAULT:
+      case KEYNAV_SHELL:
+        rgblight_set_layer_state(1, true); // blue
+        break;
+    } */
 
-    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_DEFAULT));
-    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_SHELL));
+    // base layer must be here
+    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_BROWSER)
+        || layer_state_cmp(state, BASE_SHELL) 
+        || layer_state_cmp(state, BASE_VSCODE));
+
+    // keynav - blue
+    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_DEFAULT) 
+        || layer_state_cmp(state, KEYNAV_SHELL));
+
+    // keysel - purple
     rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL_DEFAULT));
 
-    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER));
-    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_SHELL));
-    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_VSCODE));
+    // appnav - red
+    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER)
+        || layer_state_cmp(state, APPNAV_SHELL)
+        || layer_state_cmp(state, APPNAV_VSCODE));
 
     rgblight_set_layer_state(4, layer_state_cmp(state, DESKNAV_DEFAULT));
 
