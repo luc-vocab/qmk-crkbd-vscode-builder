@@ -123,6 +123,8 @@ enum custom_keycodes {
 #define BR_URL_BAR RCTL(KC_L)
 #define BR_TAB_FIRST RCTL(KC_1)
 #define BR_TAB_LAST RCTL(KC_9)
+#define BR_TAB_MOVE_LEFT RCTL(LSFT(KC_PGUP))
+#define BR_TAB_MOVE_RIGHT RCTL(LSFT(KC_PGDN))
 
 
 // shell shortcuts

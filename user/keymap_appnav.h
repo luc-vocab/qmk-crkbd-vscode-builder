@@ -3,15 +3,15 @@
 // APPNAV_BROWSER
 // ============
 
-#define __APPNAV_BROWSER_L0__  KC_TRNS,            KC_TRNS,       KC_TRNS,      KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_BROWSER_L1__  KC_TRNS,            KC_TRNS,       KC_TRNS,      KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_BROWSER_L2__  TO(BASE_BROWSER),   KC_TRNS,       KC_TRNS,      KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_BROWSER_L3__  KC_TRNS,            KC_TRNS,       KC_TRNS,      KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_L1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_L2__  TO(BASE_BROWSER),   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_L3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
 
-#define __APPNAV_BROWSER_R0__  KC_TRNS,            KC_TRNS,       KC_TRNS,      KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_BROWSER_R1__  KC_TRNS,            KC_TRNS,       KC_TRNS,      KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_BROWSER_R2__  KC_TRNS,            BR_TAB_LEFT,   BR_TAB_RIGHT, BR_SEARCH,  BR_RELOAD, BR_BACK
-#define __APPNAV_BROWSER_R3__  KC_TRNS,            BR_TAB_FIRST,  BR_TAB_LAST,  BR_URL_BAR, KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_R1__  KC_TRNS,            BR_TAB_MOVE_LEFT, BR_TAB_MOVE_RIGHT, KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_R2__  KC_TRNS,            BR_TAB_LEFT,      BR_TAB_RIGHT,      BR_SEARCH,  BR_RELOAD, BR_BACK
+#define __APPNAV_BROWSER_R3__  KC_TRNS,            BR_TAB_FIRST,     BR_TAB_LAST,       BR_URL_BAR, KC_TRNS,   KC_TRNS
 
 #define __APPNAV_BROWSER_L_2THUMB__  KC_TRNS,      KC_TRNS
 #define __APPNAV_BROWSER_R_2THUMB__  BR_TAB_CLOSE, BR_TAB_NEW
