@@ -10,19 +10,6 @@
 // ======
 
 enum layer_names {
-<<<<<<< HEAD
-    BASE,            // base dvorak layer
-    KEYNAV,          // arrow navigation (right hand)
-    KEYSEL,          // arrow navigation + shift (allow text selection)
-    SHELL_NAV,       // bash shortcuts
-    SHELL_SCREEN,    // linux screen shortcuts
-    COMBINED,        // combined numbers and symbols layer
-    VSCODE,          // visual studio code specific layer
-    BROWSER_CONTROL, // control browser and mouse
-    SHORTCUTS,       // shortcuts to be intercepted by autohotkey
-    FKEYS,           // function keys
-    GAME,            // game layer
-=======
     // base layers, will jump to the appropriate app layers
     BASE_BROWSER,
     BASE_VSCODE,
@@ -42,7 +29,6 @@ enum layer_names {
     // other
     SYMBOLS,        // combined numbers and symbols layer
     GAME           // game layer
->>>>>>> 20231110_app_based_layers
 };
 
 
