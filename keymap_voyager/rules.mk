@@ -2,7 +2,7 @@
 # See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
 CONSOLE_ENABLE = yes
 COMMAND_ENABLE = no
-MOUSEKEY_ENABLE = no
+MOUSEKEY_ENABLE = yes
 ORYX_ENABLE = yes
 RGB_MATRIX_CUSTOM_KB = yes
 TAP_DANCE_ENABLE = yes

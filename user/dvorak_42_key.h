@@ -10,6 +10,7 @@
 // ======
 
 enum layer_names {
+<<<<<<< HEAD
     BASE,            // base dvorak layer
     KEYNAV,          // arrow navigation (right hand)
     KEYSEL,          // arrow navigation + shift (allow text selection)
@@ -21,6 +22,27 @@ enum layer_names {
     SHORTCUTS,       // shortcuts to be intercepted by autohotkey
     FKEYS,           // function keys
     GAME,            // game layer
+=======
+    // base layers, will jump to the appropriate app layers
+    BASE_BROWSER,
+    BASE_VSCODE,
+    BASE_SHELL,
+    // keynav layers
+    KEYNAV_DEFAULT,
+    KEYNAV_SHELL,
+    // keysel layers
+    KEYSEL_DEFAULT,
+    // desknav layers (moving workspaces, etc)
+    DESKNAV_DEFAULT,
+    // appnav layers (app specific shortcuts)
+    APPNAV_BROWSER,
+    APPNAV_SHELL,
+    APPNAV_SCREEN,
+    APPNAV_VSCODE,
+    // other
+    SYMBOLS,        // combined numbers and symbols layer
+    GAME           // game layer
+>>>>>>> 20231110_app_based_layers
 };
 
 
@@ -96,6 +118,12 @@ enum custom_keycodes {
 };
 
 
+// generic shortcuts
+// =================
+#define DEL_WORD LCTL(KC_BSPC)
+#define SAVE LCTL(KC_S)
+#define UNDO LCTL(KC_Z)
+
 // browser shortcuts
 // =================
 
@@ -103,6 +131,12 @@ enum custom_keycodes {
 #define BR_TAB_RIGHT RCTL(KC_PGDN)
 #define BR_TAB_CLOSE RCTL(KC_W)
 #define BR_TAB_NEW RCTL(KC_T)
+#define BR_BACK LALT(KC_LEFT)
+#define BR_RELOAD RCTL(KC_R)
+#define BR_SEARCH RCTL(KC_E)
+#define BR_URL_BAR RCTL(KC_L)
+#define BR_TAB_FIRST RCTL(KC_1)
+#define BR_TAB_LAST RCTL(KC_9)
 
 
 // shell shortcuts
@@ -125,13 +159,6 @@ enum custom_keycodes {
 #define SH_CLEARSCR RCTL(KC_L)
 #define SH_STOP RCTL(KC_C)
 
-// Obsidian shortcuts
-// ==================
-
-#define OBS_READMODE RCTL(KC_E)
-#define OBS_CMD RCTL(KC_P)
-#define OBS_QUICKSW RCTL(KC_O)
-#define OBS_CHECKBOX RCTL(KC_L)
 
 // visual studio code shortcuts
 // ============================

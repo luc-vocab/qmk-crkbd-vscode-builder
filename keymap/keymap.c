@@ -5,9 +5,10 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include "dvorak_42_key.h"
-#include "dvorak_42_keymap_common.h"
+// #include "dvorak_42_keymap_common.h"
+#include "keymap_all.h"
 
-#define LAYOUT_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_WRAPPER_CRKBD(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 
 // to build: qmk compile -kb crkbd/rev1 -km dvorak_42_key
 
@@ -18,97 +19,72 @@ static bool g_oneshot_gui = false;
 static bool g_capsword = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [BASE] = LAYOUT_wrapper(
-    __BASE_L1__, __BASE_R1__,
-    __BASE_L2__, __BASE_R2__,
-    __BASE_L3__, __BASE_R3__,
-MO(BROWSER_CONTROL), __BASE_L_2THUMB__,     __BASE_R_2THUMB__, OSL(SHORTCUTS)
-  ),
+[BASE_BROWSER] = LAYOUT_WRAPPER_CRKBD(
+        __BASE_BROWSER_L1__ ,       __BASE_BROWSER_R1__ ,
+        __BASE_BROWSER_L2__ ,       __BASE_BROWSER_R2__ ,
+        __BASE_BROWSER_L3__ ,       __BASE_BROWSER_R3__ ,
+        __BASE_BROWSER_L_3THUMB__ , __BASE_BROWSER_R_3THUMB__),
+[BASE_SHELL] = LAYOUT_WRAPPER_CRKBD(
+        __BASE_SHELL_L1__ ,       __BASE_SHELL_R1__ ,
+        __BASE_SHELL_L2__ ,       __BASE_SHELL_R2__ ,
+        __BASE_SHELL_L3__ ,       __BASE_SHELL_R3__ ,
+        __BASE_SHELL_L_3THUMB__ , __BASE_SHELL_R_3THUMB__),
+[BASE_VSCODE] = LAYOUT_WRAPPER_CRKBD(
+        __BASE_VSCODE_L1__ ,       __BASE_VSCODE_R1__ ,
+        __BASE_VSCODE_L2__ ,       __BASE_VSCODE_R2__ ,
+        __BASE_VSCODE_L3__ ,       __BASE_VSCODE_R3__ ,
+        __BASE_VSCODE_L_3THUMB__ , __BASE_VSCODE_R_3THUMB__),
+[KEYNAV_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
+        __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
+        __KEYNAV_DEFAULT_L2__ ,       __KEYNAV_DEFAULT_R2__ ,
+        __KEYNAV_DEFAULT_L3__ ,       __KEYNAV_DEFAULT_R3__ ,
+        __KEYNAV_DEFAULT_L_3THUMB__ , __KEYNAV_DEFAULT_R_3THUMB__),
+[KEYNAV_SHELL] = LAYOUT_WRAPPER_CRKBD(
+        __KEYNAV_SHELL_L1__ ,       __KEYNAV_SHELL_R1__ ,
+        __KEYNAV_SHELL_L2__ ,       __KEYNAV_SHELL_R2__ ,
+        __KEYNAV_SHELL_L3__ ,       __KEYNAV_SHELL_R3__ ,
+        __KEYNAV_SHELL_L_3THUMB__ , __KEYNAV_SHELL_R_3THUMB__),
+[KEYSEL_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
+        __KEYSEL_DEFAULT_L1__ ,       __KEYSEL_DEFAULT_R1__ ,
+        __KEYSEL_DEFAULT_L2__ ,       __KEYSEL_DEFAULT_R2__ ,
+        __KEYSEL_DEFAULT_L3__ ,       __KEYSEL_DEFAULT_R3__ ,
+        __KEYSEL_DEFAULT_L_3THUMB__ , __KEYSEL_DEFAULT_R_3THUMB__),
+[DESKNAV_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
+        __DESKNAV_DEFAULT_L1__ ,       __DESKNAV_DEFAULT_R1__ ,
+        __DESKNAV_DEFAULT_L2__ ,       __DESKNAV_DEFAULT_R2__ ,
+        __DESKNAV_DEFAULT_L3__ ,       __DESKNAV_DEFAULT_R3__ ,
+        __DESKNAV_DEFAULT_L_3THUMB__ , __DESKNAV_DEFAULT_R_3THUMB__),
+[APPNAV_BROWSER] = LAYOUT_WRAPPER_CRKBD(
+        __APPNAV_BROWSER_L1__ ,       __APPNAV_BROWSER_R1__ ,
+        __APPNAV_BROWSER_L2__ ,       __APPNAV_BROWSER_R2__ ,
+        __APPNAV_BROWSER_L3__ ,       __APPNAV_BROWSER_R3__ ,
+        __APPNAV_BROWSER_L_3THUMB__ , __APPNAV_BROWSER_R_3THUMB__),
+[APPNAV_SHELL] = LAYOUT_WRAPPER_CRKBD(
+        __APPNAV_SHELL_L1__ ,       __APPNAV_SHELL_R1__ ,
+        __APPNAV_SHELL_L2__ ,       __APPNAV_SHELL_R2__ ,
+        __APPNAV_SHELL_L3__ ,       __APPNAV_SHELL_R3__ ,
+        __APPNAV_SHELL_L_3THUMB__ , __APPNAV_SHELL_R_3THUMB__),
+[APPNAV_SCREEN] = LAYOUT_WRAPPER_CRKBD(
+        __APPNAV_SCREEN_L1__ ,       __APPNAV_SCREEN_R1__ ,
+        __APPNAV_SCREEN_L2__ ,       __APPNAV_SCREEN_R2__ ,
+        __APPNAV_SCREEN_L3__ ,       __APPNAV_SCREEN_R3__ ,
+        __APPNAV_SCREEN_L_3THUMB__ , __APPNAV_SCREEN_R_3THUMB__),        
+[APPNAV_VSCODE] = LAYOUT_WRAPPER_CRKBD(
+        __APPNAV_VSCODE_L1__ ,       __APPNAV_VSCODE_R1__ ,
+        __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
+        __APPNAV_VSCODE_L3__ ,       __APPNAV_VSCODE_R3__ ,
+        __APPNAV_VSCODE_L_3THUMB__ , __APPNAV_VSCODE_R_3THUMB__),
+[SYMBOLS] = LAYOUT_WRAPPER_CRKBD(
+        __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
+        __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
+        __SYMBOLS_L3__ ,       __SYMBOLS_R3__ ,
+        __SYMBOLS_L_3THUMB__ , __SYMBOLS_R_3THUMB__),
+[GAME] = LAYOUT_WRAPPER_CRKBD(
+        __GAME_L1__ ,       __GAME_R1__ ,
+        __GAME_L2__ ,       __GAME_R2__ ,
+        __GAME_L3__ ,       __GAME_R3__ ,
+        __GAME_L_3THUMB__ , __GAME_R_3THUMB__),
 
-  [KEYNAV] = LAYOUT_wrapper(
-    __KEYNAV_L1__, __KEYNAV_R1__,
-    __KEYNAV_L2__, __KEYNAV_R2__,
-    __KEYNAV_L3__, __KEYNAV_R3__,
-    __EMPTY_3__,   __EMPTY_3__
-  ),
-
-  [KEYSEL] = LAYOUT_wrapper(
-    __KEYSEL_L1__, __KEYSEL_R1__,
-    __KEYSEL_L2__, __KEYSEL_R2__,
-    __KEYSEL_L3__, __KEYSEL_R3__,
-    __EMPTY_3__,   __EMPTY_3__
-  ),
-
-  [SHELL_NAV] = LAYOUT_wrapper(
-    __SHELL_NAV_L1__, __SHELL_NAV_R1__,
-    __SHELL_NAV_L2__, __SHELL_NAV_R2__,
-    __SHELL_NAV_L3__, __SHELL_NAV_R3__,
-    __EMPTY_3__,      __EMPTY_3__
-  ),
-
-  [SHELL_SCREEN] = LAYOUT_wrapper(
-    __SHELL_SCREEN_L1__, __SHELL_SCREEN_R1__,
-    __SHELL_SCREEN_L2__, __SHELL_SCREEN_R2__,
-    __SHELL_SCREEN_L3__, __SHELL_SCREEN_R3__,
-    __EMPTY_3__,         __SHELL_SCREEN_R4_3__
-  ),
-
-  [VSCODE] = LAYOUT_wrapper(
-    __VSCODE_L1__, __VSCODE_R1__,
-    __VSCODE_L2__, __VSCODE_R2__,
-    __VSCODE_L3__, __VSCODE_R3__,
-    __EMPTY_3__,   __VSCODE_R4_3__
-  ),
-  
-  [COMBINED] = LAYOUT_wrapper(
-    __COMBINED_L1__, __COMBINED_R1__,
-    __COMBINED_L2__, __COMBINED_R2__,
-    __COMBINED_L3__, __COMBINED_R3__,
-    __EMPTY_3__,     __COMBINED_R4_3__
-  ),
-
-  [BROWSER_CONTROL] = LAYOUT_wrapper(
-    __BROWSER_CONTROL_L1__, __BROWSER_CONTROL_R1__,
-    __BROWSER_CONTROL_L2__, __BROWSER_CONTROL_R2__,
-    __BROWSER_CONTROL_L3__, __BROWSER_CONTROL_R3__,
-    __EMPTY_3__,            __BROWSER_CONTROL_R4_3__
-  ),
-
-  [SHORTCUTS] = LAYOUT_wrapper(
-    __SHORTCUTS_L1__,   __SHORTCUTS_R1__,
-    __SHORTCUTS_L2__,   __SHORTCUTS_R2__,
-    __SHORTCUTS_L3__,   __SHORTCUTS_R3__,
-    __SHORTCUTS_L4_3__, __SHORTCUTS_R4_3__
-  ),
-
-  [FKEYS] = LAYOUT_wrapper(
-    __FKEYS_L1__, __FKEYS_R1__,
-    __FKEYS_L2__, __FKEYS_R2__,
-    __FKEYS_L3__, __FKEYS_R3__,
-  __FKEYS_L4_3__, __FKEYS_R4_3__
-  ),  
-
-  [GAME] = LAYOUT_wrapper(
-    __GAME_L1__, __GAME_R1__,
-    __GAME_L2__, __GAME_R2__,
-    __GAME_L3__, __GAME_R3__,
-  __GAME_L4_3__, __GAME_R4_3__
-  ),  
-
-  /*
-  // empty layer
-  [15] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS,  KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
-                                      //`--------------------------'  `--------------------------'
-  ),
-  */
 
 
 };
@@ -131,17 +107,24 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 
 void display_current_layer_name(void){
-  DISPLAY_LAYER_NAME(SHORTCUTS, "SHORTCUTS");
-  DISPLAY_LAYER_NAME(FKEYS, "F-KEYS");
   DISPLAY_LAYER_NAME(GAME, "GAME");
-  DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
-  DISPLAY_LAYER_NAME(COMBINED, "SYMBOLS");
-  DISPLAY_LAYER_NAME(BROWSER_CONTROL, "BROWSER");
-  DISPLAY_LAYER_NAME(SHELL_SCREEN, "SHELL SCREEN");
-  DISPLAY_LAYER_NAME(SHELL_NAV, "SHELL NAV");
-  DISPLAY_LAYER_NAME(KEYSEL, "KEYSEL");
-  DISPLAY_LAYER_NAME(KEYNAV, "KEYNAV");
-  DISPLAY_LAYER_NAME(BASE, "BASE");
+  DISPLAY_LAYER_NAME(SYMBOLS, "SYMBOLS");
+  // keysel
+  DISPLAY_LAYER_NAME(KEYSEL_DEFAULT, "KEYSEL_DEFAULT");
+  // keynav
+  DISPLAY_LAYER_NAME(KEYNAV_DEFAULT, "KEYNAV_DEFAULT");
+  DISPLAY_LAYER_NAME(KEYNAV_SHELL, "KEYNAV_SHELL");
+  // desknav
+  DISPLAY_LAYER_NAME(DESKNAV_DEFAULT, "DESKNAV_DEFAULT");
+  // appnav
+  DISPLAY_LAYER_NAME(APPNAV_BROWSER, "APPNAV_BROWSER");
+  DISPLAY_LAYER_NAME(APPNAV_SHELL, "APPNAV_SHELL");
+  DISPLAY_LAYER_NAME(APPNAV_SCREEN, "APPNAV_SCREEN");
+  DISPLAY_LAYER_NAME(APPNAV_VSCODE, "APPNAV_VSCODE");
+  // base
+  DISPLAY_LAYER_NAME(BASE_BROWSER, "BASE_BROWSER");
+  DISPLAY_LAYER_NAME(BASE_VSCODE, "BASE_VSCODE");
+  DISPLAY_LAYER_NAME(BASE_SHELL, "BASE_SHELL");
 }
 
 void display_oneshot_mods(void) {
@@ -274,19 +257,26 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
 layer_state_t layer_state_set_user(layer_state_t state) {
 
     // base layer must be here
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE));
+    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_BROWSER)
+        || layer_state_cmp(state, BASE_SHELL) 
+        || layer_state_cmp(state, BASE_VSCODE));
 
-    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV));
-    rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL));    
+    // keynav - blue
+    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_DEFAULT) 
+        || layer_state_cmp(state, KEYNAV_SHELL));
 
-    
-    rgblight_set_layer_state(3, layer_state_cmp(state, SHELL_NAV));    
-    rgblight_set_layer_state(4, layer_state_cmp(state, SHELL_SCREEN));
-    
-    rgblight_set_layer_state(5, layer_state_cmp(state, SHORTCUTS) || layer_state_cmp(state, FKEYS));
-    
-    rgblight_set_layer_state(6, layer_state_cmp(state, VSCODE));
-    
+    // keysel - purple
+    rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL_DEFAULT));
+
+    // appnav - red
+    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER)
+        || layer_state_cmp(state, APPNAV_SHELL)
+        || layer_state_cmp(state, APPNAV_VSCODE));
+
+    rgblight_set_layer_state(4, layer_state_cmp(state, DESKNAV_DEFAULT));
+
+    rgblight_set_layer_state(5, layer_state_cmp(state, APPNAV_SCREEN));
+
     return state;
 }
 
