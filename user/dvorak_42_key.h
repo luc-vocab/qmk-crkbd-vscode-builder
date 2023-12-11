@@ -99,7 +99,11 @@ enum custom_keycodes {
   OS_WS_1,     // workspace/app 1 
   OS_WS_2,
   OS_WS_3,
-  OS_WS_4
+  OS_WS_4,
+
+  APPSW_F5,
+  APPSW_F7,
+
 
 };
 

@@ -48,6 +48,13 @@ case KEYCODE:\
     }\
     break;    
 
+#define APPSW_SHORTCUT(KEYCODE, FC_KEYCODE)\
+case KEYCODE:\
+    tap_code16(MEH(FC_KEYCODE));\
+    default_layer_set(BASE_BROWSER);\
+    layer_move(BASE_BROWSER);\
+    break;    
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if(record->event.pressed) {
     switch (keycode) {
@@ -78,6 +85,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         OS_SHORTCUT(OS_WS_RIGHT, C(G(KC_RIGHT)), G(KC_PGDN),       G(KC_RBRC) );
         OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,          A(KC_TAB) );
         //                           KEYCODE      WINDOW 10       LINUX             CHROME OS          DEFAULT LAYER
+
+        // app switching shortcuts which are supposed to go back to default layer
+        APPSW_SHORTCUT(APPSW_F5, KC_F5);
+        APPSW_SHORTCUT(APPSW_F7, KC_F7);
 
         case SHELL_LS:
             SEND_STRING("ls\n");
