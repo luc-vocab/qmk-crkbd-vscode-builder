@@ -53,22 +53,25 @@ case KEYCODE:\
     tap_code16(MEH(FC_KEYCODE));\
     default_layer_set(BASE_BROWSER);\
     layer_move(BASE_BROWSER);\
+    return false;\
     break;    
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if(record->event.pressed) {
-    switch (keycode) {
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_1,     MEH(KC_F8),     LALT(LCTL(KC_1)), RGUI(LSFT(KC_1)),  BASE_BROWSER );
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)),  BASE_VSCODE);
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)),  BASE_SHELL);
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_BROWSER );
-    }
-  }
-
 
   // shell macros
   if(record->event.pressed) {
     switch (keycode) {
+        case BASE_LAYOUT_RESET:
+            default_layer_set(BASE_BROWSER);
+            layer_move(BASE_BROWSER);
+            return false;
+            break;
+
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_1,     MEH(KC_F8),     LALT(LCTL(KC_1)), RGUI(LSFT(KC_1)),  BASE_BROWSER );
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)),  BASE_VSCODE);
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)),  BASE_SHELL);
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_BROWSER );
+
         // generic desktop shortcut keycodes
         case KC_OS_MODE_WIN10:
             current_os_shortcut_mode = OS_MODE_WIN10;
@@ -87,6 +90,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         //                           KEYCODE      WINDOW 10       LINUX             CHROME OS          DEFAULT LAYER
 
         // app switching shortcuts which are supposed to go back to default layer
+        APPSW_SHORTCUT(APPSW_F2, KC_F2);
+        APPSW_SHORTCUT(APPSW_F3, KC_F3);
+        APPSW_SHORTCUT(APPSW_F4, KC_F4);
         APPSW_SHORTCUT(APPSW_F5, KC_F5);
         APPSW_SHORTCUT(APPSW_F7, KC_F7);
 
