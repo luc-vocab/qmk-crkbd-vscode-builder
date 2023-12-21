@@ -10,12 +10,21 @@ case KEYCODE:\
     switch (current_os_shortcut_mode) {\
         case OS_MODE_WIN10:\
             tap_code16(WIN10_CODE);\
+            default_layer_set(BASE_BROWSER);\
+            layer_move(BASE_BROWSER);\
+            return false;\
             break;\
         case OS_MODE_LINUX:\
             tap_code16(LINUX_CODE);\
+            default_layer_set(BASE_BROWSER);\
+            layer_move(BASE_BROWSER);\
+            return false;\
             break;\
         case OS_MODE_CHROMEOS:\
             tap_code16(CHROMEOS_CODE);\
+            default_layer_set(BASE_BROWSER);\
+            layer_move(BASE_BROWSER);\
+            return false;\
             break;\
         default:\
             break;\
