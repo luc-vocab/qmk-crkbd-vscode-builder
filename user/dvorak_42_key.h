@@ -26,6 +26,7 @@ enum layer_names {
     APPNAV_SHELL,
     APPNAV_SCREEN,
     APPNAV_VSCODE,
+    MOUSE,
     // other
     SYMBOLS,        // combined numbers and symbols layer
     GAME           // game layer

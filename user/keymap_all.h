@@ -6,4 +6,5 @@
 #include "keymap_desknav.h"
 #include "keymap_appnav.h"
 #include "keymap_symbols.h"
+#include "keymap_mouse.h"
 #include "keymap_game.h"

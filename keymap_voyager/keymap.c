@@ -131,6 +131,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
         __SYMBOLS_L3__ ,       __SYMBOLS_R3__ ,
         __SYMBOLS_L_2THUMB__ , __SYMBOLS_R_2THUMB__),
+[MOUSE] = LAYOUT_WRAPPER_VOYAGER(
+        __MOUSE_L0__ ,       __MOUSE_R0__ ,
+        __MOUSE_L1__ ,       __MOUSE_R1__ ,
+        __MOUSE_L2__ ,       __MOUSE_R2__ ,
+        __MOUSE_L3__ ,       __MOUSE_R3__ ,
+        __MOUSE_L_2THUMB__ , __MOUSE_R_2THUMB__),        
 
 };
 
@@ -177,6 +183,9 @@ void rgb_matrix_indicators_user(void) {
     case SYMBOLS:
       rgb_matrix_set_color_all(RGB_OFF); // no lights
       break;    
+    case MOUSE:
+      rgb_matrix_set_color_all(RGB_OFF); // no lights
+      break;          
     case APPNAV_VSCODE:
       rgb_matrix_set_color_all(RGB_GREEN); 
       break;
