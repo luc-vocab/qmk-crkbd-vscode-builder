@@ -9,7 +9,7 @@
 #define __BASE_BROWSER_L2__  OSL(APPNAV_BROWSER),  KC_A,             KC_O,          KC_E,          KC_U,          KC_I
 #define __BASE_BROWSER_L3__  OSM(MOD_LSFT),        KC_SEMICOLON,     KC_Q,          KC_J,          KC_K,          KC_X
 
-#define __BASE_BROWSER_R0__  KC_TRNS,              OS_WS_1,          OS_WS_2,       OS_WS_3,       OS_WS_4,       KC_TRNS
+#define __BASE_BROWSER_R0__  OS_WS_LEFT,           OS_WS_1,          OS_WS_2,       OS_WS_3,       OS_WS_4,       OS_WS_RIGHT
 #define __BASE_BROWSER_R1__  KC_F,                 KC_G,             KC_C,          KC_R,          KC_L,          KC_TAB
 #define __BASE_BROWSER_R2__  KC_D,                 KC_H,             KC_T,          KC_N,          KC_S,          DEL_WORD
 #define __BASE_BROWSER_R3__  KC_B,                 KC_M,             KC_W,          KC_V,          KC_Z,          OSM(MOD_RSFT)
