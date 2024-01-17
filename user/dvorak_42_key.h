@@ -14,6 +14,7 @@ enum layer_names {
     BASE_BROWSER,
     BASE_VSCODE,
     BASE_SHELL,
+    BASE_MSTEAMS,
     // keynav layers
     KEYNAV_DEFAULT,
     KEYNAV_SHELL,
@@ -26,6 +27,7 @@ enum layer_names {
     APPNAV_SHELL,
     APPNAV_SCREEN,
     APPNAV_VSCODE,
+    APPNAV_MSTEAMS,
     MOUSE,
     // other
     SYMBOLS,        // combined numbers and symbols layer
@@ -101,6 +103,7 @@ enum custom_keycodes {
   OS_WS_2,
   OS_WS_3,
   OS_WS_4,
+  OS_WS_5,
 
   BASE_LAYOUT_RESET,
 
@@ -136,6 +139,11 @@ enum custom_keycodes {
 #define BR_TAB_MOVE_LEFT RCTL(LSFT(KC_PGUP))
 #define BR_TAB_MOVE_RIGHT RCTL(LSFT(KC_PGDN))
 
+// MS teams shortcuts
+// =================
+
+#define TM_TAB_UP LALT(KC_UP)
+#define TM_TAB_DOWN LALT(KC_DOWN)
 
 // shell shortcuts
 // ===============

@@ -80,6 +80,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)),  BASE_VSCODE);
         OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)),  BASE_SHELL);
         OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_BROWSER );
+        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_5,     MEH(KC_F13),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_MSTEAMS );
 
         // generic desktop shortcut keycodes
         case KC_OS_MODE_WIN10:

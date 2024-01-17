@@ -34,6 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __BASE_VSCODE_L2__ ,       __BASE_VSCODE_R2__ ,
         __BASE_VSCODE_L3__ ,       __BASE_VSCODE_R3__ ,
         __BASE_VSCODE_L_3THUMB__ , __BASE_VSCODE_R_3THUMB__),
+[BASE_MSTEAMS] = LAYOUT_WRAPPER_CRKBD(
+        __BASE_MSTEAMS_L1__ ,       __BASE_MSTEAMS_R1__ ,
+        __BASE_MSTEAMS_L2__ ,       __BASE_MSTEAMS_R2__ ,
+        __BASE_MSTEAMS_L3__ ,       __BASE_MSTEAMS_R3__ ,
+        __BASE_MSTEAMS_L_3THUMB__ , __BASE_MSTEAMS_R_3THUMB__),        
 [KEYNAV_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
         __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
         __KEYNAV_DEFAULT_L2__ ,       __KEYNAV_DEFAULT_R2__ ,
@@ -74,6 +79,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
         __APPNAV_VSCODE_L3__ ,       __APPNAV_VSCODE_R3__ ,
         __APPNAV_VSCODE_L_3THUMB__ , __APPNAV_VSCODE_R_3THUMB__),
+[APPNAV_MSTEAMS] = LAYOUT_WRAPPER_CRKBD(
+        __APPNAV_MSTEAMS_L1__ ,       __APPNAV_MSTEAMS_R1__ ,
+        __APPNAV_MSTEAMS_L2__ ,       __APPNAV_MSTEAMS_R2__ ,
+        __APPNAV_MSTEAMS_L3__ ,       __APPNAV_MSTEAMS_R3__ ,
+        __APPNAV_MSTEAMS_L_3THUMB__ , __APPNAV_MSTEAMS_R_3THUMB__),        
 [SYMBOLS] = LAYOUT_WRAPPER_CRKBD(
         __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
         __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
@@ -121,10 +131,12 @@ void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(APPNAV_SHELL, "APPNAV_SHELL");
   DISPLAY_LAYER_NAME(APPNAV_SCREEN, "APPNAV_SCREEN");
   DISPLAY_LAYER_NAME(APPNAV_VSCODE, "APPNAV_VSCODE");
+  DISPLAY_LAYER_NAME(APPNAV_MSTEAMS, "APPNAV_MSTEAMS");
   // base
   DISPLAY_LAYER_NAME(BASE_BROWSER, "BASE_BROWSER");
   DISPLAY_LAYER_NAME(BASE_VSCODE, "BASE_VSCODE");
   DISPLAY_LAYER_NAME(BASE_SHELL, "BASE_SHELL");
+  DISPLAY_LAYER_NAME(BASE_MSTEAMS, "BASE_MSTEAMS");
 }
 
 void display_oneshot_mods(void) {
@@ -259,7 +271,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // base layer must be here
     rgblight_set_layer_state(0, layer_state_cmp(state, BASE_BROWSER)
         || layer_state_cmp(state, BASE_SHELL) 
-        || layer_state_cmp(state, BASE_VSCODE));
+        || layer_state_cmp(state, BASE_VSCODE)
+        || layer_state_cmp(state, BASE_MSTEAMS)
+        );
 
     // keynav - blue
     rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_DEFAULT) 
@@ -271,7 +285,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // appnav - red
     rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER)
         || layer_state_cmp(state, APPNAV_SHELL)
-        || layer_state_cmp(state, APPNAV_VSCODE));
+        || layer_state_cmp(state, APPNAV_VSCODE)
+        || layer_state_cmp(state, APPNAV_MSTEAMS)
+        );
 
     rgblight_set_layer_state(4, layer_state_cmp(state, DESKNAV_DEFAULT));
 
