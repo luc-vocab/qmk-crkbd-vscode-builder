@@ -144,6 +144,7 @@ enum custom_keycodes {
 
 #define TM_TAB_UP LALT(KC_UP)
 #define TM_TAB_DOWN LALT(KC_DOWN)
+#define TM_FOCUS_CHAT LALT(LSFT(KC_C))
 
 // shell shortcuts
 // ===============

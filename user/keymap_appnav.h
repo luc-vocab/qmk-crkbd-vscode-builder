@@ -77,15 +77,15 @@
 // APPNAV_MSTEAMS
 // ==============
 
-#define __APPNAV_MSTEAMS_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_MSTEAMS_L1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_MSTEAMS_L2__  TO(BASE_MSTEAMS),   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_MSTEAMS_L3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_MSTEAMS_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __APPNAV_MSTEAMS_L1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __APPNAV_MSTEAMS_L2__  TO(BASE_MSTEAMS),   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __APPNAV_MSTEAMS_L3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
 
-#define __APPNAV_MSTEAMS_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_MSTEAMS_R1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_MSTEAMS_R2__  KC_TRNS,            TM_TAB_UP,        TM_TAB_DOWN,       KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_MSTEAMS_R3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_MSTEAMS_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __APPNAV_MSTEAMS_R1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __APPNAV_MSTEAMS_R2__  KC_TRNS,            TM_TAB_UP,        TM_TAB_DOWN,       KC_TRNS,    TM_FOCUS_CHAT,   KC_TRNS
+#define __APPNAV_MSTEAMS_R3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
 
 #define __APPNAV_MSTEAMS_L_2THUMB__  KC_TRNS,      KC_TRNS
 #define __APPNAV_MSTEAMS_R_2THUMB__  KC_TRNS,      KC_TRNS
