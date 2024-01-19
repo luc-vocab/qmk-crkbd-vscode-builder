@@ -269,29 +269,42 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
 layer_state_t layer_state_set_user(layer_state_t state) {
 
     // base layer must be here
-    rgblight_set_layer_state(0, layer_state_cmp(state, BASE_BROWSER)
+    rgblight_set_layer_state(0, 
+           layer_state_cmp(state, BASE_BROWSER)
         || layer_state_cmp(state, BASE_SHELL) 
         || layer_state_cmp(state, BASE_VSCODE)
         || layer_state_cmp(state, BASE_MSTEAMS)
         );
 
     // keynav - blue
-    rgblight_set_layer_state(1, layer_state_cmp(state, KEYNAV_DEFAULT) 
+    rgblight_set_layer_state(1, 
+           layer_state_cmp(state, KEYNAV_DEFAULT) 
         || layer_state_cmp(state, KEYNAV_SHELL));
 
     // keysel - purple
-    rgblight_set_layer_state(2, layer_state_cmp(state, KEYSEL_DEFAULT));
+    rgblight_set_layer_state(2, 
+           layer_state_cmp(state, KEYSEL_DEFAULT));
 
-    // appnav - red
-    rgblight_set_layer_state(3, layer_state_cmp(state, APPNAV_BROWSER)
+    // base shell - red
+    rgblight_set_layer_state(3,
+           layer_state_cmp(state, BASE_SHELL)
+        );
+
+    // desknav - orange
+    rgblight_set_layer_state(4, 
+          layer_state_cmp(state, DESKNAV_DEFAULT));
+
+    // appnav screen - yellow
+    rgblight_set_layer_state(5, 
+          layer_state_cmp(state, APPNAV_SCREEN));
+
+    // appnav - green
+    rgblight_set_layer_state(6, 
+           layer_state_cmp(state, APPNAV_BROWSER)
         || layer_state_cmp(state, APPNAV_SHELL)
         || layer_state_cmp(state, APPNAV_VSCODE)
         || layer_state_cmp(state, APPNAV_MSTEAMS)
         );
-
-    rgblight_set_layer_state(4, layer_state_cmp(state, DESKNAV_DEFAULT));
-
-    rgblight_set_layer_state(5, layer_state_cmp(state, APPNAV_SCREEN));
 
     return state;
 }
