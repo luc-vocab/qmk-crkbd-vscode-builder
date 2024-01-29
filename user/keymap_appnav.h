@@ -21,15 +21,15 @@
 // APPNAV_SHELL
 // ============
 
-#define __APPNAV_SHELL_L0__  KC_TRNS,                 KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
-#define __APPNAV_SHELL_L1__  KC_TRNS,                 KC_TRNS,            SHELL_PGREP,       SHELL_PLESS,       SHELL_LESS,       SH_EXIT
-#define __APPNAV_SHELL_L2__  KC_TRNS,                 OSL(APPNAV_SCREEN), SHELL_CDPRE,       SHELL_LSLTR,       SHELL_LS,         SHELL_LSLA
-#define __APPNAV_SHELL_L3__  TO(BASE),                 SHELL_SCREEN_LIST,  SHELL_SCREENRD,    SHELL_SCREEN_NEW,  SHELL_TAILF,      SH_CLOSE
+#define __APPNAV_SHELL_L0__  KC_TRNS,                  KC_TRNS,            KC_TRNS,           KC_TRNS,                 KC_TRNS,          KC_TRNS
+#define __APPNAV_SHELL_L1__  KC_TRNS,                  KC_TRNS,            SHELL_PGREP,       SHELL_PLESS,             SHELL_LESS,       SH_EXIT
+#define __APPNAV_SHELL_L2__  KC_TRNS,                  OSL(APPNAV_SCREEN), SHELL_CDPRE,       SHELL_LSLTR,             SHELL_LS,         SHELL_LSLA
+#define __APPNAV_SHELL_L3__  TO(BASE),                 SHELL_SCREEN_LIST,  SHELL_SCREENRD,    SHELL_SCREEN_NEW,        SHELL_TAILF,      SH_CLOSE
 
-#define __APPNAV_SHELL_R0__  KC_TRNS,                 KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
-#define __APPNAV_SHELL_R1__  KC_TRNS,                 SCREEN_MOVE_LEFT,   SCREEN_MOVE_RIGHT, KC_TRNS,           SH_CLEARSCR,      SH_DEL_PATH
-#define __APPNAV_SHELL_R2__  SH_WORD_LEFT,            SCREEN_TAB_LEFT,    SCREEN_TAB_RIGHT,  SCREEN_NUMBER,     SH_WORD_RIGHT,    SH_DEL_WORD
-#define __APPNAV_SHELL_R3__  SH_DEL_TO_START,         SH_RECALL,          SH_SEARCH,         SH_PASTE,          SH_DEL_TO_END,    SH_STOP
+#define __APPNAV_SHELL_R0__  KC_TRNS,                  KC_TRNS,            KC_TRNS,           KC_TRNS,                 KC_TRNS,          KC_TRNS
+#define __APPNAV_SHELL_R1__  KC_TRNS,                  SCREEN_MOVE_LEFT,   SCREEN_MOVE_RIGHT, SCREEN_RENAME,           SH_CLEARSCR,      SH_DEL_PATH
+#define __APPNAV_SHELL_R2__  SH_WORD_LEFT,             SCREEN_TAB_LEFT,    SCREEN_TAB_RIGHT,  SCREEN_NUMBER,           SH_WORD_RIGHT,    SH_DEL_WORD
+#define __APPNAV_SHELL_R3__  SH_DEL_TO_START,          SH_RECALL,          SH_SEARCH,         SH_PASTE,                SH_DEL_TO_END,    SH_STOP
 
 #define __APPNAV_SHELL_L_2THUMB__  KC_TRNS,     KC_TRNS
 #define __APPNAV_SHELL_R_2THUMB__  SCREEN_KILL, SCREEN_NEW_TAB
