@@ -59,24 +59,12 @@ enum tap_dance_codes {
 #define LAYOUT_WRAPPER_VOYAGER(...) LAYOUT_voyager(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[BASE_BROWSER] = LAYOUT_WRAPPER_VOYAGER(
-        __BASE_BROWSER_L0__ ,       __BASE_BROWSER_R0__ ,
-        __BASE_BROWSER_L1__ ,       __BASE_BROWSER_R1__ ,
-        __BASE_BROWSER_L2__ ,       __BASE_BROWSER_R2__ ,
-        __BASE_BROWSER_L3__ ,       __BASE_BROWSER_R3__ ,
-        __BASE_BROWSER_L_2THUMB__ , __BASE_BROWSER_R_2THUMB__),
-[BASE_SHELL] = LAYOUT_WRAPPER_VOYAGER(
-        __BASE_SHELL_L0__ ,       __BASE_SHELL_R0__ ,
-        __BASE_SHELL_L1__ ,       __BASE_SHELL_R1__ ,
-        __BASE_SHELL_L2__ ,       __BASE_SHELL_R2__ ,
-        __BASE_SHELL_L3__ ,       __BASE_SHELL_R3__ ,
-        __BASE_SHELL_L_2THUMB__ , __BASE_SHELL_R_2THUMB__),
-[BASE_VSCODE] = LAYOUT_WRAPPER_VOYAGER(
-        __BASE_VSCODE_L0__ ,       __BASE_VSCODE_R0__ ,
-        __BASE_VSCODE_L1__ ,       __BASE_VSCODE_R1__ ,
-        __BASE_VSCODE_L2__ ,       __BASE_VSCODE_R2__ ,
-        __BASE_VSCODE_L3__ ,       __BASE_VSCODE_R3__ ,
-        __BASE_VSCODE_L_2THUMB__ , __BASE_VSCODE_R_2THUMB__),
+[BASE] = LAYOUT_WRAPPER_VOYAGER(
+        __BASE_L0__ ,       __BASE_R0__ ,
+        __BASE_L1__ ,       __BASE_R1__ ,
+        __BASE_L2__ ,       __BASE_R2__ ,
+        __BASE_L3__ ,       __BASE_R3__ ,
+        __BASE_L_2THUMB__ , __BASE_R_2THUMB__),
 [KEYNAV_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
         __KEYNAV_DEFAULT_L0__ ,       __KEYNAV_DEFAULT_R0__ ,
         __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
@@ -153,17 +141,9 @@ void rgb_matrix_indicators_user(void) {
 
   if (keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
-    case BASE_BROWSER:
+    case BASE:
       rgb_matrix_set_color_all(RGB_OFF); // no lights
       break;    
-    case BASE_SHELL:
-      rgb_matrix_set_color_all(RGB_OFF); // no lights
-      LED_3 = true;
-      break;    
-    case BASE_VSCODE:
-      rgb_matrix_set_color_all(RGB_OFF); // no lights
-      LED_4 = true;
-      break;
     case KEYNAV_DEFAULT:
     case KEYNAV_SHELL:
       rgb_matrix_set_color_all(RGB_BLUE); // blue
