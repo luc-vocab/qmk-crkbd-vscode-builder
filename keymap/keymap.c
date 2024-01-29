@@ -268,16 +268,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // appnav - green
     rgblight_set_layer_state(3, 
       layer_state_cmp(state, APPNAV_SHELL)
+      || layer_state_cmp(state, APPNAV_SCREEN)
     );
 
 
     // desknav - orange
     rgblight_set_layer_state(4, 
           layer_state_cmp(state, DESKNAV_DEFAULT));
-
-    // appnav screen - yellow
-    rgblight_set_layer_state(5, 
-          layer_state_cmp(state, APPNAV_SCREEN));
 
     // appnav - green
     rgblight_set_layer_state(6, 
@@ -292,7 +289,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void caps_word_set_user(bool active) {
   g_capsword = active;
   // will enable/disable rgb layer 7 based on whether caps word is active
-  rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui || g_capsword);
+  // pink - modifier active
+  rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui);
+  // yellow - capsword
+  rgblight_set_layer_state(5, g_capsword);
 }
 
 void render_bootmagic_status(bool status) {
