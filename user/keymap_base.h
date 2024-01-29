@@ -12,7 +12,7 @@
 #define __BASE_R0__  OS_WS_LEFT,           OS_WS_1,          OS_WS_2,       OS_WS_3,       OS_WS_4,       OS_WS_RIGHT
 #define __BASE_R1__  KC_F,                 KC_G,             KC_C,          KC_R,          KC_L,          KC_TAB
 #define __BASE_R2__  KC_D,                 KC_H,             KC_T,          KC_N,          KC_S,          DEL_WORD
-#define __BASE_R3__  KC_B,                 KC_M,             KC_W,          KC_V,          KC_Z,          OSM(MOD_RSFT)
+#define __BASE_R3__  KC_B,                 KC_M,             KC_W,          KC_V,          KC_Z,          OSM(MOD_LSFT)
 
 #define __BASE_L_2THUMB__  MO(SYMBOLS),    MO(KEYNAV_DEFAULT)
 #define __BASE_R_2THUMB__  KC_ENTER,       KC_SPACE
