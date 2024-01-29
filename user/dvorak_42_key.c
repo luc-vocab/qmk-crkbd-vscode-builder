@@ -10,20 +10,14 @@ case KEYCODE:\
     switch (current_os_shortcut_mode) {\
         case OS_MODE_WIN10:\
             tap_code16(WIN10_CODE);\
-            default_layer_set(BASE_BROWSER);\
-            layer_move(BASE_BROWSER);\
             return false;\
             break;\
         case OS_MODE_LINUX:\
             tap_code16(LINUX_CODE);\
-            default_layer_set(BASE_BROWSER);\
-            layer_move(BASE_BROWSER);\
             return false;\
             break;\
         case OS_MODE_CHROMEOS:\
             tap_code16(CHROMEOS_CODE);\
-            default_layer_set(BASE_BROWSER);\
-            layer_move(BASE_BROWSER);\
             return false;\
             break;\
         default:\
@@ -31,37 +25,10 @@ case KEYCODE:\
     }\
     break;
 
-#define OS_SHORTCUT_SW_DEFAULT_LAYER(KEYCODE, WIN10_CODE, LINUX_CODE, CHROMEOS_CODE, DEFAULT_LAYER) \
-case KEYCODE:\
-    switch (current_os_shortcut_mode) {\
-        case OS_MODE_WIN10:\
-            tap_code16(WIN10_CODE);\
-            default_layer_set(DEFAULT_LAYER);\
-            layer_move(DEFAULT_LAYER);\
-            return false;\
-            break;\
-        case OS_MODE_LINUX:\
-            tap_code16(LINUX_CODE);\
-            default_layer_set(DEFAULT_LAYER);\
-            layer_move(DEFAULT_LAYER);\
-            return false;\
-            break;\
-        case OS_MODE_CHROMEOS:\
-            tap_code16(CHROMEOS_CODE);\
-            default_layer_set(DEFAULT_LAYER);\
-            layer_move(DEFAULT_LAYER);\
-            return false;\
-            break;\
-        default:\
-            break;\
-    }\
-    break;    
 
 #define APPSW_SHORTCUT(KEYCODE, FC_KEYCODE)\
 case KEYCODE:\
     tap_code16(MEH(FC_KEYCODE));\
-    default_layer_set(BASE_BROWSER);\
-    layer_move(BASE_BROWSER);\
     return false;\
     break;    
 
@@ -70,17 +37,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // shell macros
   if(record->event.pressed) {
     switch (keycode) {
-        case BASE_LAYOUT_RESET:
-            default_layer_set(BASE_BROWSER);
-            layer_move(BASE_BROWSER);
-            return false;
-            break;
 
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_1,     MEH(KC_F8),     LALT(LCTL(KC_1)), RGUI(LSFT(KC_1)),  BASE_BROWSER );
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)),  BASE_VSCODE);
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)),  BASE_SHELL);
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_BROWSER );
-        OS_SHORTCUT_SW_DEFAULT_LAYER(OS_WS_5,     MEH(KC_F13),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)),  BASE_MSTEAMS );
+        OS_SHORTCUT(OS_WS_1,     MEH(KC_F8),     LALT(LCTL(KC_1)), RGUI(LSFT(KC_1)));
+        OS_SHORTCUT(OS_WS_2,     MEH(KC_F9),     LALT(LCTL(KC_2)), RGUI(LSFT(KC_2)));
+        OS_SHORTCUT(OS_WS_3,     MEH(KC_F10),    LALT(LCTL(KC_3)), RGUI(LSFT(KC_3)));
+        OS_SHORTCUT(OS_WS_4,     MEH(KC_F12),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)));
+        OS_SHORTCUT(OS_WS_5,     MEH(KC_F13),    LALT(LCTL(KC_4)), RGUI(LSFT(KC_4)));
 
         // generic desktop shortcut keycodes
         case KC_OS_MODE_WIN10:

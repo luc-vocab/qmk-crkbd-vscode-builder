@@ -11,10 +11,7 @@
 
 enum layer_names {
     // base layers, will jump to the appropriate app layers
-    BASE_BROWSER,
-    BASE_VSCODE,
-    BASE_SHELL,
-    BASE_MSTEAMS,
+    BASE,
     // keynav layers
     KEYNAV_DEFAULT,
     KEYNAV_SHELL,
@@ -104,8 +101,6 @@ enum custom_keycodes {
   OS_WS_3,
   OS_WS_4,
   OS_WS_5,
-
-  BASE_LAYOUT_RESET,
 
   APPSW_F2,
   APPSW_F3,

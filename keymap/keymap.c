@@ -19,26 +19,11 @@ static bool g_oneshot_gui = false;
 static bool g_capsword = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[BASE_BROWSER] = LAYOUT_WRAPPER_CRKBD(
-        __BASE_BROWSER_L1__ ,       __BASE_BROWSER_R1__ ,
-        __BASE_BROWSER_L2__ ,       __BASE_BROWSER_R2__ ,
-        __BASE_BROWSER_L3__ ,       __BASE_BROWSER_R3__ ,
-        __BASE_BROWSER_L_3THUMB__ , __BASE_BROWSER_R_3THUMB__),
-[BASE_SHELL] = LAYOUT_WRAPPER_CRKBD(
-        __BASE_SHELL_L1__ ,       __BASE_SHELL_R1__ ,
-        __BASE_SHELL_L2__ ,       __BASE_SHELL_R2__ ,
-        __BASE_SHELL_L3__ ,       __BASE_SHELL_R3__ ,
-        __BASE_SHELL_L_3THUMB__ , __BASE_SHELL_R_3THUMB__),
-[BASE_VSCODE] = LAYOUT_WRAPPER_CRKBD(
-        __BASE_VSCODE_L1__ ,       __BASE_VSCODE_R1__ ,
-        __BASE_VSCODE_L2__ ,       __BASE_VSCODE_R2__ ,
-        __BASE_VSCODE_L3__ ,       __BASE_VSCODE_R3__ ,
-        __BASE_VSCODE_L_3THUMB__ , __BASE_VSCODE_R_3THUMB__),
-[BASE_MSTEAMS] = LAYOUT_WRAPPER_CRKBD(
-        __BASE_MSTEAMS_L1__ ,       __BASE_MSTEAMS_R1__ ,
-        __BASE_MSTEAMS_L2__ ,       __BASE_MSTEAMS_R2__ ,
-        __BASE_MSTEAMS_L3__ ,       __BASE_MSTEAMS_R3__ ,
-        __BASE_MSTEAMS_L_3THUMB__ , __BASE_MSTEAMS_R_3THUMB__),        
+[BASE] = LAYOUT_WRAPPER_CRKBD(
+        __BASE_L1__ ,       __BASE_R1__ ,
+        __BASE_L2__ ,       __BASE_R2__ ,
+        __BASE_L3__ ,       __BASE_R3__ ,
+        __BASE_L_3THUMB__ , __BASE_R_3THUMB__),
 [KEYNAV_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
         __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
         __KEYNAV_DEFAULT_L2__ ,       __KEYNAV_DEFAULT_R2__ ,
@@ -133,10 +118,7 @@ void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(APPNAV_VSCODE, "APPNAV_VSCODE");
   DISPLAY_LAYER_NAME(APPNAV_MSTEAMS, "APPNAV_MSTEAMS");
   // base
-  DISPLAY_LAYER_NAME(BASE_BROWSER, "BASE_BROWSER");
-  DISPLAY_LAYER_NAME(BASE_VSCODE, "BASE_VSCODE");
-  DISPLAY_LAYER_NAME(BASE_SHELL, "BASE_SHELL");
-  DISPLAY_LAYER_NAME(BASE_MSTEAMS, "BASE_MSTEAMS");
+  DISPLAY_LAYER_NAME(BASE, "BASE");
 }
 
 void display_oneshot_mods(void) {
@@ -270,10 +252,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     // base layer must be here
     rgblight_set_layer_state(0, 
-           layer_state_cmp(state, BASE_BROWSER)
-        || layer_state_cmp(state, BASE_SHELL) 
-        || layer_state_cmp(state, BASE_VSCODE)
-        || layer_state_cmp(state, BASE_MSTEAMS)
+           layer_state_cmp(state, BASE)
         );
 
     // keynav - blue
@@ -286,9 +265,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
            layer_state_cmp(state, KEYSEL_DEFAULT));
 
     // base shell - red
-    rgblight_set_layer_state(3,
-           layer_state_cmp(state, BASE_SHELL)
-        );
 
     // desknav - orange
     rgblight_set_layer_state(4, 

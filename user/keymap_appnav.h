@@ -5,7 +5,7 @@
 
 #define __APPNAV_BROWSER_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
 #define __APPNAV_BROWSER_L1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
-#define __APPNAV_BROWSER_L2__  TO(BASE_BROWSER),   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
+#define __APPNAV_BROWSER_L2__  KC_TRNS,   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
 #define __APPNAV_BROWSER_L3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
 
 #define __APPNAV_BROWSER_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,   KC_TRNS
@@ -23,7 +23,7 @@
 
 #define __APPNAV_SHELL_L0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
 #define __APPNAV_SHELL_L1__  KC_TRNS,            KC_TRNS,            SHELL_PGREP,       SHELL_PLESS,       SHELL_LESS,       SH_EXIT
-#define __APPNAV_SHELL_L2__  TO(BASE_SHELL),     OSL(APPNAV_SCREEN), SHELL_CDPRE,       SHELL_LSLTR,       SHELL_LS,         SHELL_LSLA
+#define __APPNAV_SHELL_L2__  KC_TRNS,     OSL(APPNAV_SCREEN), SHELL_CDPRE,       SHELL_LSLTR,       SHELL_LS,         SHELL_LSLA
 #define __APPNAV_SHELL_L3__  KC_TRNS,            SHELL_SCREEN_LIST,  SHELL_SCREENRD,    SHELL_SCREEN_NEW,  SHELL_TAILF,      SH_CLOSE
 
 #define __APPNAV_SHELL_R0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_TRNS
@@ -41,7 +41,7 @@
 // =============
 #define __APPNAV_SCREEN_L0__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
 #define __APPNAV_SCREEN_L1__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
-#define __APPNAV_SCREEN_L2__  TO(BASE_SHELL),   KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
+#define __APPNAV_SCREEN_L2__  KC_TRNS,   KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
 #define __APPNAV_SCREEN_L3__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
 
 #define __APPNAV_SCREEN_R0__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
@@ -60,7 +60,7 @@
 
 #define __APPNAV_VSCODE_L0__  KC_TRNS,          KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     KC_TRNS
 #define __APPNAV_VSCODE_L1__  KC_TRNS,          VS_GO_TO_TOP,    VS_FIND_FILES, VS_CMT_BLOCK,      VS_CMT_LINE, VS_RECENT
-#define __APPNAV_VSCODE_L2__  TO(BASE_VSCODE),  KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     VS_SEL_BRACKET
+#define __APPNAV_VSCODE_L2__  KC_TRNS,  KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     VS_SEL_BRACKET
 #define __APPNAV_VSCODE_L3__  KC_TRNS,          VS_GO_TO_BOTTOM, KC_TRNS,       KC_TRNS,           KC_TRNS,     KC_TRNS
 
 #define __APPNAV_VSCODE_R0__  KC_TRNS,          KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     KC_TRNS
@@ -79,7 +79,7 @@
 
 #define __APPNAV_MSTEAMS_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
 #define __APPNAV_MSTEAMS_L1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __APPNAV_MSTEAMS_L2__  TO(BASE_MSTEAMS),   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
+#define __APPNAV_MSTEAMS_L2__  KC_TRNS,   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
 #define __APPNAV_MSTEAMS_L3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
 
 #define __APPNAV_MSTEAMS_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
