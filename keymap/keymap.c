@@ -265,6 +265,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
            layer_state_cmp(state, KEYSEL_DEFAULT));
 
     // base shell - red
+    // appnav - green
+    rgblight_set_layer_state(3, 
+      layer_state_cmp(state, APPNAV_SHELL)
+    );
+
 
     // desknav - orange
     rgblight_set_layer_state(4, 
@@ -277,7 +282,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // appnav - green
     rgblight_set_layer_state(6, 
            layer_state_cmp(state, APPNAV_BROWSER)
-        || layer_state_cmp(state, APPNAV_SHELL)
         || layer_state_cmp(state, APPNAV_VSCODE)
         || layer_state_cmp(state, APPNAV_MSTEAMS)
         );
