@@ -60,6 +60,9 @@ enum custom_keycodes {
   SHELL_SCREEN_NEW,
   SHELL_SCREEN_LIST,
 
+  SHELL_GIT_STATUS,
+  SHELL_GIT_DIFF,
+
   // linux screen macros
   SCREEN_TAB_LEFT,
   SCREEN_TAB_RIGHT,
