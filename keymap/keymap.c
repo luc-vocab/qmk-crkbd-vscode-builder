@@ -39,11 +39,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __KEYSEL_DEFAULT_L2__ ,       __KEYSEL_DEFAULT_R2__ ,
         __KEYSEL_DEFAULT_L3__ ,       __KEYSEL_DEFAULT_R3__ ,
         __KEYSEL_DEFAULT_L_3THUMB__ , __KEYSEL_DEFAULT_R_3THUMB__),
-[DESKNAV_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
-        __DESKNAV_DEFAULT_L1__ ,       __DESKNAV_DEFAULT_R1__ ,
-        __DESKNAV_DEFAULT_L2__ ,       __DESKNAV_DEFAULT_R2__ ,
-        __DESKNAV_DEFAULT_L3__ ,       __DESKNAV_DEFAULT_R3__ ,
-        __DESKNAV_DEFAULT_L_3THUMB__ , __DESKNAV_DEFAULT_R_3THUMB__),
+[DESKNAV] = LAYOUT_WRAPPER_CRKBD(
+        __DESKNAV_L1__ ,       __DESKNAV_R1__ ,
+        __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
+        __DESKNAV_L3__ ,       __DESKNAV_R3__ ,
+        __DESKNAV_L_3THUMB__ , __DESKNAV_R_3THUMB__),
 [APPNAV_BROWSER] = LAYOUT_WRAPPER_CRKBD(
         __APPNAV_BROWSER_L1__ ,       __APPNAV_BROWSER_R1__ ,
         __APPNAV_BROWSER_L2__ ,       __APPNAV_BROWSER_R2__ ,
@@ -110,7 +110,7 @@ void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(KEYNAV_DEFAULT, "KEYNAV_DEFAULT");
   DISPLAY_LAYER_NAME(KEYNAV_SHELL, "KEYNAV_SHELL");
   // desknav
-  DISPLAY_LAYER_NAME(DESKNAV_DEFAULT, "DESKNAV_DEFAULT");
+  DISPLAY_LAYER_NAME(DESKNAV, "DESKNAV");
   // appnav
   DISPLAY_LAYER_NAME(APPNAV_BROWSER, "APPNAV_BROWSER");
   DISPLAY_LAYER_NAME(APPNAV_SHELL, "APPNAV_SHELL");
@@ -274,7 +274,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     // desknav - orange
     rgblight_set_layer_state(4, 
-          layer_state_cmp(state, DESKNAV_DEFAULT));
+          layer_state_cmp(state, DESKNAV));
 
     // appnav - green
     rgblight_set_layer_state(6, 

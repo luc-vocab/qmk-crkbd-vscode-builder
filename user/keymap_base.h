@@ -17,5 +17,5 @@
 #define __BASE_L_2THUMB__  MO(SYMBOLS),    MO(KEYNAV_DEFAULT)
 #define __BASE_R_2THUMB__  KC_ENTER,       KC_SPACE
 #define __BASE_L_3THUMB__  OSM(MOD_LCTL),  MO(SYMBOLS),         MO(KEYNAV_DEFAULT)
-#define __BASE_R_3THUMB__  KC_ENTER,       KC_SPACE,            OSL(DESKNAV_DEFAULT)
+#define __BASE_R_3THUMB__  KC_ENTER,       KC_SPACE,            OSL(DESKNAV)
 

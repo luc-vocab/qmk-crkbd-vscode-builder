@@ -83,12 +83,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __KEYSEL_DEFAULT_L2__ ,       __KEYSEL_DEFAULT_R2__ ,
         __KEYSEL_DEFAULT_L3__ ,       __KEYSEL_DEFAULT_R3__ ,
         __KEYSEL_DEFAULT_L_2THUMB__ , __KEYSEL_DEFAULT_R_2THUMB__),
-[DESKNAV_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
-        __DESKNAV_DEFAULT_L0__ ,       __DESKNAV_DEFAULT_R0__ ,
-        __DESKNAV_DEFAULT_L1__ ,       __DESKNAV_DEFAULT_R1__ ,
-        __DESKNAV_DEFAULT_L2__ ,       __DESKNAV_DEFAULT_R2__ ,
-        __DESKNAV_DEFAULT_L3__ ,       __DESKNAV_DEFAULT_R3__ ,
-        __DESKNAV_DEFAULT_L_2THUMB__ , __DESKNAV_DEFAULT_R_2THUMB__),
+[DESKNAV] = LAYOUT_WRAPPER_VOYAGER(
+        __DESKNAV_L0__ ,       __DESKNAV_R0__ ,
+        __DESKNAV_L1__ ,       __DESKNAV_R1__ ,
+        __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
+        __DESKNAV_L3__ ,       __DESKNAV_R3__ ,
+        __DESKNAV_L_2THUMB__ , __DESKNAV_R_2THUMB__),
 [APPNAV_BROWSER] = LAYOUT_WRAPPER_VOYAGER(
         __APPNAV_BROWSER_L0__ ,       __APPNAV_BROWSER_R0__ ,
         __APPNAV_BROWSER_L1__ ,       __APPNAV_BROWSER_R1__ ,
@@ -157,7 +157,7 @@ void rgb_matrix_indicators_user(void) {
     case APPNAV_SCREEN:
       rgb_matrix_set_color_all(RGB_YELLOW); 
       break;            
-    case DESKNAV_DEFAULT:
+    case DESKNAV:
       rgb_matrix_set_color_all(RGB_ORANGE); 
       break;
     case SYMBOLS:

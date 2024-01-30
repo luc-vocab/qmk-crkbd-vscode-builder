@@ -18,7 +18,7 @@ enum layer_names {
     // keysel layers
     KEYSEL_DEFAULT,
     // desknav layers (moving workspaces, etc)
-    DESKNAV_DEFAULT,
+    DESKNAV,
     // appnav layers (app specific shortcuts)
     APPNAV_BROWSER,
     APPNAV_SHELL,

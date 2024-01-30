@@ -4,7 +4,7 @@
 // ===========
 
 #define __MOUSE_L0__  KC_TRNS,               KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,    KC_TRNS
-#define __MOUSE_L1__  OSL(DESKNAV_DEFAULT),  KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,    KC_TRNS
+#define __MOUSE_L1__  KC_TRNS,               KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,    KC_TRNS
 #define __MOUSE_L2__  KC_TRNS,               KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,    KC_TRNS
 #define __MOUSE_L3__  KC_TRNS,               KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,    KC_TRNS
 

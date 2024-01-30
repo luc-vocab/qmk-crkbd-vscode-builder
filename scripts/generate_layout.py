@@ -34,7 +34,7 @@ layer_names = [
     'KEYNAV_DEFAULT',
     'KEYNAV_SHELL',
     'KEYSEL_DEFAULT',
-    'DESKNAV_DEFAULT',
+    'DESKNAV',
     'APPNAV_BROWSER',
     'APPNAV_SHELL',
     'APPNAV_VSCODE',
