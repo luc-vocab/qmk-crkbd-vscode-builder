@@ -4,7 +4,7 @@
 // base layer - browser
 // ====================
 
-#define __BASE_L0__  MO(MOUSE),     KC_OS_MODE_WIN10,   OSM(MOD_LGUI),   OSM(MOD_LALT),   OSM(MOD_LCTL),   KC_OS_MODE_CHROMEOS
+#define __BASE_L0__  MO(MOUSE),     KC_TRNS,            OSM(MOD_LGUI),   OSM(MOD_LALT),   OSM(MOD_LCTL),   KC_TRNS
 #define __BASE_L1__  OSL(VSCODE),   KC_QUOTE,           KC_COMMA,        KC_DOT,          KC_P,            KC_Y
 #define __BASE_L2__  MO(BROWSER),   KC_A,               KC_O,            KC_E,            KC_U,            KC_I
 #define __BASE_L3__  OSL(SHELL),    KC_SEMICOLON,       KC_Q,            KC_J,            KC_K,            KC_X
