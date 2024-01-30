@@ -30,17 +30,6 @@ enum layer_names {
 };
 
 
-enum os_shortcut_mode {
-    OS_MODE_WIN10 = 0,
-    OS_MODE_LINUX,
-    OS_MODE_CHROMEOS
-};
-
-// global variables
-// ================
-
-extern char current_os_shortcut_mode;
-
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   
@@ -89,22 +78,25 @@ enum custom_keycodes {
   SCREEN_COPY_MODE,
   SCREEN_PASTE,
 
-  // generic OS shortcut macros
-  KC_OS_MODE_WIN10,
-  KC_OS_MODE_LINUX,
-  KC_OS_MODE_CHROMEOS,
-
-  OS_WS_LEFT,  // go to left workspace
-  OS_WS_RIGHT, // go to right workspace
-  OS_WS_SHOW,   // show workspaces
-  OS_WS_1,     // workspace/app 1 
-  OS_WS_2,
-  OS_WS_3,
-  OS_WS_4,
-  OS_WS_5,
-
+  
 };
 
+// OS shortcuts
+// ============
+
+// win10
+#define WIN10_WS_LEFT LCTL(LGUI(KC_LEFT))
+#define WIN10_WS_RIGHT LCTL(LGUI(KC_RIGHT))
+#define WIN10_WS_SHOW LGUI(KC_TAB)
+
+// chrome os
+#define CROS_WS_LEFT LGUI(KC_LBRC)
+#define CROS_WS_RIGHT LGUI(KC_RBRC)
+
+#define CROS_WS_1 RGUI(LSFT(KC_1))
+#define CROS_WS_2 RGUI(LSFT(KC_2))
+#define CROS_WS_3 RGUI(LSFT(KC_3))
+#define CROS_WS_4 RGUI(LSFT(KC_4))
 
 // generic shortcuts
 // =================

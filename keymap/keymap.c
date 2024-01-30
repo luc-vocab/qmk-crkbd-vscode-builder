@@ -138,20 +138,6 @@ void display_oneshot_mods(void) {
 void oled_render_layer_state(void) {
   // first line: display layer name
   display_current_layer_name();
-  // which OS mode are we in ?
-  switch(current_os_shortcut_mode) {
-    case OS_MODE_WIN10:
-      oled_write_ln_P(PSTR("WINDOWS 10"), false);
-      break;
-    case OS_MODE_LINUX:
-      oled_write_ln_P(PSTR("LINUX"), false);
-      break;      
-    case OS_MODE_CHROMEOS:
-      oled_write_ln_P(PSTR("CHROME OS"), false);
-      break;            
-    default:
-      break;
-  }
   // display mods
   display_oneshot_mods();
 
