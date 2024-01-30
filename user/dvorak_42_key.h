@@ -13,10 +13,9 @@ enum layer_names {
     // base layers, will jump to the appropriate app layers
     BASE,
     // keynav layers
-    KEYNAV_DEFAULT,
-    KEYNAV_SHELL,
+    KEYNAV,
     // keysel layers
-    KEYSEL_DEFAULT,
+    KEYSEL,
     // desknav layers (moving workspaces, etc)
     DESKNAV,
     // appnav layers (app specific shortcuts)
@@ -24,7 +23,6 @@ enum layer_names {
     SHELL,
     SCREEN,
     VSCODE,
-    MSTEAMS,
     MOUSE,
     // other
     SYMBOLS,        // combined numbers and symbols layer

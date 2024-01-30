@@ -24,21 +24,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __BASE_L2__ ,       __BASE_R2__ ,
         __BASE_L3__ ,       __BASE_R3__ ,
         __BASE_L_3THUMB__ , __BASE_R_3THUMB__),
-[KEYNAV_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
-        __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
-        __KEYNAV_DEFAULT_L2__ ,       __KEYNAV_DEFAULT_R2__ ,
-        __KEYNAV_DEFAULT_L3__ ,       __KEYNAV_DEFAULT_R3__ ,
-        __KEYNAV_DEFAULT_L_3THUMB__ , __KEYNAV_DEFAULT_R_3THUMB__),
-[KEYNAV_SHELL] = LAYOUT_WRAPPER_CRKBD(
-        __KEYNAV_SHELL_L1__ ,       __KEYNAV_SHELL_R1__ ,
-        __KEYNAV_SHELL_L2__ ,       __KEYNAV_SHELL_R2__ ,
-        __KEYNAV_SHELL_L3__ ,       __KEYNAV_SHELL_R3__ ,
-        __KEYNAV_SHELL_L_3THUMB__ , __KEYNAV_SHELL_R_3THUMB__),
-[KEYSEL_DEFAULT] = LAYOUT_WRAPPER_CRKBD(
-        __KEYSEL_DEFAULT_L1__ ,       __KEYSEL_DEFAULT_R1__ ,
-        __KEYSEL_DEFAULT_L2__ ,       __KEYSEL_DEFAULT_R2__ ,
-        __KEYSEL_DEFAULT_L3__ ,       __KEYSEL_DEFAULT_R3__ ,
-        __KEYSEL_DEFAULT_L_3THUMB__ , __KEYSEL_DEFAULT_R_3THUMB__),
+[KEYNAV] = LAYOUT_WRAPPER_CRKBD(
+        __KEYNAV_L1__ ,       __KEYNAV_R1__ ,
+        __KEYNAV_L2__ ,       __KEYNAV_R2__ ,
+        __KEYNAV_L3__ ,       __KEYNAV_R3__ ,
+        __KEYNAV_L_3THUMB__ , __KEYNAV_R_3THUMB__),
+[KEYSEL] = LAYOUT_WRAPPER_CRKBD(
+        __KEYSEL_L1__ ,       __KEYSEL_R1__ ,
+        __KEYSEL_L2__ ,       __KEYSEL_R2__ ,
+        __KEYSEL_L3__ ,       __KEYSEL_R3__ ,
+        __KEYSEL_L_3THUMB__ , __KEYSEL_R_3THUMB__),
 [DESKNAV] = LAYOUT_WRAPPER_CRKBD(
         __DESKNAV_L1__ ,       __DESKNAV_R1__ ,
         __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
@@ -64,11 +59,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __VSCODE_L2__ ,       __VSCODE_R2__ ,
         __VSCODE_L3__ ,       __VSCODE_R3__ ,
         __VSCODE_L_3THUMB__ , __VSCODE_R_3THUMB__),
-[MSTEAMS] = LAYOUT_WRAPPER_CRKBD(
-        __MSTEAMS_L1__ ,       __MSTEAMS_R1__ ,
-        __MSTEAMS_L2__ ,       __MSTEAMS_R2__ ,
-        __MSTEAMS_L3__ ,       __MSTEAMS_R3__ ,
-        __MSTEAMS_L_3THUMB__ , __MSTEAMS_R_3THUMB__),        
 [SYMBOLS] = LAYOUT_WRAPPER_CRKBD(
         __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
         __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
@@ -105,10 +95,9 @@ void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(GAME, "GAME");
   DISPLAY_LAYER_NAME(SYMBOLS, "SYMBOLS");
   // keysel
-  DISPLAY_LAYER_NAME(KEYSEL_DEFAULT, "KEYSEL_DEFAULT");
+  DISPLAY_LAYER_NAME(KEYSEL, "KEYSEL");
   // keynav
-  DISPLAY_LAYER_NAME(KEYNAV_DEFAULT, "KEYNAV_DEFAULT");
-  DISPLAY_LAYER_NAME(KEYNAV_SHELL, "KEYNAV_SHELL");
+  DISPLAY_LAYER_NAME(KEYNAV, "KEYNAV");
   // desknav
   DISPLAY_LAYER_NAME(DESKNAV, "DESKNAV");
   // appnav
@@ -116,7 +105,6 @@ void display_current_layer_name(void){
   DISPLAY_LAYER_NAME(SHELL, "SHELL");
   DISPLAY_LAYER_NAME(SCREEN, "SCREEN");
   DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
-  DISPLAY_LAYER_NAME(MSTEAMS, "MSTEAMS");
   // base
   DISPLAY_LAYER_NAME(BASE, "BASE");
 }
@@ -257,12 +245,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     // keynav - blue
     rgblight_set_layer_state(1, 
-           layer_state_cmp(state, KEYNAV_DEFAULT) 
-        || layer_state_cmp(state, KEYNAV_SHELL));
+           layer_state_cmp(state, KEYNAV));
 
     // keysel - purple
     rgblight_set_layer_state(2, 
-           layer_state_cmp(state, KEYSEL_DEFAULT));
+           layer_state_cmp(state, KEYSEL));
 
     // base shell - red
     // appnav - green
@@ -280,7 +267,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(6, 
            layer_state_cmp(state, BROWSER)
         || layer_state_cmp(state, VSCODE)
-        || layer_state_cmp(state, MSTEAMS)
         );
 
     return state;

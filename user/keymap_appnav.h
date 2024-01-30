@@ -73,21 +73,3 @@
 #define __VSCODE_L_3THUMB__  KC_TRNS,     KC_TRNS,     KC_TRNS
 #define __VSCODE_R_3THUMB__  VS_CLOSETAB, VS_BM_LIST,  VS_COMMANDS
 
-
-// MSTEAMS
-// ==============
-
-#define __MSTEAMS_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __MSTEAMS_L1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __MSTEAMS_L2__  KC_TRNS,   KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __MSTEAMS_L3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-
-#define __MSTEAMS_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __MSTEAMS_R1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-#define __MSTEAMS_R2__  KC_TRNS,            TM_TAB_UP,        TM_TAB_DOWN,       KC_TRNS,    TM_FOCUS_CHAT,   KC_TRNS
-#define __MSTEAMS_R3__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,    KC_TRNS,         KC_TRNS
-
-#define __MSTEAMS_L_2THUMB__  KC_TRNS,      KC_TRNS
-#define __MSTEAMS_R_2THUMB__  KC_TRNS,      KC_TRNS
-#define __MSTEAMS_L_3THUMB__  KC_TRNS,      KC_TRNS,    KC_TRNS
-#define __MSTEAMS_R_3THUMB__  KC_TRNS,      KC_TRNS,    KC_TRNS

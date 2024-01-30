@@ -65,24 +65,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __BASE_L2__ ,       __BASE_R2__ ,
         __BASE_L3__ ,       __BASE_R3__ ,
         __BASE_L_2THUMB__ , __BASE_R_2THUMB__),
-[KEYNAV_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
-        __KEYNAV_DEFAULT_L0__ ,       __KEYNAV_DEFAULT_R0__ ,
-        __KEYNAV_DEFAULT_L1__ ,       __KEYNAV_DEFAULT_R1__ ,
-        __KEYNAV_DEFAULT_L2__ ,       __KEYNAV_DEFAULT_R2__ ,
-        __KEYNAV_DEFAULT_L3__ ,       __KEYNAV_DEFAULT_R3__ ,
-        __KEYNAV_DEFAULT_L_2THUMB__ , __KEYNAV_DEFAULT_R_2THUMB__),
-[KEYNAV_SHELL] = LAYOUT_WRAPPER_VOYAGER(
-        __KEYNAV_SHELL_L0__ ,       __KEYNAV_SHELL_R0__ ,
-        __KEYNAV_SHELL_L1__ ,       __KEYNAV_SHELL_R1__ ,
-        __KEYNAV_SHELL_L2__ ,       __KEYNAV_SHELL_R2__ ,
-        __KEYNAV_SHELL_L3__ ,       __KEYNAV_SHELL_R3__ ,
-        __KEYNAV_SHELL_L_2THUMB__ , __KEYNAV_SHELL_R_2THUMB__),
-[KEYSEL_DEFAULT] = LAYOUT_WRAPPER_VOYAGER(
-        __KEYSEL_DEFAULT_L0__ ,       __KEYSEL_DEFAULT_R0__ ,
-        __KEYSEL_DEFAULT_L1__ ,       __KEYSEL_DEFAULT_R1__ ,
-        __KEYSEL_DEFAULT_L2__ ,       __KEYSEL_DEFAULT_R2__ ,
-        __KEYSEL_DEFAULT_L3__ ,       __KEYSEL_DEFAULT_R3__ ,
-        __KEYSEL_DEFAULT_L_2THUMB__ , __KEYSEL_DEFAULT_R_2THUMB__),
+[KEYNAV] = LAYOUT_WRAPPER_VOYAGER(
+        __KEYNAV_L0__ ,       __KEYNAV_R0__ ,
+        __KEYNAV_L1__ ,       __KEYNAV_R1__ ,
+        __KEYNAV_L2__ ,       __KEYNAV_R2__ ,
+        __KEYNAV_L3__ ,       __KEYNAV_R3__ ,
+        __KEYNAV_L_2THUMB__ , __KEYNAV_R_2THUMB__),
+[KEYSEL] = LAYOUT_WRAPPER_VOYAGER(
+        __KEYSEL_L0__ ,       __KEYSEL_R0__ ,
+        __KEYSEL_L1__ ,       __KEYSEL_R1__ ,
+        __KEYSEL_L2__ ,       __KEYSEL_R2__ ,
+        __KEYSEL_L3__ ,       __KEYSEL_R3__ ,
+        __KEYSEL_L_2THUMB__ , __KEYSEL_R_2THUMB__),
 [DESKNAV] = LAYOUT_WRAPPER_VOYAGER(
         __DESKNAV_L0__ ,       __DESKNAV_R0__ ,
         __DESKNAV_L1__ ,       __DESKNAV_R1__ ,
@@ -144,11 +138,10 @@ void rgb_matrix_indicators_user(void) {
     case BASE:
       rgb_matrix_set_color_all(RGB_OFF); // no lights
       break;    
-    case KEYNAV_DEFAULT:
-    case KEYNAV_SHELL:
+    case KEYNAV:
       rgb_matrix_set_color_all(RGB_BLUE); // blue
       break;
-    case KEYSEL_DEFAULT:
+    case KEYSEL:
       rgb_matrix_set_color_all(RGB_PURPLE); // purple
       break;
     case SHELL:
