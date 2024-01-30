@@ -103,13 +103,6 @@ enum custom_keycodes {
   OS_WS_4,
   OS_WS_5,
 
-  APPSW_F2,
-  APPSW_F3,
-  APPSW_F4,
-  APPSW_F5,
-  APPSW_F7,
-
-
 };
 
 

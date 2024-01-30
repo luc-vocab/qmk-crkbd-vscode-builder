@@ -61,13 +61,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         OS_SHORTCUT(OS_WS_SHOW,  G(KC_TAB),      KC_LGUI,          A(KC_TAB) );
         //                           KEYCODE      WINDOW 10       LINUX             CHROME OS          DEFAULT LAYER
 
-        // app switching shortcuts which are supposed to go back to default layer
-        APPSW_SHORTCUT(APPSW_F2, KC_F2);
-        APPSW_SHORTCUT(APPSW_F3, KC_F3);
-        APPSW_SHORTCUT(APPSW_F4, KC_F4);
-        APPSW_SHORTCUT(APPSW_F5, KC_F5);
-        APPSW_SHORTCUT(APPSW_F7, KC_F7);
-
         case SHELL_LS:
             SEND_STRING("ls\n");
             break;
