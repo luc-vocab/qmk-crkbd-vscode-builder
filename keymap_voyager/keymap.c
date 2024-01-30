@@ -89,30 +89,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
         __DESKNAV_L3__ ,       __DESKNAV_R3__ ,
         __DESKNAV_L_2THUMB__ , __DESKNAV_R_2THUMB__),
-[APPNAV_BROWSER] = LAYOUT_WRAPPER_VOYAGER(
-        __APPNAV_BROWSER_L0__ ,       __APPNAV_BROWSER_R0__ ,
-        __APPNAV_BROWSER_L1__ ,       __APPNAV_BROWSER_R1__ ,
-        __APPNAV_BROWSER_L2__ ,       __APPNAV_BROWSER_R2__ ,
-        __APPNAV_BROWSER_L3__ ,       __APPNAV_BROWSER_R3__ ,
-        __APPNAV_BROWSER_L_2THUMB__ , __APPNAV_BROWSER_R_2THUMB__),
-[APPNAV_SHELL] = LAYOUT_WRAPPER_VOYAGER(
-        __APPNAV_SHELL_L0__ ,       __APPNAV_SHELL_R0__ ,
-        __APPNAV_SHELL_L1__ ,       __APPNAV_SHELL_R1__ ,
-        __APPNAV_SHELL_L2__ ,       __APPNAV_SHELL_R2__ ,
-        __APPNAV_SHELL_L3__ ,       __APPNAV_SHELL_R3__ ,
-        __APPNAV_SHELL_L_2THUMB__ , __APPNAV_SHELL_R_2THUMB__),
-[APPNAV_SCREEN] = LAYOUT_WRAPPER_VOYAGER(
-        __APPNAV_SCREEN_L0__ ,       __APPNAV_SCREEN_R0__ ,  
-        __APPNAV_SCREEN_L1__ ,       __APPNAV_SCREEN_R1__ ,
-        __APPNAV_SCREEN_L2__ ,       __APPNAV_SCREEN_R2__ ,
-        __APPNAV_SCREEN_L3__ ,       __APPNAV_SCREEN_R3__ ,
-        __APPNAV_SCREEN_L_2THUMB__ , __APPNAV_SCREEN_R_2THUMB__),
-[APPNAV_VSCODE] = LAYOUT_WRAPPER_VOYAGER(
-        __APPNAV_VSCODE_L0__ ,       __APPNAV_VSCODE_R0__ ,
-        __APPNAV_VSCODE_L1__ ,       __APPNAV_VSCODE_R1__ ,
-        __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
-        __APPNAV_VSCODE_L3__ ,       __APPNAV_VSCODE_R3__ ,
-        __APPNAV_VSCODE_L_2THUMB__ , __APPNAV_VSCODE_R_2THUMB__),
+[BROWSER] = LAYOUT_WRAPPER_VOYAGER(
+        __BROWSER_L0__ ,       __BROWSER_R0__ ,
+        __BROWSER_L1__ ,       __BROWSER_R1__ ,
+        __BROWSER_L2__ ,       __BROWSER_R2__ ,
+        __BROWSER_L3__ ,       __BROWSER_R3__ ,
+        __BROWSER_L_2THUMB__ , __BROWSER_R_2THUMB__),
+[SHELL] = LAYOUT_WRAPPER_VOYAGER(
+        __SHELL_L0__ ,       __SHELL_R0__ ,
+        __SHELL_L1__ ,       __SHELL_R1__ ,
+        __SHELL_L2__ ,       __SHELL_R2__ ,
+        __SHELL_L3__ ,       __SHELL_R3__ ,
+        __SHELL_L_2THUMB__ , __SHELL_R_2THUMB__),
+[SCREEN] = LAYOUT_WRAPPER_VOYAGER(
+        __SCREEN_L0__ ,       __SCREEN_R0__ ,  
+        __SCREEN_L1__ ,       __SCREEN_R1__ ,
+        __SCREEN_L2__ ,       __SCREEN_R2__ ,
+        __SCREEN_L3__ ,       __SCREEN_R3__ ,
+        __SCREEN_L_2THUMB__ , __SCREEN_R_2THUMB__),
+[VSCODE] = LAYOUT_WRAPPER_VOYAGER(
+        __VSCODE_L0__ ,       __VSCODE_R0__ ,
+        __VSCODE_L1__ ,       __VSCODE_R1__ ,
+        __VSCODE_L2__ ,       __VSCODE_R2__ ,
+        __VSCODE_L3__ ,       __VSCODE_R3__ ,
+        __VSCODE_L_2THUMB__ , __VSCODE_R_2THUMB__),
 [SYMBOLS] = LAYOUT_WRAPPER_VOYAGER(
         __SYMBOLS_L0__ ,       __SYMBOLS_R0__ ,
         __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
@@ -151,10 +151,10 @@ void rgb_matrix_indicators_user(void) {
     case KEYSEL_DEFAULT:
       rgb_matrix_set_color_all(RGB_PURPLE); // purple
       break;
-    case APPNAV_SHELL:
+    case SHELL:
       rgb_matrix_set_color_all(RGB_RED); 
       break;      
-    case APPNAV_SCREEN:
+    case SCREEN:
       rgb_matrix_set_color_all(RGB_YELLOW); 
       break;            
     case DESKNAV:
@@ -166,7 +166,7 @@ void rgb_matrix_indicators_user(void) {
     case MOUSE:
       rgb_matrix_set_color_all(RGB_OFF); // no lights
       break;          
-    case APPNAV_VSCODE:
+    case VSCODE:
       rgb_matrix_set_color_all(RGB_GREEN); 
       break;
    default:

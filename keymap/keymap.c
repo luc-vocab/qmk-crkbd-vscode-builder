@@ -44,31 +44,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
         __DESKNAV_L3__ ,       __DESKNAV_R3__ ,
         __DESKNAV_L_3THUMB__ , __DESKNAV_R_3THUMB__),
-[APPNAV_BROWSER] = LAYOUT_WRAPPER_CRKBD(
-        __APPNAV_BROWSER_L1__ ,       __APPNAV_BROWSER_R1__ ,
-        __APPNAV_BROWSER_L2__ ,       __APPNAV_BROWSER_R2__ ,
-        __APPNAV_BROWSER_L3__ ,       __APPNAV_BROWSER_R3__ ,
-        __APPNAV_BROWSER_L_3THUMB__ , __APPNAV_BROWSER_R_3THUMB__),
-[APPNAV_SHELL] = LAYOUT_WRAPPER_CRKBD(
-        __APPNAV_SHELL_L1__ ,       __APPNAV_SHELL_R1__ ,
-        __APPNAV_SHELL_L2__ ,       __APPNAV_SHELL_R2__ ,
-        __APPNAV_SHELL_L3__ ,       __APPNAV_SHELL_R3__ ,
-        __APPNAV_SHELL_L_3THUMB__ , __APPNAV_SHELL_R_3THUMB__),
-[APPNAV_SCREEN] = LAYOUT_WRAPPER_CRKBD(
-        __APPNAV_SCREEN_L1__ ,       __APPNAV_SCREEN_R1__ ,
-        __APPNAV_SCREEN_L2__ ,       __APPNAV_SCREEN_R2__ ,
-        __APPNAV_SCREEN_L3__ ,       __APPNAV_SCREEN_R3__ ,
-        __APPNAV_SCREEN_L_3THUMB__ , __APPNAV_SCREEN_R_3THUMB__),        
-[APPNAV_VSCODE] = LAYOUT_WRAPPER_CRKBD(
-        __APPNAV_VSCODE_L1__ ,       __APPNAV_VSCODE_R1__ ,
-        __APPNAV_VSCODE_L2__ ,       __APPNAV_VSCODE_R2__ ,
-        __APPNAV_VSCODE_L3__ ,       __APPNAV_VSCODE_R3__ ,
-        __APPNAV_VSCODE_L_3THUMB__ , __APPNAV_VSCODE_R_3THUMB__),
-[APPNAV_MSTEAMS] = LAYOUT_WRAPPER_CRKBD(
-        __APPNAV_MSTEAMS_L1__ ,       __APPNAV_MSTEAMS_R1__ ,
-        __APPNAV_MSTEAMS_L2__ ,       __APPNAV_MSTEAMS_R2__ ,
-        __APPNAV_MSTEAMS_L3__ ,       __APPNAV_MSTEAMS_R3__ ,
-        __APPNAV_MSTEAMS_L_3THUMB__ , __APPNAV_MSTEAMS_R_3THUMB__),        
+[BROWSER] = LAYOUT_WRAPPER_CRKBD(
+        __BROWSER_L1__ ,       __BROWSER_R1__ ,
+        __BROWSER_L2__ ,       __BROWSER_R2__ ,
+        __BROWSER_L3__ ,       __BROWSER_R3__ ,
+        __BROWSER_L_3THUMB__ , __BROWSER_R_3THUMB__),
+[SHELL] = LAYOUT_WRAPPER_CRKBD(
+        __SHELL_L1__ ,       __SHELL_R1__ ,
+        __SHELL_L2__ ,       __SHELL_R2__ ,
+        __SHELL_L3__ ,       __SHELL_R3__ ,
+        __SHELL_L_3THUMB__ , __SHELL_R_3THUMB__),
+[SCREEN] = LAYOUT_WRAPPER_CRKBD(
+        __SCREEN_L1__ ,       __SCREEN_R1__ ,
+        __SCREEN_L2__ ,       __SCREEN_R2__ ,
+        __SCREEN_L3__ ,       __SCREEN_R3__ ,
+        __SCREEN_L_3THUMB__ , __SCREEN_R_3THUMB__),        
+[VSCODE] = LAYOUT_WRAPPER_CRKBD(
+        __VSCODE_L1__ ,       __VSCODE_R1__ ,
+        __VSCODE_L2__ ,       __VSCODE_R2__ ,
+        __VSCODE_L3__ ,       __VSCODE_R3__ ,
+        __VSCODE_L_3THUMB__ , __VSCODE_R_3THUMB__),
+[MSTEAMS] = LAYOUT_WRAPPER_CRKBD(
+        __MSTEAMS_L1__ ,       __MSTEAMS_R1__ ,
+        __MSTEAMS_L2__ ,       __MSTEAMS_R2__ ,
+        __MSTEAMS_L3__ ,       __MSTEAMS_R3__ ,
+        __MSTEAMS_L_3THUMB__ , __MSTEAMS_R_3THUMB__),        
 [SYMBOLS] = LAYOUT_WRAPPER_CRKBD(
         __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
         __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
@@ -112,11 +112,11 @@ void display_current_layer_name(void){
   // desknav
   DISPLAY_LAYER_NAME(DESKNAV, "DESKNAV");
   // appnav
-  DISPLAY_LAYER_NAME(APPNAV_BROWSER, "APPNAV_BROWSER");
-  DISPLAY_LAYER_NAME(APPNAV_SHELL, "APPNAV_SHELL");
-  DISPLAY_LAYER_NAME(APPNAV_SCREEN, "APPNAV_SCREEN");
-  DISPLAY_LAYER_NAME(APPNAV_VSCODE, "APPNAV_VSCODE");
-  DISPLAY_LAYER_NAME(APPNAV_MSTEAMS, "APPNAV_MSTEAMS");
+  DISPLAY_LAYER_NAME(BROWSER, "BROWSER");
+  DISPLAY_LAYER_NAME(SHELL, "SHELL");
+  DISPLAY_LAYER_NAME(SCREEN, "SCREEN");
+  DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
+  DISPLAY_LAYER_NAME(MSTEAMS, "MSTEAMS");
   // base
   DISPLAY_LAYER_NAME(BASE, "BASE");
 }
@@ -267,8 +267,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // base shell - red
     // appnav - green
     rgblight_set_layer_state(3, 
-      layer_state_cmp(state, APPNAV_SHELL)
-      || layer_state_cmp(state, APPNAV_SCREEN)
+      layer_state_cmp(state, SHELL)
+      || layer_state_cmp(state, SCREEN)
     );
 
 
@@ -278,9 +278,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     // appnav - green
     rgblight_set_layer_state(6, 
-           layer_state_cmp(state, APPNAV_BROWSER)
-        || layer_state_cmp(state, APPNAV_VSCODE)
-        || layer_state_cmp(state, APPNAV_MSTEAMS)
+           layer_state_cmp(state, BROWSER)
+        || layer_state_cmp(state, VSCODE)
+        || layer_state_cmp(state, MSTEAMS)
         );
 
     return state;

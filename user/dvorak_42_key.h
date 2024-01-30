@@ -20,11 +20,11 @@ enum layer_names {
     // desknav layers (moving workspaces, etc)
     DESKNAV,
     // appnav layers (app specific shortcuts)
-    APPNAV_BROWSER,
-    APPNAV_SHELL,
-    APPNAV_SCREEN,
-    APPNAV_VSCODE,
-    APPNAV_MSTEAMS,
+    BROWSER,
+    SHELL,
+    SCREEN,
+    VSCODE,
+    MSTEAMS,
     MOUSE,
     // other
     SYMBOLS,        // combined numbers and symbols layer

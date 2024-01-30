@@ -35,9 +35,9 @@ layer_names = [
     'KEYNAV_SHELL',
     'KEYSEL_DEFAULT',
     'DESKNAV',
-    'APPNAV_BROWSER',
-    'APPNAV_SHELL',
-    'APPNAV_VSCODE',
+    'BROWSER',
+    'SHELL',
+    'VSCODE',
     'SYMBOLS',
     'GAME'
 ]
