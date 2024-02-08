@@ -120,6 +120,9 @@ enum custom_keycodes {
 #define BR_TAB_MOVE_LEFT RCTL(LSFT(KC_PGUP))
 #define BR_TAB_MOVE_RIGHT RCTL(LSFT(KC_PGDN))
 
+#define BR_TAB_LEFT_ALT RCTL(LSFT(KC_TAB))
+#define BR_TAB_RIGHT_ALT RCTL(KC_TAB)
+
 // MS teams shortcuts
 // =================
 
