@@ -3,13 +3,18 @@
 BASEDIR=$(dirname $0)
 python3 $BASEDIR/process_mapping.py
 . $BASEDIR/zsa_qmk_tag.sh
+REBUILD_DOCKER=$1
 
 export DOCKER_BUILDKIT=1
 echo "ZSA_QMK_TAG: " $ZSA_QMK_TAG
 DOCKER_IMAGE=lucwastiaux/qmk-crkbd-vscode-builder-zsa:QMK_ZSA-${ZSA_QMK_TAG}
 
-# build image if not already built (will cache)
-docker build --build-arg ZSA_QMK_TAG=$ZSA_QMK_TAG --build-arg UNAME=$(id -un) --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t ${DOCKER_IMAGE} -f Dockerfile.zsa_qmk .
+if [ "$REBUILD_DOCKER" = "rebuild" ]; then
+    # build image if not already built (will cache)
+    docker build --build-arg ZSA_QMK_TAG=$ZSA_QMK_TAG --build-arg UNAME=$(id -un) --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t ${DOCKER_IMAGE} -f Dockerfile.zsa_qmk .
+    # push image to docker hub
+    docker push ${DOCKER_IMAGE}    
+fi
 
 docker run --rm -it \
 --mount type=bind,source="$(pwd)"/keymap_voyager,target=/workspace/qmk_firmware/keyboards/voyager/keymaps/luc \
