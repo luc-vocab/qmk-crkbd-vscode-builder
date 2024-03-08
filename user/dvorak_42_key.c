@@ -50,6 +50,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SHELL_GIT_DIFF:
             SEND_STRING("git diff\n");
             break;                        
+        case SHELL_GIT_COMMIT:
+            SEND_STRING("git commit -a\n");
+            break;                                    
 
         // linux screen shortcuts
         case SCREEN_TAB_LEFT:

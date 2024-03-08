@@ -49,6 +49,7 @@ enum custom_keycodes {
 
   SHELL_GIT_STATUS,
   SHELL_GIT_DIFF,
+  SHELL_GIT_COMMIT,
 
   // linux screen macros
   SCREEN_TAB_LEFT,
