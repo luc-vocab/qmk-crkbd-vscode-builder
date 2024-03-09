@@ -10,7 +10,7 @@
 #define __DESKNAV_R2__  MEH(KC_F7),   MEH(KC_F8),        MEH(KC_F9),          MEH(KC_F10),          MEH(KC_F12),       MEH(KC_F13)
 #define __DESKNAV_R3__  MEH(KC_F14),  WIN10_WS_LEFT,     WIN10_WS_RIGHT,      WIN10_WS_SHOW,        MEH(KC_F15),       MEH(KC_F16)
 
-#define __DESKNAV_L_2THUMB__  KC_TRNS,       KC_TRNS
-#define __DESKNAV_R_2THUMB__  KC_TRNS,       KC_TRNS
-#define __DESKNAV_L_3THUMB__  OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI)
-#define __DESKNAV_R_3THUMB__  KC_TRNS,       KC_TRNS,       KC_TRNS
+#define __DESKNAV_L_2THUMB__  KC_TRNS,        KC_TRNS
+#define __DESKNAV_R_2THUMB__  KC_TRNS,        KC_TRNS
+#define __DESKNAV_L_3THUMB__  OSM(MOD_LCTL),  OSM(MOD_LALT), OSM(MOD_LGUI)
+#define __DESKNAV_R_3THUMB__  TO(GAME),       KC_TRNS,       KC_TRNS
