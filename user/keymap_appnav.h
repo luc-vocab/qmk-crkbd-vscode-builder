@@ -24,7 +24,7 @@
 #define __SHELL_L0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_L1__  SCREEN_PASTE,       KC_TRNS,            SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
 #define __SHELL_L2__  SCREEN_COPY_MODE,   OSL(SCREEN),        SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  TO(BASE),           SHELL_SCREEN_LIST,  SHELL_SCREENRD,    SHELL_SCREEN_NEW, SHELL_TAILF,      SH_CLOSE
+#define __SHELL_L3__  KC_TRNS,            TO(BASE),           SHELL_SCREENRD,    SHELL_SCREEN_NEW, SHELL_TAILF,      SH_CLOSE
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  SCREEN_KILL,        SCREEN_NUMBER,      SCREEN_RENAME,     KC_TRNS,          SH_CLEARSCR,      SH_DEL_PATH

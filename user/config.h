@@ -14,7 +14,7 @@
 // ==================
 // don't want the double tap
 // #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
-//p#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define CAPS_WORD_IDLE_TIMEOUT 2000
 
 // tap settings 
