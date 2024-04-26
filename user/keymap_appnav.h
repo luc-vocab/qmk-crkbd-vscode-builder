@@ -21,15 +21,15 @@
 // SHELL
 // ============
 
-#define __SHELL_L0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
-#define __SHELL_L1__  SCREEN_PASTE,       KC_TRNS,            SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
-#define __SHELL_L2__  SCREEN_COPY_MODE,   OSL(SCREEN),        SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  KC_TRNS,            TO(BASE),           SHELL_SCREENRD,    SHELL_SCREEN_NEW, SHELL_TAILF,      SH_CLOSE
+#define __SHELL_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
+#define __SHELL_L1__  SCREEN_DETACH,      SCREEN_PASTE,     SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
+#define __SHELL_L2__  SHELL_SCREENRD,     SCREEN_COPY_MODE, SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
+#define __SHELL_L3__  SHELL_SCREEN_LIST,  TO(BASE),         KC_TRNS,           KC_TRNS,          SHELL_TAILF,      SHELL_SCREEN_NEW
 
-#define __SHELL_R0__  KC_TRNS,            KC_TRNS,            KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
-#define __SHELL_R1__  SCREEN_KILL,        SCREEN_NUMBER,      SCREEN_RENAME,     KC_TRNS,          SH_CLEARSCR,      SH_DEL_PATH
-#define __SHELL_R2__  SH_WORD_LEFT,       SCREEN_TAB_LEFT,    SCREEN_TAB_RIGHT,  KC_TRNS,          SH_WORD_RIGHT,    SH_DEL_WORD
-#define __SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,          SH_SEARCH,         SH_PASTE,         SH_DEL_TO_END,    SH_STOP
+#define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
+#define __SHELL_R1__  SCREEN_KILL,        SCREEN_NUMBER,    SCREEN_RENAME,     KC_TRNS,          SH_CLEARSCR,      SH_DEL_PATH
+#define __SHELL_R2__  SH_WORD_LEFT,       SCREEN_TAB_LEFT,  SCREEN_TAB_RIGHT,  SCREEN_WINDOWS,   SH_WORD_RIGHT,    SH_DEL_WORD
+#define __SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,        SH_SEARCH,         SH_PASTE,         SH_DEL_TO_END,    SH_STOP
 
 #define __SHELL_L_2THUMB__  SHELL_GIT_DIFF,     SHELL_GIT_STATUS
 #define __SHELL_R_2THUMB__  KC_TRNS,            SCREEN_NEW_TAB
@@ -39,15 +39,15 @@
 
 // SCREEN
 // =============
-#define __SCREEN_L0__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
-#define __SCREEN_L1__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
-#define __SCREEN_L2__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
-#define __SCREEN_L3__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
+#define __SCREEN_L0__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
+#define __SCREEN_L1__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
+#define __SCREEN_L2__  KC_TRNS,          KC_TRNS,  SHELL_SCREENRD,     SHELL_SCREEN_NEW,    SHELL_SCREEN_LIST,   KC_TRNS
+#define __SCREEN_L3__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
 
-#define __SCREEN_R0__  KC_TRNS,          KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS
-#define __SCREEN_R1__  KC_TRNS,          SCREEN_7,   SCREEN_8,  SCREEN_9,  SCREEN_RENAME,    KC_TRNS
-#define __SCREEN_R2__  SCREEN_TAB_LEFT,  SCREEN_4,   SCREEN_5,  SCREEN_6,  SCREEN_TAB_RIGHT, SCREEN_COPY_MODE
-#define __SCREEN_R3__  KC_TRNS,          SCREEN_1,   SCREEN_2,  SCREEN_3,  SCREEN_NUMBER,    SCREEN_PASTE
+#define __SCREEN_R0__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
+#define __SCREEN_R1__  KC_TRNS,          SCREEN_7, SCREEN_8,           SCREEN_9,            SCREEN_RENAME,       KC_TRNS
+#define __SCREEN_R2__  SCREEN_TAB_LEFT,  SCREEN_4, SCREEN_5,           SCREEN_6,            SCREEN_TAB_RIGHT,    KC_TRNS
+#define __SCREEN_R3__  KC_TRNS,          SCREEN_1, SCREEN_2,           SCREEN_3,            SCREEN_NUMBER,       KC_TRNS
 
 #define __SCREEN_L_2THUMB__  KC_TRNS,       KC_TRNS
 #define __SCREEN_L_3THUMB__  KC_TRNS,       KC_TRNS,   KC_TRNS

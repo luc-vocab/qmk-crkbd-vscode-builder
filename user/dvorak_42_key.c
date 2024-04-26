@@ -34,16 +34,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SHELL_TAILF:
             SEND_STRING("tail -f ");
             break;
-        case SHELL_SCREENRD:
-            SEND_STRING("screen -r -d ");
-            break;
-        case SHELL_SCREEN_NEW:
-            SEND_STRING("screen -S ");
-            break;
-        case SHELL_SCREEN_LIST:
-            SEND_STRING("screen -list\n");
-            break;
-
         case SHELL_GIT_STATUS:
             SEND_STRING("git status\n");
             break;
@@ -55,6 +45,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;                                    
 
         // linux screen shortcuts
+
+        case SHELL_SCREENRD:
+            SEND_STRING("screen -r -d ");
+            break;
+        case SHELL_SCREEN_NEW:
+            SEND_STRING("screen -S ");
+            break;
+        case SHELL_SCREEN_LIST:
+            SEND_STRING("screen -list\n");
+            break;
+
         case SCREEN_TAB_LEFT:
             SEND_STRING(SS_LCTL("a") "p");
             break;
