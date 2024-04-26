@@ -41,7 +41,7 @@
 // =============
 #define __SCREEN_L0__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
 #define __SCREEN_L1__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
-#define __SCREEN_L2__  KC_TRNS,          KC_TRNS,  SHELL_SCREENRD,     SHELL_SCREEN_NEW,    SHELL_SCREEN_LIST,   KC_TRNS
+#define __SCREEN_L2__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
 #define __SCREEN_L3__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
 
 #define __SCREEN_R0__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
