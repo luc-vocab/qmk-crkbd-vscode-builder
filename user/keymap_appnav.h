@@ -24,16 +24,16 @@
 #define __SHELL_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_L1__  SCREEN_DETACH,      SCREEN_PASTE,     SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
 #define __SHELL_L2__  SHELL_SCREENRD,     SCREEN_COPY_MODE, SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  SHELL_SCREEN_LIST,  TO(BASE),         KC_TRNS,           KC_TRNS,          SHELL_TAILF,      SHELL_SCREEN_NEW
+#define __SHELL_L3__  SHELL_SCREEN_LIST,  TO(BASE),         SHELL_GIT_DIFF,    SHELL_GIT_STATUS, SHELL_TAILF,      SHELL_SCREEN_NEW
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  SCREEN_KILL,        SCREEN_NUMBER,    SCREEN_RENAME,     KC_TRNS,          SH_CLEARSCR,      SH_DEL_PATH
 #define __SHELL_R2__  SH_WORD_LEFT,       SCREEN_TAB_LEFT,  SCREEN_TAB_RIGHT,  SCREEN_WINDOWS,   SH_WORD_RIGHT,    SH_DEL_WORD
 #define __SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,        SH_SEARCH,         SH_PASTE,         SH_DEL_TO_END,    SH_STOP
 
-#define __SHELL_L_2THUMB__  SHELL_GIT_DIFF,     SHELL_GIT_STATUS
+#define __SHELL_L_2THUMB__  KC_TRNS,            KC_TRNS
 #define __SHELL_R_2THUMB__  KC_TRNS,            SCREEN_NEW_TAB
-#define __SHELL_L_3THUMB__  SHELL_GIT_COMMIT,   SHELL_GIT_DIFF,     SHELL_GIT_STATUS
+#define __SHELL_L_3THUMB__  KC_TRNS,            KC_TRNS,            KC_TRNS
 #define __SHELL_R_3THUMB__  KC_TRNS,            SCREEN_NEW_TAB,     KC_TRNS
 
 
