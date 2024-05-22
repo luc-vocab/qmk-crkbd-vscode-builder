@@ -86,9 +86,9 @@ enum custom_keycodes {
 // ============
 
 // win10
-#define WIN10_WS_LEFT LCTL(LGUI(KC_LEFT))
-#define WIN10_WS_RIGHT LCTL(LGUI(KC_RIGHT))
-#define WIN10_WS_SHOW LGUI(KC_TAB)
+#define WS_LEFT LCTL(LGUI(KC_LEFT))
+#define WS_RIGHT LCTL(LGUI(KC_RIGHT))
+#define WS_SHOW LGUI(KC_TAB)
 
 // chrome os
 #define CROS_WS_LEFT LGUI(KC_LBRC)

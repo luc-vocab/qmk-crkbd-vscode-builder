@@ -3,14 +3,14 @@
 // BROWSER
 // ============
 
-#define __BROWSER_L0__  KC_TRNS, KC_TRNS,          KC_TRNS,           KC_TRNS,            KC_TRNS,            KC_TRNS
-#define __BROWSER_L1__  KC_TRNS, KC_TRNS,          KC_TRNS,           KC_TRNS,            KC_TRNS,            KC_TRNS
-#define __BROWSER_L2__  KC_TRNS, KC_TRNS,          KC_TRNS,           KC_TRNS,            KC_TRNS,            KC_TRNS
-#define __BROWSER_L3__  KC_TRNS, KC_TRNS,          KC_TRNS,           KC_TRNS,            KC_TRNS,            KC_TRNS
+#define __BROWSER_L0__  KC_TRNS, KC_TRNS,          KC_TRNS,            KC_TRNS,            KC_TRNS,            KC_TRNS
+#define __BROWSER_L1__  KC_TRNS, KC_TRNS,          KC_TRNS,            KC_TRNS,            KC_TRNS,            KC_TRNS
+#define __BROWSER_L2__  KC_TRNS, KC_TRNS,          KC_TRNS,            KC_TRNS,            KC_TRNS,            KC_TRNS
+#define __BROWSER_L3__  KC_TRNS, KC_TRNS,          KC_TRNS,            KC_TRNS,            KC_TRNS,            KC_TRNS
 
-#define __BROWSER_R0__  KC_TRNS, KC_TRNS,          KC_TRNS,           KC_TRNS,            KC_TRNS,            KC_TRNS
-#define __BROWSER_R1__  KC_TRNS, BR_TAB_MOVE_LEFT, BR_TAB_MOVE_RIGHT, BR_TAB_LEFT_ALT,    BR_TAB_RIGHT_ALT,   KC_TRNS
-#define __BROWSER_R2__  KC_TRNS, BR_TAB_LEFT,      BR_TAB_RIGHT,      BR_SEARCH,          BR_RELOAD,          BR_BACK
+#define __BROWSER_R0__  KC_TRNS, KC_TRNS,          KC_TRNS,            KC_TRNS,            KC_TRNS,            KC_TRNS
+#define __BROWSER_R1__  KC_TRNS, BR_TAB_MOVE_LEFT, BR_TAB_MOVE_RIGHT,  BR_TAB_LEFT_ALT,    BR_TAB_RIGHT_ALT,   KC_TRNS
+#define __BROWSER_R2__  KC_TRNS, BR_TAB_LEFT,      BR_TAB_RIGHT,       BR_SEARCH,          BR_RELOAD,          BR_BACK
 #define __BROWSER_R3__  KC_TRNS, BR_TAB_FIRST,     BR_TAB_LAST,       BR_URL_BAR,         KC_TRNS,            KC_TRNS
 
 #define __BROWSER_L_2THUMB__  KC_TRNS,      KC_TRNS
