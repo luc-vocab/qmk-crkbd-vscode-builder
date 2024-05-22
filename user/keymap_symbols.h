@@ -5,7 +5,7 @@
 
 #define __SYMBOLS_L0__  KC_TRNS,   KC_TRNS,  KC_TRNS,   KC_TRNS,   KC_TRNS,     KC_TRNS
 #define __SYMBOLS_L1__  KC_TILD,   KC_EXLM,  KC_AT,     KC_HASH,   KC_DLR,      KC_PERC
-#define __SYMBOLS_L2__  KC_GRAVE,  KC_LPRN,  KC_RPRN,   KC_LBRC,   KC_RBRC,     KC_UNDS
+#define __SYMBOLS_L2__  KC_SEMICOLON,  KC_LPRN,  KC_RPRN,   KC_LBRC,   KC_RBRC,     KC_UNDS
 #define __SYMBOLS_L3__  KC_CIRC,   KC_COLN,  KC_DQUO,   KC_LCBR,   KC_RCBR,     KC_AMPR
 
 #define __SYMBOLS_R0__  KC_TRNS,   KC_TRNS,  KC_TRNS,   KC_TRNS,   KC_TRNS,     KC_TRNS
