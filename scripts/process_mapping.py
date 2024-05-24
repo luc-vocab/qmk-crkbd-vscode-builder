@@ -43,6 +43,7 @@ class Mapping(enum.Enum):
     VS_SYMBOLEDITOR     = (Modifier.MEH,  '6', 'workbench.action.gotoSymbol')
     VS_GO_TO_TOP        = (Modifier.MEH,  '7', 'cursorTop')
     VS_GO_TO_BOTTOM     = (Modifier.MEH,  '8', 'cursorBottom')
+    VS_OPEN_FILE        = (Modifier.MEH,  '9', 'workbench.action.files.openFile')
 
     def __init__(self, modifier, keycode, command):
         self.modifier = modifier

@@ -58,15 +58,15 @@
 // VSCODE
 // ============
 
-#define __VSCODE_L0__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     KC_TRNS
-#define __VSCODE_L1__  TO(BASE),          VS_GO_TO_TOP,    VS_FIND_FILES, VS_CMT_BLOCK,      VS_CMT_LINE, VS_RECENT
-#define __VSCODE_L2__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     VS_SEL_BRACKET
-#define __VSCODE_L3__  KC_TRNS,           VS_GO_TO_BOTTOM, KC_TRNS,       KC_TRNS,           KC_TRNS,     KC_TRNS
+#define __VSCODE_L0__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,          KC_TRNS
+#define __VSCODE_L1__  TO(BASE),          VS_GO_TO_TOP,    VS_FIND_FILES, VS_CMT_BLOCK,      VS_CMT_LINE,      VS_RECENT
+#define __VSCODE_L2__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           VS_OPEN_FILE,     VS_SEL_BRACKET
+#define __VSCODE_L3__  KC_TRNS,           VS_GO_TO_BOTTOM, KC_TRNS,       KC_TRNS,           KC_TRNS,          KC_TRNS
 
-#define __VSCODE_R0__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,     KC_TRNS
-#define __VSCODE_R1__  VS_COPYLINEDOWN,   VS_REFERENCES,   VS_DEFINITION, VS_IMPLEMENTATION, VS_LINE,     VS_BRACKET
-#define __VSCODE_R2__  VS_DEL_LINE,       VS_TABLEFT,      VS_TABRIGHT,   VS_SYMBOLEDITOR,   VS_FILE,     VS_BACK
-#define __VSCODE_R3__  VS_BM_CLEARALL,    VS_BM_PREV,      VS_BM_NEXT,    VS_GROUP_1,        VS_GROUP_2,  VS_BM_TOGGLE
+#define __VSCODE_R0__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,          KC_TRNS
+#define __VSCODE_R1__  VS_COPYLINEDOWN,   VS_REFERENCES,   VS_DEFINITION, VS_IMPLEMENTATION, VS_LINE,          VS_BRACKET
+#define __VSCODE_R2__  VS_DEL_LINE,       VS_TABLEFT,      VS_TABRIGHT,   VS_SYMBOLEDITOR,   VS_FILE,          VS_BACK
+#define __VSCODE_R3__  VS_BM_CLEARALL,    VS_BM_PREV,      VS_BM_NEXT,    VS_GROUP_1,        VS_GROUP_2,       VS_BM_TOGGLE
 
 #define __VSCODE_L_2THUMB__  KC_TRNS,     KC_TRNS
 #define __VSCODE_R_2THUMB__  VS_CLOSETAB, VS_COMMANDS
