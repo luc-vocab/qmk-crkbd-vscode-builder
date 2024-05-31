@@ -80,7 +80,8 @@ enum custom_keycodes {
   SCREEN_COPY_MODE,
   SCREEN_PASTE,
 
-  WS_SWITCH,
+  WS_WIN_SWITCH,
+  WS_APP_SWITCH
 
   
 };

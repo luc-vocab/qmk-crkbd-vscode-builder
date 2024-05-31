@@ -11,18 +11,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if(record->event.pressed) {
     
     switch (keycode) {
-        case WS_SWITCH:
+        case WS_WIN_SWITCH:
             if (! wsWindowSwitchingMode)
             {
                 // press down alt key
-                // SEND_STRING(SS_DOWN(X_LALT));
                 register_code(KC_LALT);
                 wsWindowSwitchingMode = true;
             }
-            // SEND_STRING(SS_TAP(ESC));
             register_code(KC_ESC);
             unregister_code(KC_ESC);
             break;
+        case WS_APP_SWITCH:
+            if (! wsWindowSwitchingMode)
+            {
+                // press down alt key
+                register_code(KC_LALT);
+                wsWindowSwitchingMode = true;
+            }
+            register_code(KC_TAB);
+            unregister_code(KC_TAB);
+            break;            
         case SHELL_LS:
             SEND_STRING("ls\n");
             break;
