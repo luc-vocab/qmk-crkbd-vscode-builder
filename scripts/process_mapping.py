@@ -37,6 +37,7 @@ class Mapping(enum.Enum):
     VS_BM_CLEARALL      = (Modifier.MEH,  'v', 'bookmarks.clearFromAllFiles')
     VS_BM_LIST          = (Modifier.MEH,  'w', 'bookmarks.list')
     VS_RECENT           = (Modifier.MEH,  'x', 'workbench.action.openRecent')
+    VS_COPILOT          = (Modifier.MEH,  'y', 'workbench.panel.chat.view.copilot.focus')
     VS_SEL_BRACKET      = (Modifier.MEH,  '1', 'editor.action.selectToBracket')
     VS_FIND_FILES       = (Modifier.MEH,  '4', 'workbench.action.findInFiles')
     VS_FILE             = (Modifier.MEH,  '5', 'workbench.action.quickOpen')    

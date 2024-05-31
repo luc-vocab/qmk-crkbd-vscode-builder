@@ -60,7 +60,7 @@
 
 #define __VSCODE_L0__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,          KC_TRNS
 #define __VSCODE_L1__  TO(BASE),          VS_GO_TO_TOP,    VS_FIND_FILES, VS_CMT_BLOCK,      VS_CMT_LINE,      VS_RECENT
-#define __VSCODE_L2__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           VS_OPEN_FILE,     VS_SEL_BRACKET
+#define __VSCODE_L2__  KC_TRNS,           VS_COPILOT,      KC_TRNS,       KC_TRNS,           VS_OPEN_FILE,     VS_SEL_BRACKET
 #define __VSCODE_L3__  KC_TRNS,           VS_GO_TO_BOTTOM, KC_TRNS,       KC_TRNS,           KC_TRNS,          KC_TRNS
 
 #define __VSCODE_R0__  KC_TRNS,           KC_TRNS,         KC_TRNS,       KC_TRNS,           KC_TRNS,          KC_TRNS
