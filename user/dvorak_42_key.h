@@ -5,6 +5,7 @@
 
 #include "quantum.h"
 
+extern bool wsWindowSwitchingMode;
 
 // LAYERS
 // ======
@@ -78,6 +79,8 @@ enum custom_keycodes {
 
   SCREEN_COPY_MODE,
   SCREEN_PASTE,
+
+  WS_SWITCH,
 
   
 };

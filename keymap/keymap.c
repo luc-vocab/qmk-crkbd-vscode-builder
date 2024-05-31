@@ -131,6 +131,11 @@ void display_oneshot_mods(void) {
       oled_write_ln_P(PSTR("MOD: GUI"), false);
       return;
   }        
+  if (wsWindowSwitchingMode)
+  {
+      oled_write_ln_P(PSTR("WIN SWITCH"), false);
+      return;    
+  }
 
   oled_write_ln_P(PSTR(""), false);
 }
@@ -223,6 +228,16 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
+
+    // are we coming out of window switching mode ?
+    if (wsWindowSwitchingMode &&
+        layer_state_cmp(state, BASE))
+    {
+        // SEND_STRING(SS_UP(X_LALT));
+        unregister_code(KC_LALT);
+        wsWindowSwitchingMode = false;
+    }
+
 
     // base layer must be here
     rgblight_set_layer_state(0, 
