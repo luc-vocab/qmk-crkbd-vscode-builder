@@ -81,7 +81,7 @@ enum custom_keycodes {
   SCREEN_PASTE,
 
   WS_WIN_SWITCH,
-  WS_APP_SWITCH
+  WS_APP_SWITCH,
 
   
 };
@@ -102,6 +102,12 @@ enum custom_keycodes {
 #define CROS_WS_2 RGUI(LSFT(KC_2))
 #define CROS_WS_3 RGUI(LSFT(KC_3))
 #define CROS_WS_4 RGUI(LSFT(KC_4))
+
+// gnome terminal
+#define TERMINAL_NEW_TAB LSFT(LCTL(KC_T))
+#define TERMINAL_TITLE LSFT(LCTL(KC_S))
+#define TERMINAL_CLOSE_TAB LSFT(LCTL(KC_W))
+
 
 // generic shortcuts
 // =================
