@@ -163,6 +163,20 @@ void rgb_matrix_indicators_user(void) {
   STATUS_LED_4(LED_4);
 }
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+
+    // are we coming out of window switching mode ?
+    if (wsWindowSwitchingMode &&
+        layer_state_cmp(state, BASE))
+    {
+        // SEND_STRING(SS_UP(X_LALT));
+        unregister_code(KC_LALT);
+        wsWindowSwitchingMode = false;
+    }
+
+    return state;
+}
+
 /*
 LED_1: red, left top
 LED_2: green, left bottom
@@ -184,6 +198,11 @@ void oneshot_mods_changed_user(uint8_t mods) {
     LED_2 = true;
   }
   if (mods & MOD_MASK_GUI) {
+    LED_2 = true;
+  }
+
+  if (wsWindowSwitchingMode)
+  {
     LED_2 = true;
   }
 
