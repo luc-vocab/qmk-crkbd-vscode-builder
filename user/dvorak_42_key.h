@@ -22,7 +22,6 @@ enum layer_names {
     // appnav layers (app specific shortcuts)
     BROWSER,
     SHELL,
-    SCREEN,
     VSCODE,
     MOUSE,
     // other

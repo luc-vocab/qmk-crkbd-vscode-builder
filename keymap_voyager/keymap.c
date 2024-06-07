@@ -95,12 +95,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __SHELL_L2__ ,       __SHELL_R2__ ,
         __SHELL_L3__ ,       __SHELL_R3__ ,
         __SHELL_L_2THUMB__ , __SHELL_R_2THUMB__),
-[SCREEN] = LAYOUT_WRAPPER_VOYAGER(
-        __SCREEN_L0__ ,       __SCREEN_R0__ ,  
-        __SCREEN_L1__ ,       __SCREEN_R1__ ,
-        __SCREEN_L2__ ,       __SCREEN_R2__ ,
-        __SCREEN_L3__ ,       __SCREEN_R3__ ,
-        __SCREEN_L_2THUMB__ , __SCREEN_R_2THUMB__),
 [VSCODE] = LAYOUT_WRAPPER_VOYAGER(
         __VSCODE_L0__ ,       __VSCODE_R0__ ,
         __VSCODE_L1__ ,       __VSCODE_R1__ ,
@@ -147,9 +141,6 @@ void rgb_matrix_indicators_user(void) {
     case SHELL:
       rgb_matrix_set_color_all(RGB_RED); 
       break;      
-    case SCREEN:
-      rgb_matrix_set_color_all(RGB_YELLOW); 
-      break;            
     case DESKNAV:
       rgb_matrix_set_color_all(RGB_ORANGE); 
       break;
