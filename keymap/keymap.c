@@ -49,11 +49,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __SHELL_L2__ ,       __SHELL_R2__ ,
         __SHELL_L3__ ,       __SHELL_R3__ ,
         __SHELL_L_3THUMB__ , __SHELL_R_3THUMB__),
-[SCREEN] = LAYOUT_WRAPPER_CRKBD(
-        __SCREEN_L1__ ,       __SCREEN_R1__ ,
-        __SCREEN_L2__ ,       __SCREEN_R2__ ,
-        __SCREEN_L3__ ,       __SCREEN_R3__ ,
-        __SCREEN_L_3THUMB__ , __SCREEN_R_3THUMB__),        
 [VSCODE] = LAYOUT_WRAPPER_CRKBD(
         __VSCODE_L1__ ,       __VSCODE_R1__ ,
         __VSCODE_L2__ ,       __VSCODE_R2__ ,
@@ -103,7 +98,6 @@ void display_current_layer_name(void){
   // appnav
   DISPLAY_LAYER_NAME(BROWSER, "BROWSER");
   DISPLAY_LAYER_NAME(SHELL, "SHELL");
-  DISPLAY_LAYER_NAME(SCREEN, "SCREEN");
   DISPLAY_LAYER_NAME(VSCODE, "VSCODE");
   // base
   DISPLAY_LAYER_NAME(BASE, "BASE");
@@ -256,7 +250,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // appnav - green
     rgblight_set_layer_state(3, 
       layer_state_cmp(state, SHELL)
-      || layer_state_cmp(state, SCREEN)
     );
 
 
