@@ -107,36 +107,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SCREEN_WINDOWS:
             SEND_STRING(SS_LCTL("a") "\"");
             break;            
-        case SCREEN_0:
-            SEND_STRING(SS_LCTL("a") "0");
-            break;
-        case SCREEN_1:
-            SEND_STRING(SS_LCTL("a") "1");
-            break;
-        case SCREEN_2:
-            SEND_STRING(SS_LCTL("a") "2");
-            break;
-        case SCREEN_3:
-            SEND_STRING(SS_LCTL("a") "3");
-            break;
-        case SCREEN_4:
-            SEND_STRING(SS_LCTL("a") "4");
-            break;
-        case SCREEN_5:
-            SEND_STRING(SS_LCTL("a") "5");
-            break;
-        case SCREEN_6:
-            SEND_STRING(SS_LCTL("a") "6");
-            break;
-        case SCREEN_7:
-            SEND_STRING(SS_LCTL("a") "7");
-            break;
-        case SCREEN_8:
-            SEND_STRING(SS_LCTL("a") "8");
-            break;
-        case SCREEN_9:
-            SEND_STRING(SS_LCTL("a") "9");
-            break;
         case SCREEN_COPY_MODE:
             SEND_STRING(SS_LCTL("a") "[");
             break;

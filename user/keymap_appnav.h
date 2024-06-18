@@ -37,24 +37,6 @@
 #define __SHELL_R_3THUMB__  KC_TRNS,            SCREEN_NEW_TAB,     KC_TRNS
 
 
-// SCREEN
-// =============
-#define __SCREEN_L0__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
-#define __SCREEN_L1__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
-#define __SCREEN_L2__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
-#define __SCREEN_L3__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
-
-#define __SCREEN_R0__  KC_TRNS,          KC_TRNS,  KC_TRNS,            KC_TRNS,             KC_TRNS,             KC_TRNS
-#define __SCREEN_R1__  KC_TRNS,          SCREEN_7, SCREEN_8,           SCREEN_9,            SCREEN_RENAME,       KC_TRNS
-#define __SCREEN_R2__  SCREEN_TAB_LEFT,  SCREEN_4, SCREEN_5,           SCREEN_6,            SCREEN_TAB_RIGHT,    KC_TRNS
-#define __SCREEN_R3__  KC_TRNS,          SCREEN_1, SCREEN_2,           SCREEN_3,            SCREEN_NUMBER,       KC_TRNS
-
-#define __SCREEN_L_2THUMB__  KC_TRNS,       KC_TRNS
-#define __SCREEN_L_3THUMB__  KC_TRNS,       KC_TRNS,   KC_TRNS
-#define __SCREEN_R_2THUMB__  SCREEN_DETACH, SCREEN_0
-#define __SCREEN_R_3THUMB__  SCREEN_DETACH, KC_TRNS,  SCREEN_0
-
-
 // VSCODE
 // ============
 
