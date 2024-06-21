@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 VERSION_NUMBER"
+    exit 1
+fi
+
 VERSION_NUMBER=$1 # for example 0.1
 GIT_TAG=v${VERSION_NUMBER}
 
