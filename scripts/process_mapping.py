@@ -41,7 +41,7 @@ class Mapping(enum.Enum):
     VS_COPILOT             =   (Modifier.MEH,  'y', 'workbench.panel.chat.view.copilot.focus')
     VS_EXPAND_SEL          =   (Modifier.MEH,  'z', 'editor.action.smartSelect.expand')
     VS_FOCUS_BREADCRUMBS   =   (Modifier.MEH,  '1', 'breadcrumbs.focus')
-    VS_FOCUS_EXPLORER      =   (Modifier.MEH,  '2', 'workbench.files.action.focusOpenEditorsView')
+    VS_FOCUS_EXPLORER      =   (Modifier.MEH,  '2', 'workbench.explorer.fileView.focus')
     VS_COLLAPSE_EXPLORER   =   (Modifier.MEH,  '3', 'workbench.files.action.collapseExplorerFolders')
     VS_FIND_FILES          =   (Modifier.MEH,  '4', 'workbench.action.findInFiles')
     VS_FILE                =   (Modifier.MEH,  '5', 'workbench.action.quickOpen')    
