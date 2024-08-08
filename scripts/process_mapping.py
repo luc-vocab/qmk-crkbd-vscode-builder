@@ -49,6 +49,10 @@ class Mapping(enum.Enum):
     VS_GO_TO_TOP           =   (Modifier.MEH,  '7', 'cursorTop')
     VS_GO_TO_BOTTOM        =   (Modifier.MEH,  '8', 'cursorBottom')
     VS_OPEN_FILE           =   (Modifier.MEH,  '9', 'workbench.action.files.openFile')
+    # double.bot shortcuts
+    VS_DBL_ADD_SEL_NEW     =   (Modifier.HYPR,  'a', 'doublebot.addSelectionToNewConvo')
+    VS_DBL_ADD_SEL         =   (Modifier.HYPR,  'b', 'doublebot.addSelectionToChat')
+    VS_DBL_FOCUS_CHAT      =   (Modifier.HYPR,  'c', 'doublebot.focusCurrentChat')
     # meh + 0
 
     def __init__(self, modifier, keycode, command):
