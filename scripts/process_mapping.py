@@ -53,6 +53,7 @@ class Mapping(enum.Enum):
     VS_DBL_ADD_SEL_NEW     =   (Modifier.HYPR,  'a', 'doublebot.addSelectionToNewConvo')
     VS_DBL_ADD_SEL         =   (Modifier.HYPR,  'b', 'doublebot.addSelectionToChat')
     VS_DBL_FOCUS_CHAT      =   (Modifier.HYPR,  'c', 'doublebot.focusCurrentChat')
+    VS_DBL_NEW_CHAT        =   (Modifier.HYPR,  'd', 'doublebot.newConvo')
     # meh + 0
 
     def __init__(self, modifier, keycode, command):
