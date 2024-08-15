@@ -1,1 +1,1 @@
-export QMK_TAG=0.23.7
+export QMK_TAG=0.25.20
