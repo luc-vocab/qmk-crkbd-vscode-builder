@@ -5,7 +5,6 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include "dvorak_42_key.h"
-// #include "dvorak_42_keymap_common.h"
 #include "keymap_all.h"
 
 #define LAYOUT_WRAPPER_CRKBD(...) LAYOUT_split_3x6_3_ex2(__VA_ARGS__)
