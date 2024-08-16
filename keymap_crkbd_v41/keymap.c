@@ -24,16 +24,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __BASE_L2_EXT__,      __BASE_R2_EXT__ ,
         __BASE_L3__,          __BASE_R3__     ,
         __BASE_L_3THUMB__,    __BASE_R_3THUMB__),
-/* [KEYNAV] = LAYOUT_WRAPPER_CRKBD(
-        __KEYNAV_L1__ ,       __KEYNAV_R1__ ,
-        __KEYNAV_L2__ ,       __KEYNAV_R2__ ,
-        __KEYNAV_L3__ ,       __KEYNAV_R3__ ,
+[KEYNAV] = LAYOUT_WRAPPER_CRKBD(
+        __KEYNAV_L1_EXT__   , __KEYNAV_R1_EXT__ ,
+        __KEYNAV_L2_EXT__   , __KEYNAV_R2_EXT__ ,
+        __KEYNAV_L3__       , __KEYNAV_R3__     ,
         __KEYNAV_L_3THUMB__ , __KEYNAV_R_3THUMB__),
 [KEYSEL] = LAYOUT_WRAPPER_CRKBD(
-        __KEYSEL_L1__ ,       __KEYSEL_R1__ ,
-        __KEYSEL_L2__ ,       __KEYSEL_R2__ ,
+        __KEYSEL_L1_EXT__ ,   __KEYSEL_R1_EXT__ ,
+        __KEYSEL_L2_EXT__ ,   __KEYSEL_R2_EXT__ ,
         __KEYSEL_L3__ ,       __KEYSEL_R3__ ,
         __KEYSEL_L_3THUMB__ , __KEYSEL_R_3THUMB__),
+/*
 [DESKNAV] = LAYOUT_WRAPPER_CRKBD(
         __DESKNAV_L1__ ,       __DESKNAV_R1__ ,
         __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
