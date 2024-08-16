@@ -25,7 +25,7 @@ docker run --rm -it \
 --mount type=bind,source=${HOME}/keyboard/firmware,target=/firmware \
 --name qmk-crkbd-vscode-builder \
 ${DOCKER_IMAGE} \
-sh -c "cd /workspace/qmk_firmware && qmk compile -kb crkbd/rev4 -km luc && cp *.hex /firmware" || exit 1
+sh -c "cd /workspace/qmk_firmware && qmk compile -kb crkbd/rev4 -km luc && cp *.uf2 /firmware" || exit 1
 
-rclone copy ~/keyboard/firmware/*.hex dropbox:Keyboard/firmware
+rclone copy ~/keyboard/firmware/*.uf2 dropbox:Keyboard/firmware
 rclone copy ~/keyboard/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode
