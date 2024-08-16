@@ -16,15 +16,15 @@
 
 #define RGBLIGHT_LAYERS
 
-#ifdef RGBLIGHT_ENABLE
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
-#endif
+// #ifdef RGBLIGHT_ENABLE
+//     #define RGBLIGHT_HUE_STEP 10
+//     #define RGBLIGHT_SAT_STEP 17
+//     #define RGBLIGHT_VAL_STEP 17
+// #endif
 
 
-// we don't want any colors by default
-#define RGBLIGHT_DEFAULT_HUE 	0
-#define RGBLIGHT_DEFAULT_SAT 	0
-#define RGBLIGHT_DEFAULT_VAL    0
+// // we don't want any colors by default
+// #define RGBLIGHT_DEFAULT_HUE 	0
+// #define RGBLIGHT_DEFAULT_SAT 	0
+// #define RGBLIGHT_DEFAULT_VAL    0
 
