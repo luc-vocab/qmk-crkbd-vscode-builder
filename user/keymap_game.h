@@ -15,3 +15,8 @@
 #define __GAME_R_2THUMB__  KC_LCTL,  KC_SPACE
 #define __GAME_L_3THUMB__  KC_NO,    KC_LCTL, KC_SPACE
 #define __GAME_R_3THUMB__  KC_TRNS,  KC_TRNS, TO(BASE)
+
+#define __GAME_L1_EXT__ __GAME_L1__, KC_TRNS
+#define __GAME_L2_EXT__ __GAME_L2__, KC_TRNS
+#define __GAME_R1_EXT__ KC_TRNS, __GAME_R1__
+#define __GAME_R2_EXT__ KC_TRNS, __GAME_R2__

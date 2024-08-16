@@ -18,6 +18,12 @@
 #define __BROWSER_L_3THUMB__  KC_TRNS,      KC_TRNS,    KC_TRNS
 #define __BROWSER_R_3THUMB__  BR_TAB_CLOSE, BR_TAB_NEW, KC_TRNS
 
+#define __BROWSER_L1_EXT__ __BROWSER_L1__, KC_TRNS
+#define __BROWSER_L2_EXT__ __BROWSER_L2__, KC_TRNS
+#define __BROWSER_R1_EXT__ KC_TRNS, __BROWSER_R1__
+#define __BROWSER_R2_EXT__ KC_TRNS, __BROWSER_R2__
+
+
 // SHELL
 // ============
 
@@ -36,6 +42,10 @@
 #define __SHELL_L_3THUMB__  KC_TRNS,            KC_TRNS,            KC_TRNS
 #define __SHELL_R_3THUMB__  KC_TRNS,            SCREEN_NEW_TAB,     KC_TRNS
 
+#define __SHELL_L1_EXT__ __SHELL_L1__, KC_TRNS
+#define __SHELL_L2_EXT__ __SHELL_L2__, KC_TRNS
+#define __SHELL_R1_EXT__ KC_TRNS, __SHELL_R1__
+#define __SHELL_R2_EXT__ KC_TRNS, __SHELL_R2__
 
 // VSCODE
 // ============
@@ -54,4 +64,9 @@
 #define __VSCODE_R_2THUMB__  VS_CLOSETAB, VS_COMMANDS
 #define __VSCODE_L_3THUMB__  KC_TRNS,     KC_TRNS,     KC_TRNS
 #define __VSCODE_R_3THUMB__  VS_CLOSETAB, VS_BM_LIST,  VS_COMMANDS
+
+#define __VSCODE_L1_EXT__ __VSCODE_L1__, KC_TRNS
+#define __VSCODE_L2_EXT__ __VSCODE_L2__, KC_TRNS
+#define __VSCODE_R1_EXT__ KC_TRNS, __VSCODE_R1__
+#define __VSCODE_R2_EXT__ KC_TRNS, __VSCODE_R2__
 

@@ -39,32 +39,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __DESKNAV_L2_EXT__ ,  __DESKNAV_R2_EXT__ ,
         __DESKNAV_L3__ ,      __DESKNAV_R3__ ,
         __DESKNAV_L_3THUMB__, __DESKNAV_R_3THUMB__),
-/*
 [BROWSER] = LAYOUT_WRAPPER_CRKBD(
-        __BROWSER_L1__ ,       __BROWSER_R1__ ,
-        __BROWSER_L2__ ,       __BROWSER_R2__ ,
-        __BROWSER_L3__ ,       __BROWSER_R3__ ,
-        __BROWSER_L_3THUMB__ , __BROWSER_R_3THUMB__),
+        __BROWSER_L1_EXT__ ,  __BROWSER_R1_EXT__ ,
+        __BROWSER_L2_EXT__ ,  __BROWSER_R2_EXT__ ,
+        __BROWSER_L3__ ,      __BROWSER_R3__ ,
+        __BROWSER_L_3THUMB__ ,__BROWSER_R_3THUMB__),
 [SHELL] = LAYOUT_WRAPPER_CRKBD(
-        __SHELL_L1__ ,       __SHELL_R1__ ,
-        __SHELL_L2__ ,       __SHELL_R2__ ,
+        __SHELL_L1_EXT__ ,   __SHELL_R1_EXT__ ,
+        __SHELL_L2_EXT__ ,   __SHELL_R2_EXT__ ,
         __SHELL_L3__ ,       __SHELL_R3__ ,
         __SHELL_L_3THUMB__ , __SHELL_R_3THUMB__),
 [VSCODE] = LAYOUT_WRAPPER_CRKBD(
-        __VSCODE_L1__ ,       __VSCODE_R1__ ,
-        __VSCODE_L2__ ,       __VSCODE_R2__ ,
+        __VSCODE_L1_EXT__ ,   __VSCODE_R1_EXT__ ,
+        __VSCODE_L2_EXT__ ,   __VSCODE_R2_EXT__ ,
         __VSCODE_L3__ ,       __VSCODE_R3__ ,
         __VSCODE_L_3THUMB__ , __VSCODE_R_3THUMB__),
 [SYMBOLS] = LAYOUT_WRAPPER_CRKBD(
-        __SYMBOLS_L1__ ,       __SYMBOLS_R1__ ,
-        __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
+        __SYMBOLS_L1_EXT__ ,   __SYMBOLS_R1_EXT__ ,
+        __SYMBOLS_L2_EXT__ ,   __SYMBOLS_R2_EXT__ ,
         __SYMBOLS_L3__ ,       __SYMBOLS_R3__ ,
         __SYMBOLS_L_3THUMB__ , __SYMBOLS_R_3THUMB__),
 [GAME] = LAYOUT_WRAPPER_CRKBD(
-        __GAME_L1__ ,       __GAME_R1__ ,
-        __GAME_L2__ ,       __GAME_R2__ ,
+        __GAME_L1_EXT__ ,   __GAME_R1_EXT__ ,
+        __GAME_L2_EXT__ ,   __GAME_R2_EXT__ ,
         __GAME_L3__ ,       __GAME_R3__ ,
-        __GAME_L_3THUMB__ , __GAME_R_3THUMB__), */
+        __GAME_L_3THUMB__ , __GAME_R_3THUMB__),
 
 
 
