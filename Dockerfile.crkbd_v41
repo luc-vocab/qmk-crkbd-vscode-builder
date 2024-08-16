@@ -1,0 +1,48 @@
+# how to build
+# docker build --build-arg UNAME=$(id -un) --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t lucwastiaux/qmk-crkbd-vscode-builder:latest -f Dockerfile .
+# run 
+# scripts/docker_qmk_build.sh
+# docker run -it --mount type=bind,source="$(pwd)"/keymap,target=/qmk_firmware/keyboards/crkbd/keymaps/luc --mount type=bind,source="$(pwd)"/user,target=/qmk_firmware/users/luc lucwastiaux/qmk-crkbd-vscode-builder:latest
+#
+# debug:
+# look inside image:
+# docker run -it lucwastiaux/qmk-crkbd-vscode-builder:latest sh
+
+FROM ubuntu:24.04
+
+ARG UNAME=qmk_user
+ARG UID=1000
+ARG GID=1000
+ARG QMK_TAG=0.19.4
+
+# install packages first
+# https://github.com/samhocevar-forks/qmk-firmware/blob/master/docs/getting_started_build_tools.md
+RUN apt-get update -y && apt-get install -y python3-pip python3.12-venv git gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-programmer dfu-util gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi
+
+# python virtual env
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+RUN pip install qmk
+
+# install github CLI utility
+RUN mkdir -p -m 755 /etc/apt/keyrings \
+&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg |  tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&&  chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" |  tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&&  apt update \
+&&  apt install gh -y
+
+RUN groupadd -g $GID -o $UNAME
+RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+
+RUN mkdir /workspace && chown $UNAME:$UNAME /workspace
+USER $UNAME
+RUN git clone --branch $QMK_TAG --single-branch https://github.com/qmk/qmk_firmware.git /workspace/qmk_firmware
+WORKDIR /workspace/qmk_firmware
+RUN git fetch origin pull/24084/head:develop
+RUN git checkout develop
+RUN make git-submodule
+
+
