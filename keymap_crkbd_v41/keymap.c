@@ -34,12 +34,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __KEYSEL_L2_EXT__ ,   __KEYSEL_R2_EXT__ ,
         __KEYSEL_L3__ ,       __KEYSEL_R3__ ,
         __KEYSEL_L_3THUMB__ , __KEYSEL_R_3THUMB__),
-/*
 [DESKNAV] = LAYOUT_WRAPPER_CRKBD(
-        __DESKNAV_L1__ ,       __DESKNAV_R1__ ,
-        __DESKNAV_L2__ ,       __DESKNAV_R2__ ,
-        __DESKNAV_L3__ ,       __DESKNAV_R3__ ,
-        __DESKNAV_L_3THUMB__ , __DESKNAV_R_3THUMB__),
+        __DESKNAV_L1_EXT__ ,  __DESKNAV_R1_EXT__ ,
+        __DESKNAV_L2_EXT__ ,  __DESKNAV_R2_EXT__ ,
+        __DESKNAV_L3__ ,      __DESKNAV_R3__ ,
+        __DESKNAV_L_3THUMB__, __DESKNAV_R_3THUMB__),
+/*
 [BROWSER] = LAYOUT_WRAPPER_CRKBD(
         __BROWSER_L1__ ,       __BROWSER_R1__ ,
         __BROWSER_L2__ ,       __BROWSER_R2__ ,
