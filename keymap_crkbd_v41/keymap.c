@@ -96,31 +96,31 @@ const rgblight_segment_t PROGMEM rgb_layer_off[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_blue[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_BLUE}
+    {0, RGBLED_NUM, HSV_BLUE}
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_purple[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_PURPLE}
+    {0, RGBLED_NUM, HSV_PURPLE}
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_red[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_RED}
+    {0, RGBLED_NUM, HSV_RED}
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_orange[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_ORANGE}
+    {0, RGBLED_NUM, HSV_ORANGE}
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_yellow[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_YELLOW}
+    {0, RGBLED_NUM, HSV_YELLOW}
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_green[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_GREEN}
+    {0, RGBLED_NUM, HSV_GREEN}
 );
 
 const rgblight_segment_t PROGMEM rgb_layer_pink[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLIGHT_LED_COUNT, HSV_PINK}
+    {0, RGBLED_NUM, HSV_PINK}
 );
 
 
