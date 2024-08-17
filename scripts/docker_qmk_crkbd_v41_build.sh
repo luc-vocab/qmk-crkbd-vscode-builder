@@ -10,7 +10,7 @@ REBUILD_DOCKER=$1
 
 export DOCKER_BUILDKIT=1
 echo "QMK_TAG: " $QMK_TAG
-DOCKER_IMAGE=lucwastiaux/qmk-crkbd-vscode-builder-crkbd-v41:QMK-${QMK_TAG}
+DOCKER_IMAGE=lucwastiaux/qmk-crkbd-vscode-builder-crkbd-v41:foostan-${QMK_TAG}
 
 if [ "$REBUILD_DOCKER" = "rebuild" ]; then
     # build image if not already built (will cache)
@@ -21,12 +21,12 @@ fi
 
 
 docker run --rm -it \
---mount type=bind,source="$(pwd)"/keymap_crkbd_v41,target=/workspace/kbd_firmware/keyboards/crkbd/rev4_1/keymaps/luc \
---mount type=bind,source="$(pwd)"/user,target=/workspace/qmk_firmware/users/luc \
+--mount type=bind,source="$(pwd)"/keymap_crkbd_v41,target=/workspace/kbd_firmware/keyboards/crkbd/qmk/qmk_firmware/keymaps/luc \
+--mount type=bind,source="$(pwd)"/user,target=/workspace/kbd_firmware/src/qmk/qmk_firmware/users/luc \
 --mount type=bind,source=${HOME}/keyboard/firmware,target=/firmware \
 --name qmk-crkbd-vscode-builder \
 ${DOCKER_IMAGE} \
-sh -c "cd /workspace/kbd_firmware && kb=crkbd kr=rev4_1/standard km=via make qmk-compile && cp keyboards/crkbd/qmk/qmk_firmware/.build/*.uf2 /firmware"
+sh -c "cd /workspace/kbd_firmware && kb=crkbd kr=rev4_1/standard km=luc make qmk-compile && cp keyboards/crkbd/qmk/qmk_firmware/.build/*.uf2 /firmware"
 
 rclone sync ~/keyboard/firmware/ dropbox:Keyboard/firmware/
 rclone copy ~/keyboard/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode/keybindings.json
