@@ -16,7 +16,7 @@ if [ "$REBUILD_DOCKER" = "rebuild" ]; then
     # build image if not already built (will cache)
     docker build --build-arg QMK_TAG=$QMK_TAG --build-arg UNAME=$(id -un) --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t ${DOCKER_IMAGE} -f Dockerfile.crkbd_v41 .
     # push image to docker hub
-    # docker push ${DOCKER_IMAGE}
+    docker push ${DOCKER_IMAGE}
 fi
 
 
