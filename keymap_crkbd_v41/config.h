@@ -17,3 +17,8 @@
 // RGB light settings
 // ==================
 #define RGBLIGHT_LAYERS
+
+// we don't want any colors by default
+#define RGBLIGHT_DEFAULT_HUE 	0
+#define RGBLIGHT_DEFAULT_SAT 	0
+#define RGBLIGHT_DEFAULT_VAL    0
