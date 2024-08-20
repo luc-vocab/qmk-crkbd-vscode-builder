@@ -63,6 +63,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __GAME_L2_EXT__ ,   __GAME_R2_EXT__ ,
         __GAME_L3__ ,       __GAME_R3__ ,
         __GAME_L_3THUMB__ , __GAME_R_3THUMB__),
+[GAME_NUMPAD] = LAYOUT_WRAPPER_CRKBD(
+        __GAME_NUMPAD_L1_EXT__ ,   __GAME_NUMPAD_R1_EXT__ ,
+        __GAME_NUMPAD_L2_EXT__ ,   __GAME_NUMPAD_R2_EXT__ ,
+        __GAME_NUMPAD_L3__ ,       __GAME_NUMPAD_R3__ ,
+        __GAME_NUMPAD_L_3THUMB__ , __GAME_NUMPAD_R_3THUMB__),
 
 
 

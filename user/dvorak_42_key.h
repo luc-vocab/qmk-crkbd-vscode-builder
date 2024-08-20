@@ -26,7 +26,8 @@ enum layer_names {
     MOUSE,
     // other
     SYMBOLS,        // combined numbers and symbols layer
-    GAME           // game layer
+    GAME,           // game layer
+    GAME_NUMPAD
 };
 
 
