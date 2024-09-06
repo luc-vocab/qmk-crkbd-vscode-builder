@@ -71,6 +71,7 @@ enum custom_keycodes {
 
   // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,
+  // alt-tab / Switch apps
   WS_APP_SWITCH,
 
   
