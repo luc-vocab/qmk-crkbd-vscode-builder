@@ -69,6 +69,7 @@ enum custom_keycodes {
   SCREEN_COPY_MODE,
   SCREEN_PASTE,
 
+  // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,
   WS_APP_SWITCH,
 
