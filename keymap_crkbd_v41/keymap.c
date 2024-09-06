@@ -96,6 +96,20 @@ void oneshot_mods_changed_user(uint8_t mods) {
   rgblight_set_layer_state(7, g_oneshot_shift || g_oneshot_ctrl || g_oneshot_alt || g_oneshot_gui || g_capsword);
 }
 
+  /*
+  // RGB key numbers
+  //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
+       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,     T:3,  KC_LCTL,    KC_RCTL,    KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+      KC_LCTL,    KC_A,    KC_S,     D:10,    KC_F,    KC_G, KC_LALT,    KC_RALT,    KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+  //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
+       20,       KC_Z,    X: 14,      C:9,     V:6,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
+  //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
+                                       8,       7,      0,          KC_ENT, TL_UPPR, KC_RGUI
+                                  //`--------------------------'  `--------------------------'
+
+  */
+
 const rgblight_segment_t PROGMEM rgb_layer_off[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 0, 0}
 );
@@ -128,6 +142,11 @@ const rgblight_segment_t PROGMEM rgb_layer_pink[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, RGBLED_NUM, HSV_PINK}
 );
 
+const rgblight_segment_t PROGMEM rgb_layer_gaming[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0,  1, HSV_RED}, // L rightmost thumb key
+    {7,  2, HSV_RED}  // L 2 thumb keys (leftmost)
+);
+
 
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
@@ -138,7 +157,8 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     rgb_layer_orange,
     rgb_layer_yellow,
     rgb_layer_green,
-    rgb_layer_pink
+    rgb_layer_pink,
+    rgb_layer_gaming
 );
 
 void keyboard_post_init_user(void) {
@@ -193,6 +213,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
            layer_state_cmp(state, BROWSER)
         || layer_state_cmp(state, VSCODE)
         );
+
+    // gaming
+    rgblight_set_layer_state(8, 
+          layer_state_cmp(state, GAME));
 
     return state;
 }

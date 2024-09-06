@@ -22,3 +22,7 @@
 
 #undef TAPPING_TERM
 #define TAPPING_TERM 175
+
+// RGB setings
+// ===========
+#define RGBLIGHT_MAX_LAYERS 32
