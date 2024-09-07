@@ -85,15 +85,6 @@ enum custom_keycodes {
 #define WS_RIGHT LCTL(LGUI(KC_RIGHT))
 #define WS_SHOW LGUI(KC_TAB)
 
-// chrome os
-#define CROS_WS_LEFT LGUI(KC_LBRC)
-#define CROS_WS_RIGHT LGUI(KC_RBRC)
-
-#define CROS_WS_1 RGUI(LSFT(KC_1))
-#define CROS_WS_2 RGUI(LSFT(KC_2))
-#define CROS_WS_3 RGUI(LSFT(KC_3))
-#define CROS_WS_4 RGUI(LSFT(KC_4))
-
 // gnome terminal
 #define TERMINAL_NEW_TAB LSFT(LCTL(KC_T))
 #define TERMINAL_TITLE LSFT(LCTL(KC_S)) // this is not a default shortcut, needs to be configured
