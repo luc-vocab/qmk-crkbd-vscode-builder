@@ -117,12 +117,6 @@ enum custom_keycodes {
 #define BR_TAB_LEFT_ALT RCTL(LSFT(KC_TAB))
 #define BR_TAB_RIGHT_ALT RCTL(KC_TAB)
 
-// MS teams shortcuts
-// =================
-
-#define TM_TAB_UP LALT(KC_UP)
-#define TM_TAB_DOWN LALT(KC_DOWN)
-#define TM_FOCUS_CHAT LALT(LSFT(KC_C))
 
 // shell shortcuts
 // ===============
