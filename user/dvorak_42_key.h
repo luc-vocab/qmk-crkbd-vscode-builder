@@ -5,6 +5,11 @@
 
 #include "quantum.h"
 
+#define TMUX_SHORTCUT(KEYCODE, SHORTCUT) \
+case KEYCODE:\
+    SEND_STRING(SS_LCTL("a") SHORTCUT);\
+    break
+
 extern bool wsWindowSwitchingMode;
 
 // LAYERS
@@ -68,6 +73,10 @@ enum custom_keycodes {
 
   SCREEN_COPY_MODE,
   SCREEN_PASTE,
+
+  // tmux shortcuts
+  TMUX_TAB_LEFT,
+  TMUX_TAB_RIGHT,
 
   // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,

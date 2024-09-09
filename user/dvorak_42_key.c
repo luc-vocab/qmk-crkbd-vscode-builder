@@ -116,6 +116,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SCREEN_KILL:
             SEND_STRING(SS_LCTL("a") "ky");
             break;            
+
+        // tmux shortcuts
+        TMUX_SHORTCUT(TMUX_TAB_LEFT, "p");
+        TMUX_SHORTCUT(TMUX_TAB_RIGHT, "n");
     }
   }
 
