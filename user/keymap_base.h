@@ -19,8 +19,8 @@
 #define __BASE_R1_EXT__ KC_TRNS,       __BASE_R1__
 #define __BASE_R2_EXT__ OSM(MOD_LALT), __BASE_R2__
 
-#define __BASE_L_2THUMB__  MO(SYMBOLS),    MO(KEYNAV)
-#define __BASE_R_2THUMB__  KC_ENTER,       KC_SPACE
-#define __BASE_L_3THUMB__  OSM(MOD_LCTL),  MO(SYMBOLS), MO(KEYNAV)
-#define __BASE_R_3THUMB__  KC_ENTER,       KC_SPACE,    MO(DESKNAV)
+#define __BASE_L_2THUMB__  MO(SYMBOLS),       MO(KEYNAV)
+#define __BASE_R_2THUMB__  KC_ENTER,          KC_SPACE
+#define __BASE_L_3THUMB__  OSM(MOD_LCTL),     __BASE_L_2THUMB__
+#define __BASE_R_3THUMB__  __BASE_R_2THUMB__, MO(DESKNAV)
 
