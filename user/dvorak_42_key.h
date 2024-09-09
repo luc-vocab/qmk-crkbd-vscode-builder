@@ -77,6 +77,7 @@ enum custom_keycodes {
   // tmux shortcuts
   TMUX_TAB_LEFT,
   TMUX_TAB_RIGHT,
+  TMUX_COMMANDS,
 
   // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,

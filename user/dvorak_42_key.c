@@ -120,6 +120,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         // tmux shortcuts
         TMUX_SHORTCUT(TMUX_TAB_LEFT, "p");
         TMUX_SHORTCUT(TMUX_TAB_RIGHT, "n");
+        TMUX_SHORTCUT(TMUX_COMMANDS, ":");
     }
   }
 
