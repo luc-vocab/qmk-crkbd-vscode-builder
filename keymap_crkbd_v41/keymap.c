@@ -147,6 +147,10 @@ const rgblight_segment_t PROGMEM rgb_layer_pink[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, RGBLED_NUM, HSV_PINK}
 );
 
+const rgblight_segment_t PROGMEM rgb_layer_magenta[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, RGBLED_NUM, HSV_MAGENTA}
+);
+
 const rgblight_segment_t PROGMEM rgb_layer_gaming[] = RGBLIGHT_LAYER_SEGMENTS(
     {0,  1, HSV_RED}, // L rightmost thumb key
     {7,  2, HSV_RED}  // L 2 thumb keys (leftmost)
@@ -155,15 +159,16 @@ const rgblight_segment_t PROGMEM rgb_layer_gaming[] = RGBLIGHT_LAYER_SEGMENTS(
 
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
-    rgb_layer_off,
-    rgb_layer_blue,
-    rgb_layer_purple,
-    rgb_layer_red,
-    rgb_layer_orange,
-    rgb_layer_yellow,
-    rgb_layer_green,
-    rgb_layer_pink,
-    rgb_layer_gaming
+    rgb_layer_off,     // 0
+    rgb_layer_blue,    // 1
+    rgb_layer_purple,  // 2
+    rgb_layer_red,     // 3
+    rgb_layer_orange,  // 4
+    rgb_layer_yellow,  // 5
+    rgb_layer_green,   // 6
+    rgb_layer_pink,    // 7
+    rgb_layer_gaming,  // 8 
+    rgb_layer_magenta  // 9
 );
 
 void keyboard_post_init_user(void) {
@@ -208,6 +213,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       layer_state_cmp(state, SHELL)
     );
 
+    rgblight_set_layer_state(9, 
+      layer_state_cmp(state, TMUX)
+    );    
 
     // desknav - orange
     rgblight_set_layer_state(4, 
