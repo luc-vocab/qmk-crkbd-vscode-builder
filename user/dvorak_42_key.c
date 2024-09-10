@@ -121,6 +121,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         TMUX_SHORTCUT(TMUX_PREV_SESSION, "(");
         TMUX_SHORTCUT(TMUX_NEXT_SESSION, ")");
         TMUX_SHORTCUT(TMUX_LIST_SESSIONS, "s");
+        TMUX_SHORTCUT(TMUX_RENAME_SESSION, "$");
+        TMUX_SHORTCUT(TMUX_NEW_SESSION, ":new\n");
 
         TMUX_SHORTCUT(TMUX_TAB_LEFT, "p");
         TMUX_SHORTCUT(TMUX_TAB_RIGHT, "n");
@@ -128,8 +130,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         TMUX_SHORTCUT(TMUX_NEW_WIN,  "c");
         TMUX_SHORTCUT(TMUX_RENAME_WIN, ",");
         TMUX_SHORTCUT(TMUX_KILL_WIN, "&");
-        TMUX_SHORTCUT(TMUX_MOVE_WIN_LEFT, "swap-window -t -1");
-        TMUX_SHORTCUT(TMUX_MOVE_WIN_RIGHT, "swap-window -t +1");
+        TMUX_SHORTCUT(TMUX_MOVE_WIN_LEFT, ":swap-window -t -1\n");
+        TMUX_SHORTCUT(TMUX_MOVE_WIN_RIGHT, ":swap-window -t +1\n");
 
         TMUX_SHORTCUT(TMUX_WIN_1, "1");
         TMUX_SHORTCUT(TMUX_WIN_2, "2");

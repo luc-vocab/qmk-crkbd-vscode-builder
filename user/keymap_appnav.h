@@ -34,7 +34,7 @@
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  SCREEN_KILL,        SCREEN_NUMBER,    SCREEN_RENAME,     SH_PROJCMD,       SH_CLEARSCR,      SH_DEL_PATH
-#define __SHELL_R2__  SH_WORD_LEFT,       TMUX_TAB_LEFT,    TMUX_TAB_RIGHT,    SCREEN_WINDOWS,   SH_WORD_RIGHT,    SH_DEL_WORD
+#define __SHELL_R2__  SH_WORD_LEFT,       KC_TRNS,          KC_TRNS,           SCREEN_WINDOWS,   SH_WORD_RIGHT,    SH_DEL_WORD
 #define __SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,        SH_SEARCH,         SH_PASTE,         SH_DEL_TO_END,    SH_STOP
 
 #define __SHELL_L_2THUMB__  KC_TRNS, KC_TRNS
@@ -50,15 +50,15 @@
 // TMUX
 // ====
 
-#define __TMUX_L0__  KC_TRNS, KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
-#define __TMUX_L1__  KC_TRNS, KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
-#define __TMUX_L2__  KC_TRNS, KC_TRNS,           KC_TRNS,           TMUX_MOVE_WIN_LEFT, TMUX_MOVE_WIN_RIGHT, KC_TRNS
-#define __TMUX_L3__  KC_TRNS, KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
+#define __TMUX_L0__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
+#define __TMUX_L1__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
+#define __TMUX_L2__  KC_TRNS,          KC_TRNS,           KC_TRNS,           TMUX_MOVE_WIN_LEFT, TMUX_MOVE_WIN_RIGHT, KC_TRNS
+#define __TMUX_L3__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
 
-#define __TMUX_R0__  KC_TRNS, KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
-#define __TMUX_R1__  KC_TRNS, TMUX_WIN_1,        TMUX_WIN_2,        TMUX_WIN_3,         TMUX_WIN_4,          TMUX_WIN_5
-#define __TMUX_R2__  KC_TRNS, TMUX_TAB_LEFT,     TMUX_TAB_RIGHT,    TMUX_LIST_WIN,      TMUX_RENAME_WIN,     TMUX_KILL_WIN
-#define __TMUX_R3__  KC_TRNS, TMUX_PREV_SESSION, TMUX_NEXT_SESSION, TMUX_LIST_SESSIONS, KC_TRNS,             KC_TRNS
+#define __TMUX_R0__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
+#define __TMUX_R1__  KC_TRNS,          TMUX_WIN_1,        TMUX_WIN_2,        TMUX_WIN_3,         TMUX_WIN_4,          TMUX_WIN_5
+#define __TMUX_R2__  KC_TRNS,          TMUX_TAB_LEFT,     TMUX_TAB_RIGHT,    TMUX_LIST_WIN,      TMUX_RENAME_WIN,     TMUX_KILL_WIN
+#define __TMUX_R3__  TMUX_NEW_SESSION, TMUX_PREV_SESSION, TMUX_NEXT_SESSION, TMUX_LIST_SESSIONS, TMUX_RENAME_SESSION, KC_TRNS
 
 #define __TMUX_L_2THUMB__  KC_TRNS, KC_TRNS
 #define __TMUX_R_2THUMB__  KC_TRNS, TMUX_NEW_WIN
