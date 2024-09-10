@@ -50,15 +50,15 @@
 // TMUX
 // ====
 
-#define __TMUX_L0__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
-#define __TMUX_L1__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
-#define __TMUX_L2__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
-#define __TMUX_L3__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L0__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L1__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L2__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L3__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
 
-#define __TMUX_R0__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
-#define __TMUX_R1__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
-#define __TMUX_R2__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
-#define __TMUX_R3__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R0__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R1__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R2__  KC_TRNS, TMUX_TAB_LEFT, TMUX_TAB_RIGHT,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R3__  KC_TRNS, KC_TRNS,       KC_TRNS,         KC_TRNS, KC_TRNS,  KC_TRNS
 
 #define __TMUX_L_2THUMB__  KC_TRNS, KC_TRNS
 #define __TMUX_R_2THUMB__  KC_TRNS, SCREEN_NEW_TAB
