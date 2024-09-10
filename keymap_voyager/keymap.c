@@ -95,6 +95,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __SHELL_L2__ ,       __SHELL_R2__ ,
         __SHELL_L3__ ,       __SHELL_R3__ ,
         __SHELL_L_2THUMB__ , __SHELL_R_2THUMB__),
+[TMUX] = LAYOUT_WRAPPER_VOYAGER(
+        __TMUX_L0__ ,       __TMUX_R0__ ,
+        __TMUX_L1__ ,       __TMUX_R1__ ,
+        __TMUX_L2__ ,       __TMUX_R2__ ,
+        __TMUX_L3__ ,       __TMUX_R3__ ,
+        __TMUX_L_2THUMB__ , __TMUX_R_2THUMB__),
 [VSCODE] = LAYOUT_WRAPPER_VOYAGER(
         __VSCODE_L0__ ,       __VSCODE_R0__ ,
         __VSCODE_L1__ ,       __VSCODE_R1__ ,
