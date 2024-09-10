@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __TMUX_L1__ ,       __TMUX_R1__ ,
         __TMUX_L2__ ,       __TMUX_R2__ ,
         __TMUX_L3__ ,       __TMUX_R3__ ,
-        __TMUX_L_3THUMB__ , __TMUX_R_3THUMB__),        
+        __TMUX_L_3THUMB__ , __TMUX_R_3THUMB__),
 [VSCODE] = LAYOUT_WRAPPER_CRKBD(
         __VSCODE_L1__ ,       __VSCODE_R1__ ,
         __VSCODE_L2__ ,       __VSCODE_R2__ ,

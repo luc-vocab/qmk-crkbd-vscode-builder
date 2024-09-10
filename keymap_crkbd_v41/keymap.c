@@ -48,6 +48,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __SHELL_L2_EXT__ ,   __SHELL_R2_EXT__ ,
         __SHELL_L3__ ,       __SHELL_R3__ ,
         __SHELL_L_3THUMB__ , __SHELL_R_3THUMB__),
+[TMUX] = LAYOUT_WRAPPER_CRKBD(
+        __TMUX_L1_EXT__   ,       __TMUX_R1_EXT__ ,
+        __TMUX_L2_EXT__   ,       __TMUX_R2_EXT__ ,
+        __TMUX_L3__       ,       __TMUX_R3__     ,
+        __TMUX_L_3THUMB__ ,       __TMUX_R_3THUMB__),
 [VSCODE] = LAYOUT_WRAPPER_CRKBD(
         __VSCODE_L1_EXT__ ,   __VSCODE_R1_EXT__ ,
         __VSCODE_L2_EXT__ ,   __VSCODE_R2_EXT__ ,
