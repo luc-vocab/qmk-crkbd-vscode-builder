@@ -58,23 +58,6 @@ enum custom_keycodes {
   SHELL_GIT_DIFF,
   SHELL_GIT_COMMIT,
 
-  // linux screen macros
-  SCREEN_TAB_LEFT,
-  SCREEN_TAB_RIGHT,
-
-  SCREEN_NEW_TAB,
-  SCREEN_DETACH,  // deprecate
-  SCREEN_RENAME,
-  SCREEN_NUMBER,
-  SCREEN_KILL,
-  SCREEN_WINDOWS,
-
-  SCREEN_MOVE_LEFT,
-  SCREEN_MOVE_RIGHT,
-
-  SCREEN_COPY_MODE,
-  SCREEN_PASTE,
-
   // tmux shortcuts
   // sessions
   TMUX_PREV_SESSION,

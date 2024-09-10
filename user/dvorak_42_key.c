@@ -66,57 +66,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("git commit -a\n");
             break;                                    
 
-        // linux screen shortcuts
-
-        case SHELL_SCREENRD:
-            SEND_STRING("screen -r -d ");
-            break;
-        case SHELL_SCREEN_NEW:
-            SEND_STRING("screen -S ");
-            break;
-        case SHELL_SCREEN_LIST:
-            SEND_STRING("screen -list\n");
-            break;
-
-        case SCREEN_TAB_LEFT:
-            SEND_STRING(SS_LCTL("a") "p");
-            break;
-        case SCREEN_TAB_RIGHT:
-            SEND_STRING(SS_LCTL("a") "n");
-            break;
-
-        case SCREEN_MOVE_LEFT:
-            SEND_STRING(SS_LCTL("a") ":number -1\n");
-            break;            
-        case SCREEN_MOVE_RIGHT:
-            SEND_STRING(SS_LCTL("a") ":number +1\n");
-            break;                        
-            
-        case SCREEN_NEW_TAB:
-            SEND_STRING(SS_LCTL("a") "c");
-            break;
-        case SCREEN_DETACH:
-            SEND_STRING(SS_LCTL("a") "d");
-            break;
-        case SCREEN_RENAME:
-            SEND_STRING(SS_LCTL("a") "A");
-            break;
-        case SCREEN_NUMBER:
-            SEND_STRING(SS_LCTL("a") ":number ");
-            break;
-        case SCREEN_WINDOWS:
-            SEND_STRING(SS_LCTL("a") "\"");
-            break;            
-        case SCREEN_COPY_MODE:
-            SEND_STRING(SS_LCTL("a") "[");
-            break;
-        case SCREEN_PASTE:
-            SEND_STRING(SS_LCTL("a") "]");
-            break;
-        case SCREEN_KILL:
-            SEND_STRING(SS_LCTL("a") "ky");
-            break;            
-
         // tmux shortcuts
         TMUX_SHORTCUT(TMUX_PREV_SESSION, "(");
         TMUX_SHORTCUT(TMUX_NEXT_SESSION, ")");
