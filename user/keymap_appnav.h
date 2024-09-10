@@ -28,9 +28,9 @@
 // ============
 
 #define __SHELL_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
-#define __SHELL_L1__  SCREEN_DETACH,      SCREEN_PASTE,     SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
-#define __SHELL_L2__  SHELL_SCREENRD,     SCREEN_COPY_MODE, SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  SHELL_SCREEN_LIST,  TO(BASE),         SHELL_GIT_DIFF,    SHELL_GIT_STATUS, SHELL_TAILF,      SHELL_SCREEN_NEW
+#define __SHELL_L1__  KC_TRNS,            SCREEN_PASTE,     SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
+#define __SHELL_L2__  KC_TRNS,            SCREEN_COPY_MODE, SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
+#define __SHELL_L3__  KC_TRNS,            TO(BASE),         SHELL_GIT_DIFF,    SHELL_GIT_STATUS, SHELL_TAILF,      SHELL_SCREEN_NEW
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  SCREEN_KILL,        SCREEN_NUMBER,    SCREEN_RENAME,     SH_PROJCMD,       SH_CLEARSCR,      SH_DEL_PATH
@@ -46,6 +46,29 @@
 #define __SHELL_L2_EXT__ __SHELL_L2__, KC_TRNS
 #define __SHELL_R1_EXT__ KC_TRNS, __SHELL_R1__
 #define __SHELL_R2_EXT__ KC_TRNS, __SHELL_R2__
+
+// TMUX
+// ====
+
+#define __TMUX_L0__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L1__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L2__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_L3__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+
+#define __TMUX_R0__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R1__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R2__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+#define __TMUX_R3__  KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS
+
+#define __TMUX_L_2THUMB__  KC_TRNS, KC_TRNS
+#define __TMUX_R_2THUMB__  KC_TRNS, SCREEN_NEW_TAB
+#define __TMUX_L_3THUMB__  KC_TRNS,            __TMUX_L_2THUMB__
+#define __TMUX_R_3THUMB__  __TMUX_R_2THUMB__, TMUX_COMMANDS
+
+#define __TMUX_L1_EXT__ __TMUX_L1__, KC_TRNS
+#define __TMUX_L2_EXT__ __TMUX_L2__, KC_TRNS
+#define __TMUX_R1_EXT__ KC_TRNS, __TMUX_R1__
+#define __TMUX_R2_EXT__ KC_TRNS, __TMUX_R2__
 
 // VSCODE
 // ============

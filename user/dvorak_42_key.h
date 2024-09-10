@@ -27,6 +27,7 @@ enum layer_names {
     // appnav layers (app specific shortcuts)
     BROWSER,
     SHELL,
+    TMUX,
     VSCODE,
     MOUSE,
     // other
@@ -49,9 +50,9 @@ enum custom_keycodes {
   SHELL_PGREP,
   SHELL_TAILF,
 
-  SHELL_SCREENRD,
-  SHELL_SCREEN_NEW,
-  SHELL_SCREEN_LIST,
+  SHELL_SCREENRD,    // deprecate
+  SHELL_SCREEN_NEW,  // deprecate
+  SHELL_SCREEN_LIST, // deprecate
 
   SHELL_GIT_STATUS,
   SHELL_GIT_DIFF,
@@ -62,7 +63,7 @@ enum custom_keycodes {
   SCREEN_TAB_RIGHT,
 
   SCREEN_NEW_TAB,
-  SCREEN_DETACH,
+  SCREEN_DETACH,  // deprecate
   SCREEN_RENAME,
   SCREEN_NUMBER,
   SCREEN_KILL,
