@@ -76,8 +76,19 @@ enum custom_keycodes {
   SCREEN_PASTE,
 
   // tmux shortcuts
+  // sessions
+  TMUX_PREV_SESSION,
+  TMUX_NEXT_SESSION,
+  TMUX_LIST_SESSIONS,
+  // windows
   TMUX_TAB_LEFT,
   TMUX_TAB_RIGHT,
+  TMUX_LIST_WIN,
+  TMUX_WIN_1,
+  TMUX_WIN_2,
+  TMUX_WIN_3,
+  TMUX_WIN_4,
+  TMUX_WIN_5,
   TMUX_COMMANDS,
 
   // Alt+Escape / Switch windows directly in Gnome
