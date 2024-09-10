@@ -75,6 +75,7 @@ enum custom_keycodes {
   TMUX_WIN_3,
   TMUX_WIN_4,
   TMUX_WIN_5,
+  TMUX_COPY_MODE,
   TMUX_COMMANDS,
 
   // Alt+Escape / Switch windows directly in Gnome
