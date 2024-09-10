@@ -50,10 +50,6 @@ enum custom_keycodes {
   SHELL_PGREP,
   SHELL_TAILF,
 
-  SHELL_SCREENRD,    // deprecate
-  SHELL_SCREEN_NEW,  // deprecate
-  SHELL_SCREEN_LIST, // deprecate
-
   SHELL_GIT_STATUS,
   SHELL_GIT_DIFF,
   SHELL_GIT_COMMIT,
