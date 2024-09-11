@@ -1,0 +1,7 @@
+session_name: qmk
+start_directory: ./
+shell_command_before:
+  - cmd: source .bash_aliases
+windows:
+- window_name: qmk
+  focus: true
