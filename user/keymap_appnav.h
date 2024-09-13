@@ -30,7 +30,7 @@
 #define __SHELL_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_L1__  KC_TRNS,            KC_TRNS,          SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
 #define __SHELL_L2__  KC_TRNS,            KC_TRNS,          SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  KC_TRNS,            TO(BASE),         SHELL_GIT_DIFF,    SHELL_GIT_STATUS, SHELL_TAILF,      KC_TRNS
+#define __SHELL_L3__  KC_TRNS,            TO(BASE),         MO(TMUX),          SHELL_GIT_STATUS, SHELL_TAILF,      KC_TRNS
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  KC_TRNS,            KC_TRNS,          KC_TRNS,           SH_PROJCMD,       SH_CLEARSCR,      SH_DEL_PATH

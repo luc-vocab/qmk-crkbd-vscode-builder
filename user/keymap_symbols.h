@@ -13,7 +13,7 @@
 #define __SYMBOLS_R2__  KC_MINUS,      KC_4,     KC_5,      KC_6,      KC_SLSH,     KC_BSLS
 #define __SYMBOLS_R3__  KC_EQUAL,      KC_1,     KC_2,      KC_3,      KC_QUES,     KC_DOT
 
-#define __SYMBOLS_L_2THUMB__  KC_TRNS, KC_TRNS
+#define __SYMBOLS_L_2THUMB__  KC_TRNS, KC_CIRC
 #define __SYMBOLS_R_2THUMB__  KC_TRNS, KC_0
 #define __SYMBOLS_L_3THUMB__  KC_TRNS, KC_TRNS, KC_TRNS
 #define __SYMBOLS_R_3THUMB__  KC_TRNS, KC_TRNS, KC_0
