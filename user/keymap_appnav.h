@@ -53,14 +53,14 @@
 #define __TMUX_L0__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
 #define __TMUX_L1__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
 #define __TMUX_L2__  KC_TRNS,          KC_TRNS,           KC_TRNS,           TMUX_MOVE_WIN_LEFT, TMUX_MOVE_WIN_RIGHT, KC_TRNS
-#define __TMUX_L3__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
+#define __TMUX_L3__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            TMUX_DETACH_CLIENT,  KC_TRNS
 
 #define __TMUX_R0__  KC_TRNS,          KC_TRNS,           KC_TRNS,           KC_TRNS,            KC_TRNS,             KC_TRNS
 #define __TMUX_R1__  TMUX_COPY_MODE,   TMUX_WIN_1,        TMUX_WIN_2,        TMUX_WIN_3,         TMUX_WIN_4,          TMUX_WIN_5
 #define __TMUX_R2__  KC_TRNS,          TMUX_TAB_LEFT,     TMUX_TAB_RIGHT,    TMUX_LIST_WIN,      TMUX_RENAME_WIN,     TMUX_KILL_WIN
 #define __TMUX_R3__  TMUX_NEW_SESSION, TMUX_PREV_SESSION, TMUX_NEXT_SESSION, TMUX_LIST_SESSIONS, TMUX_RENAME_SESSION, TMUX_KILL_SESSION
 
-#define __TMUX_L_2THUMB__  KC_TRNS, KC_TRNS
+#define __TMUX_L_2THUMB__  KC_TRNS, TMUX_NEW_SESSION
 #define __TMUX_R_2THUMB__  KC_TRNS, TMUX_NEW_WIN
 #define __TMUX_L_3THUMB__  KC_TRNS,           __TMUX_L_2THUMB__
 #define __TMUX_R_3THUMB__  __TMUX_R_2THUMB__, TMUX_COMMANDS

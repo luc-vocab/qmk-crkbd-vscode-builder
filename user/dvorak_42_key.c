@@ -73,6 +73,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         TMUX_SHORTCUT(TMUX_RENAME_SESSION, "$");
         TMUX_SHORTCUT(TMUX_NEW_SESSION, "m");
         TMUX_SHORTCUT(TMUX_KILL_SESSION, "k");
+        TMUX_SHORTCUT(TMUX_DETACH_CLIENT, "z");
 
         TMUX_SHORTCUT(TMUX_TAB_LEFT, "p");
         TMUX_SHORTCUT(TMUX_TAB_RIGHT, "n");

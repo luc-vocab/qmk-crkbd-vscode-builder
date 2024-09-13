@@ -62,6 +62,7 @@ enum custom_keycodes {
   TMUX_RENAME_SESSION,
   TMUX_NEW_SESSION,
   TMUX_KILL_SESSION,
+  TMUX_DETACH_CLIENT,
   // windows
   TMUX_TAB_LEFT,
   TMUX_TAB_RIGHT,
