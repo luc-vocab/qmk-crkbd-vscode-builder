@@ -81,8 +81,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         TMUX_SHORTCUT(TMUX_NEW_WIN,  "c");
         TMUX_SHORTCUT(TMUX_RENAME_WIN, ",");
         TMUX_SHORTCUT(TMUX_KILL_WIN, "&");
-        TMUX_SHORTCUT(TMUX_MOVE_WIN_LEFT, "s");
-        TMUX_SHORTCUT(TMUX_MOVE_WIN_RIGHT, "d");
+        TMUX_SHORTCUT(TMUX_MOVE_WIN_LEFT, "e");
+        TMUX_SHORTCUT(TMUX_MOVE_WIN_RIGHT, "r");
 
         TMUX_SHORTCUT(TMUX_WIN_1, "1");
         TMUX_SHORTCUT(TMUX_WIN_2, "2");
