@@ -145,7 +145,6 @@ enum custom_keycodes {
 #define SH_PASTE KC_BTN2
 
 #define SH_EXIT RCTL(KC_X)
-#define SH_CLEARSCR RCTL(KC_L)
 #define SH_STOP RCTL(KC_C)
 
 #define SH_PROJCMD RCTL(KC_P)
