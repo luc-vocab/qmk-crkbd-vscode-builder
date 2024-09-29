@@ -4,7 +4,7 @@
 // base layer - browser
 // ====================
 
-#define __BASE_L0__  OSL(DESKNAV),  BR_TAB_CLOSE,    BR_URL_BAR,      BR_TAB_LEFT,     BR_TAB_RIGHT,    BR_TAB_NEW
+#define __BASE_L0__  BR_TAB_CLOSE,  BR_URL_BAR,      BR_RELOAD,       BR_TAB_LEFT,     BR_TAB_RIGHT,    BR_TAB_NEW
 #define __BASE_L1__  OSL(VSCODE),   KC_QUOTE,        KC_COMMA,        KC_DOT,          KC_P,            KC_Y
 #define __BASE_L2__  OSM(MOD_LCTL), KC_A,            KC_O,            KC_E,            KC_U,            KC_I
 #define __BASE_L3__  OSM(MOD_LSFT), OSL(SHELL),      KC_Q,            KC_J,            KC_K,            KC_X
