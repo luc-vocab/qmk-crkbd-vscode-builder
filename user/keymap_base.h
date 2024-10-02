@@ -15,7 +15,7 @@
 #define __BASE_R3__  KC_B,          KC_M,            KC_W,            KC_V,            KC_Z,            OSM(MOD_RSFT)
 
 #define __BASE_L1_EXT__ __BASE_L1__,   KC_TRNS
-#define __BASE_L2_EXT__ __BASE_L2__,   KC_TRNS
+#define __BASE_L2_EXT__ __BASE_L2__,   KC_LGUI
 #define __BASE_R1_EXT__ KC_TRNS,       __BASE_R1__
 #define __BASE_R2_EXT__ OSM(MOD_LALT), __BASE_R2__
 
