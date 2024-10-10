@@ -12,7 +12,7 @@
 
 #define __DESKNAV_L_2THUMB__  KC_TRNS,        KC_TRNS
 #define __DESKNAV_R_2THUMB__  KC_TRNS,        KC_TRNS
-#define __DESKNAV_L_3THUMB__  OSM(MOD_LCTL),  OSM(MOD_LALT), OSM(MOD_LGUI)
+#define __DESKNAV_L_3THUMB__  KC_TRNS,        KC_TRNS,       KC_TRNS
 #define __DESKNAV_R_3THUMB__  TO(GAME),       KC_TRNS,       KC_TRNS
 
 #define __DESKNAV_L1_EXT__ __DESKNAV_L1__, QK_BOOT
