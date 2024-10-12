@@ -142,7 +142,7 @@ enum custom_keycodes {
 
 #define SH_RECALL LALT(KC_DOT)
 #define SH_SEARCH RCTL(KC_R)
-#define SH_PASTE KC_BTN2
+#define SH_PASTE KC_BTN2 // potentially unused (putty)
 
 #define SH_EXIT RCTL(KC_X)
 #define SH_STOP RCTL(KC_C)
