@@ -7,7 +7,7 @@
 
 #define TMUX_SHORTCUT(KEYCODE, SHORTCUT) \
 case KEYCODE:\
-    SEND_STRING(SS_LCTL("a") SHORTCUT);\
+    SEND_STRING(SS_LCTL("b") SHORTCUT);\
     break
 
 extern bool wsWindowSwitchingMode;
