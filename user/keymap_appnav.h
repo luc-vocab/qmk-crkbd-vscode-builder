@@ -28,9 +28,9 @@
 // ============
 
 #define __SHELL_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
-#define __SHELL_L1__  KC_TRNS,            KC_TRNS,          SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
-#define __SHELL_L2__  KC_TRNS,            TERMINAL_PASTE,   SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  KC_TRNS,            TO(BASE),         MO(TMUX),          SHELL_GIT_STATUS, SHELL_TAILF,      KC_TRNS
+#define __SHELL_L1__  TERMINAL_CLOSE_TAB, KC_TRNS,          SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
+#define __SHELL_L2__  TERMINAL_NEW_TAB,   TERMINAL_PASTE,   SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
+#define __SHELL_L3__  TERMINAL_TITLE,     TO(BASE),         MO(TMUX),          SHELL_GIT_STATUS, SHELL_TAILF,      KC_TRNS
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  KC_TRNS,            TMUX_WIN_1,       TMUX_WIN_2,        TMUX_WIN_3,       TMUX_WIN_4,       SH_DEL_PATH
