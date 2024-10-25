@@ -9,7 +9,7 @@
 #define __BASE_L2__  OSM(MOD_LCTL), KC_A,            KC_O,            KC_E,            KC_U,            KC_I
 #define __BASE_L3__  OSM(MOD_LSFT), OSL(SHELL),      KC_Q,            KC_J,            KC_K,            KC_X
 
-#define __BASE_R0__  WS_LEFT,       MEH(KC_F8),      MEH(KC_F9),      MEH(KC_F10),     MEH(KC_F12),     WS_RIGHT
+#define __BASE_R0__  WS_LEFT,       MEH(KC_F1),      MEH(KC_F2),      MEH(KC_F3),      MEH(KC_F4),      WS_RIGHT
 #define __BASE_R1__  KC_F,          KC_G,            KC_C,            KC_R,            KC_L,            KC_TAB
 #define __BASE_R2__  KC_D,          KC_H,            KC_T,            KC_N,            KC_S,            DEL_WORD
 #define __BASE_R3__  KC_B,          KC_M,            KC_W,            KC_V,            KC_Z,            OSM(MOD_RSFT)
