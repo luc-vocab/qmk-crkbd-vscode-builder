@@ -113,6 +113,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __SYMBOLS_L2__ ,       __SYMBOLS_R2__ ,
         __SYMBOLS_L3__ ,       __SYMBOLS_R3__ ,
         __SYMBOLS_L_2THUMB__ , __SYMBOLS_R_2THUMB__),
+[GAME] = LAYOUT_WRAPPER_VOYAGER(
+        __GAME_L0__ ,       __GAME_R0__ ,
+        __GAME_L1__ ,       __GAME_R1__ ,
+        __GAME_L2__ ,       __GAME_R2__ ,
+        __GAME_L3__ ,       __GAME_R3__ ,
+        __GAME_L_2THUMB__ , __GAME_R_2THUMB__),
 [MOUSE] = LAYOUT_WRAPPER_VOYAGER(
         __MOUSE_L0__ ,       __MOUSE_R0__ ,
         __MOUSE_L1__ ,       __MOUSE_R1__ ,
@@ -130,6 +136,8 @@ LED_4: green, right bottom
 */
 
 void rgb_matrix_indicators_user(void) {
+  bool LED_1 = false;
+  bool LED_2 = false;
   bool LED_3 = false;
   bool LED_4 = false;
 
@@ -156,6 +164,11 @@ void rgb_matrix_indicators_user(void) {
     case MOUSE:
       rgb_matrix_set_color_all(RGB_OFF); // no lights
       break;          
+    case GAME:
+      rgb_matrix_set_color_all(RGB_OFF); // no lights
+      LED_1 = true;
+      LED_3 = true;
+      break;
     case VSCODE:
       rgb_matrix_set_color_all(RGB_GREEN); 
       break;
@@ -165,6 +178,8 @@ void rgb_matrix_indicators_user(void) {
     break;
   }
 
+  STATUS_LED_1(LED_1);
+  STATUS_LED_2(LED_2);
   STATUS_LED_3(LED_3);  
   STATUS_LED_4(LED_4);
 }

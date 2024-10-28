@@ -4,7 +4,7 @@
 // KEYNAV
 // ==========================
 
-#define __KEYNAV_L0__  KC_TRNS,       KC_TRNS,        KC_TRNS,      KC_TRNS,       KC_TRNS,        KC_TRNS
+#define __KEYNAV_L0__  KC_TRNS,       KC_TRNS,        KC_TRNS,      KC_TRNS,       KC_TRNS,        TO(GAME)
 #define __KEYNAV_L1__  KC_ESC,        KC_TRNS,        KC_TRNS,      KC_TRNS,       KC_TRNS,        KC_TRNS
 #define __KEYNAV_L2__  KC_TRNS,       MO(KEYSEL),     KC_TRNS,      KC_TRNS,       KC_TRNS,        KC_TRNS
 #define __KEYNAV_L3__  KC_TRNS,       KC_TRNS,        KC_LGUI,      WS_APP_SWITCH, WS_WIN_SWITCH,  KC_TRNS
