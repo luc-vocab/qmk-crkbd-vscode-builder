@@ -108,6 +108,7 @@ enum custom_keycodes {
 #define DEL_WORD LCTL(KC_BSPC)
 #define SAVE LCTL(KC_S)
 #define UNDO LCTL(KC_Z)
+#define CTRL_ALT_DEL LCTL(LALT(KC_DEL))
 
 // browser shortcuts
 // =================
