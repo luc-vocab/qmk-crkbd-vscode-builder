@@ -79,6 +79,7 @@ enum custom_keycodes {
   TMUX_WIN_5,
   TMUX_COPY_MODE,
   TMUX_COMMANDS,
+  TMUX_PASTE,
 
   // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,
@@ -149,6 +150,12 @@ enum custom_keycodes {
 #define SH_STOP RCTL(KC_C)
 
 #define SH_PROJCMD RCTL(KC_P)
+
+// additional tmux shortcuts
+// ==========================
+// https://www.baeldung.com/linux/tmux-copy-paste-keyboard-mouse
+#define TMUX_START_SEL RCTL(KC_SPACE)
+#define TMUX_COPY_SEL RCTL(KC_W)
 
 
 // visual studio code shortcuts
