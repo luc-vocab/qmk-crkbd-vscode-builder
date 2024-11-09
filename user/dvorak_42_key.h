@@ -99,7 +99,6 @@ enum custom_keycodes {
 
 // gnome terminal
 #define TERMINAL_NEW_TAB LSFT(LCTL(KC_T))
-#define TERMINAL_TITLE LSFT(LCTL(KC_S)) // this is not a default shortcut, needs to be configured
 #define TERMINAL_CLOSE_TAB LSFT(LCTL(KC_W))
 #define TERMINAL_PASTE LSFT(LCTL(KC_V))
 
