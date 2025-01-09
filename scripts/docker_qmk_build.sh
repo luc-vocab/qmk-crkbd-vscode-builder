@@ -22,7 +22,7 @@ fi
 docker run --rm -it \
 --mount type=bind,source="$(pwd)"/keymap,target=/workspace/qmk_firmware/keyboards/crkbd/keymaps/luc \
 --mount type=bind,source="$(pwd)"/user,target=/workspace/qmk_firmware/users/luc \
---mount type=bind,source=${HOME}/keyboard/firmware,target=/firmware \
+--mount type=bind,source=${HOME}/code/keyboard/firmware,target=/firmware \
 --name qmk-crkbd-vscode-builder \
 ${DOCKER_IMAGE} \
 sh -c "cd /workspace/qmk_firmware && qmk compile -kb crkbd -km luc && cp *.hex /firmware/crkbd/"

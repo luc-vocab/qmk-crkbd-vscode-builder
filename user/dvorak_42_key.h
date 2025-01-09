@@ -149,6 +149,7 @@ enum custom_keycodes {
 #define SH_STOP RCTL(KC_C)
 
 #define SH_PROJCMD RCTL(KC_P)
+#define SH_LAST_TEST RCTL(KC_G)
 
 // additional tmux shortcuts
 // ==========================

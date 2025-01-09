@@ -3,6 +3,9 @@
 set -xe
 
 BASEDIR=$(dirname $0)
+
+. $BASEDIR/directories.sh
+
 python3 $BASEDIR/process_mapping.py
 # . $BASEDIR/qmk_tag.sh
 QMK_TAG=master
@@ -23,10 +26,10 @@ fi
 docker run --rm -it \
 --mount type=bind,source="$(pwd)"/keymap_crkbd_v41,target=/workspace/kbd_firmware/keyboards/crkbd/qmk/qmk_firmware/keymaps/luc \
 --mount type=bind,source="$(pwd)"/user,target=/workspace/kbd_firmware/src/qmk/qmk_firmware/users/luc \
---mount type=bind,source=${HOME}/keyboard/firmware,target=/firmware \
+--mount type=bind,source=${FIRMWARE_DIR},target=/firmware \
 --name qmk-crkbd-vscode-builder \
 ${DOCKER_IMAGE} \
 sh -c "cd /workspace/kbd_firmware && kb=crkbd kr=rev4_1/standard km=luc make qmk-compile && cp keyboards/crkbd/qmk/qmk_firmware/.build/*.uf2 /firmware/crkbd_v41/"
 
-rclone sync ~/keyboard/firmware/crkbd_v41/ dropbox:Keyboard/firmware/crkbd_v41/
-rclone copy ~/keyboard/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode/
+rclone sync ${FIRMWARE_DIR}/crkbd_v41/ dropbox:Keyboard/firmware/crkbd_v41/
+rclone copy ${KEYBOARD_DIR}/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode/

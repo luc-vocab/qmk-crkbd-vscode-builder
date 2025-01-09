@@ -33,7 +33,7 @@
 #define __SHELL_L3__  KC_TRNS,            TO(BASE),         MO(TMUX),          SHELL_GIT_STATUS, SHELL_TAILF,      KC_TRNS
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
-#define __SHELL_R1__  KC_TRNS,            TMUX_WIN_1,       TMUX_WIN_2,        TMUX_WIN_3,       TMUX_WIN_4,       SH_DEL_PATH
+#define __SHELL_R1__  SH_LAST_TEST,       TMUX_WIN_1,       TMUX_WIN_2,        TMUX_WIN_3,       TMUX_WIN_4,       SH_DEL_PATH
 #define __SHELL_R2__  SH_WORD_LEFT,       TMUX_TAB_LEFT,    TMUX_TAB_RIGHT,    TMUX_LIST_WIN,    SH_WORD_RIGHT,    SH_DEL_WORD
 #define __SHELL_R3__  SH_DEL_TO_START,    SH_RECALL,        SH_SEARCH,         SH_PROJCMD,       SH_DEL_TO_END,    SH_STOP
 
