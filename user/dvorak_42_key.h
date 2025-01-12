@@ -80,6 +80,7 @@ enum custom_keycodes {
   TMUX_COPY_MODE,
   TMUX_COMMANDS,
   TMUX_PASTE,
+  TMUX_COPY_LAST,
 
   // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,
@@ -150,6 +151,7 @@ enum custom_keycodes {
 
 #define SH_PROJCMD RCTL(KC_P)
 #define SH_LAST_TEST RCTL(KC_G)
+#define SH_TEST_LIST RCTL(KC_T)
 
 // additional tmux shortcuts
 // ==========================

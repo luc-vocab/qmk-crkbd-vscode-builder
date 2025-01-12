@@ -93,6 +93,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         TMUX_SHORTCUT(TMUX_COPY_MODE, "[");
         TMUX_SHORTCUT(TMUX_PASTE, "]");
         TMUX_SHORTCUT(TMUX_COMMANDS, ":");        
+        TMUX_SHORTCUT(TMUX_COPY_LAST, "y");
     }
   }
 
