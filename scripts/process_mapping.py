@@ -40,21 +40,17 @@ class Mapping(enum.Enum):
     VS_RECENT              =   (Modifier.MEH,  'x', 'workbench.action.openRecent')
     VS_COPILOT             =   (Modifier.MEH,  'y', 'workbench.panel.chat.view.copilot.focus')
     VS_EXPAND_SEL          =   (Modifier.MEH,  'z', 'editor.action.smartSelect.expand')
+    VS_COLLAPSE_EXPLORER   =   (Modifier.MEH,  '0', 'workbench.files.action.collapseExplorerFolders')
     VS_FOCUS_BREADCRUMBS   =   (Modifier.MEH,  '1', 'breadcrumbs.focus')
     VS_FOCUS_EXPLORER      =   (Modifier.MEH,  '2', 'workbench.explorer.fileView.focus')
-    VS_COLLAPSE_EXPLORER   =   (Modifier.MEH,  '3', 'workbench.files.action.collapseExplorerFolders')
+    # meh + 3 used by skype for business
     VS_FIND_FILES          =   (Modifier.MEH,  '4', 'workbench.action.findInFiles')
     VS_FILE                =   (Modifier.MEH,  '5', 'workbench.action.quickOpen')    
     VS_SYMBOLEDITOR        =   (Modifier.MEH,  '6', 'workbench.action.gotoSymbol')
     VS_GO_TO_TOP           =   (Modifier.MEH,  '7', 'cursorTop')
     VS_GO_TO_BOTTOM        =   (Modifier.MEH,  '8', 'cursorBottom')
     VS_OPEN_FILE           =   (Modifier.MEH,  '9', 'workbench.action.files.openFile')
-    # double.bot shortcuts
-    VS_DBL_ADD_SEL_NEW     =   (Modifier.HYPR,  'a', 'doublebot.addSelectionToNewConvo')
-    VS_DBL_ADD_SEL         =   (Modifier.HYPR,  'b', 'doublebot.addSelectionToChat')
-    VS_DBL_FOCUS_CHAT      =   (Modifier.HYPR,  'c', 'doublebot.focusCurrentChat')
-    VS_DBL_NEW_CHAT        =   (Modifier.HYPR,  'd', 'doublebot.newConvo')
-    # meh + 0
+    # next series of shortcuts can use Modifier.HYPR,  'a'
 
     def __init__(self, modifier, keycode, command):
         self.modifier = modifier

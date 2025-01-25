@@ -1,0 +1,134 @@
+[
+    {
+        "key": "ctrl+shift+alt+a",
+        "command": "bookmarks.toggle"
+    },
+    {
+        "key": "ctrl+shift+alt+b",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+alt+c",
+        "command": "workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+shift+alt+e",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "key": "ctrl+shift+alt+f",
+        "command": "editor.action.goToImplementation"
+    },
+    {
+        "key": "ctrl+shift+alt+g",
+        "command": "editor.action.goToReferences"
+    },
+    {
+        "key": "ctrl+shift+alt+h",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+shift+alt+i",
+        "command": "editor.action.jumpToBracket"
+    },
+    {
+        "key": "ctrl+shift+alt+j",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+shift+alt+k",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+alt+l",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+shift+alt+m",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+shift+alt+n",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "ctrl+shift+alt+o",
+        "command": "editor.action.blockComment"
+    },
+    {
+        "key": "ctrl+shift+alt+p",
+        "command": "editor.action.commentLine"
+    },
+    {
+        "key": "ctrl+shift+alt+q",
+        "command": "editor.action.deleteLines"
+    },
+    {
+        "key": "ctrl+shift+alt+r",
+        "command": "editor.action.copyLinesDownAction"
+    },
+    {
+        "key": "ctrl+shift+alt+s",
+        "command": "bookmarks.jumpToPrevious"
+    },
+    {
+        "key": "ctrl+shift+alt+t",
+        "command": "bookmarks.jumpToNext"
+    },
+    {
+        "key": "ctrl+shift+alt+v",
+        "command": "bookmarks.clearFromAllFiles"
+    },
+    {
+        "key": "ctrl+shift+alt+w",
+        "command": "bookmarks.list"
+    },
+    {
+        "key": "ctrl+shift+alt+x",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+shift+alt+y",
+        "command": "workbench.panel.chat.view.copilot.focus"
+    },
+    {
+        "key": "ctrl+shift+alt+z",
+        "command": "editor.action.smartSelect.expand"
+    },
+    {
+        "key": "ctrl+shift+alt+0",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "ctrl+shift+alt+1",
+        "command": "breadcrumbs.focus"
+    },
+    {
+        "key": "ctrl+shift+alt+2",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+shift+alt+4",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+alt+5",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+shift+alt+6",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+shift+alt+7",
+        "command": "cursorTop"
+    },
+    {
+        "key": "ctrl+shift+alt+8",
+        "command": "cursorBottom"
+    },
+    {
+        "key": "ctrl+shift+alt+9",
+        "command": "workbench.action.files.openFile"
+    }
+]
