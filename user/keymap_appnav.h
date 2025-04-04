@@ -75,13 +75,13 @@
 
 #define __VSCODE_L0__  KC_TRNS,           KC_TRNS,         KC_TRNS,            KC_TRNS,              KC_TRNS,              KC_TRNS
 #define __VSCODE_L1__  TO(BASE),          VS_GO_TO_TOP,    VS_FIND_FILES,      VS_CMT_BLOCK,         VS_CMT_LINE,          VS_RECENT
-#define __VSCODE_L2__  KC_TRNS,           VS_COPILOT,      KC_TRNS,            VS_FOCUS_EXPLORER,    VS_FOCUS_BREADCRUMBS, KC_TRNS
-#define __VSCODE_L3__  KC_TRNS,           VS_GO_TO_BOTTOM, KC_TRNS,            VS_COLLAPSE_EXPLORER, VS_OPEN_FILE,         KC_TRNS
+#define __VSCODE_L2__  VS_FREE_1,         VS_COPILOT,      VS_FREE_3,          VS_FOCUS_EXPLORER,    VS_FOCUS_BREADCRUMBS, VS_FREE_5
+#define __VSCODE_L3__  VS_FREE_2,         VS_GO_TO_BOTTOM, VS_FREE_4,          VS_COLLAPSE_EXPLORER, VS_OPEN_FILE,         VS_FREE_6
 
 #define __VSCODE_R0__  KC_TRNS,           KC_TRNS,         KC_TRNS,            KC_TRNS,              KC_TRNS,              KC_TRNS
 #define __VSCODE_R1__  VS_EXPAND_SEL,     VS_REFERENCES,   VS_DEFINITION,      VS_IMPLEMENTATION,    VS_LINE,              VS_BRACKET
 #define __VSCODE_R2__  VS_BM_TOGGLE,      VS_TABLEFT,      VS_TABRIGHT,        VS_SYMBOLEDITOR,      VS_FILE,              VS_BACK
-#define __VSCODE_R3__  VS_BM_CLEARALL,    VS_BM_PREV,      VS_BM_NEXT,         VS_GROUP_1,           VS_GROUP_2,           KC_TRNS
+#define __VSCODE_R3__  VS_BM_CLEARALL,    VS_BM_PREV,      VS_BM_NEXT,         VS_GROUP_1,           VS_GROUP_2,           VS_FREE_7
 
 #define __VSCODE_L_2THUMB__  VS_COPYLINEDOWN, VS_DEL_LINE
 #define __VSCODE_R_2THUMB__  VS_CLOSETAB,     VS_COMMANDS

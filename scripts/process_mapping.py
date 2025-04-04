@@ -51,6 +51,13 @@ class Mapping(enum.Enum):
     VS_GO_TO_BOTTOM        =   (Modifier.MEH,  '8', 'cursorBottom')
     VS_OPEN_FILE           =   (Modifier.MEH,  '9', 'workbench.action.files.openFile')
     # next series of shortcuts can use Modifier.HYPR,  'a'
+    VS_FREE_1              =   (Modifier.HYPR, 'a', '-')
+    VS_FREE_2              =   (Modifier.HYPR, 'b', '-')
+    VS_FREE_3              =   (Modifier.HYPR, 'c', '-')
+    VS_FREE_4              =   (Modifier.HYPR, 'd', '-')
+    VS_FREE_5              =   (Modifier.HYPR, 'e', '-')
+    VS_FREE_6              =   (Modifier.HYPR, 'f', '-')
+    VS_FREE_7              =   (Modifier.HYPR, 'g', '-')
 
     def __init__(self, modifier, keycode, command):
         self.modifier = modifier

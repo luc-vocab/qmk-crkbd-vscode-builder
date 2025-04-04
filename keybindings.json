@@ -130,5 +130,33 @@
     {
         "key": "ctrl+shift+alt+9",
         "command": "workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+a",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+b",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+c",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+d",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+e",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+f",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+shift+alt+meta+g",
+        "command": "-"
     }
 ]
