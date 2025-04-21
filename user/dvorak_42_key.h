@@ -102,6 +102,7 @@ enum custom_keycodes {
 #define TERMINAL_NEW_TAB LSFT(LCTL(KC_T))
 #define TERMINAL_CLOSE_TAB LSFT(LCTL(KC_W))
 #define TERMINAL_PASTE LSFT(LCTL(KC_V))
+#define TERMINAL_FULLSCREEN KC_F11
 
 
 // generic shortcuts
