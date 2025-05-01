@@ -3,6 +3,8 @@
 set -xe
 
 BASEDIR=$(dirname $0)
+. $BASEDIR/directories.sh
+
 python3 $BASEDIR/process_mapping.py
 . $BASEDIR/qmk_tag.sh
 REBUILD_DOCKER=$1
@@ -27,5 +29,5 @@ docker run --rm -it \
 ${DOCKER_IMAGE} \
 sh -c "cd /workspace/qmk_firmware && qmk compile -kb crkbd -km luc && cp *.hex /firmware/crkbd/"
 
-rclone sync ~/keyboard/firmware/crkbd/ dropbox:Keyboard/firmware/crkbd/
-rclone copy ~/keyboard/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode
+rclone sync ${FIRMWARE_DIR}/crkbd/ dropbox:Keyboard/firmware/crkbd/
+rclone copy ${KEYBOARD_DIR}/qmk-crkbd-vscode-builder/keybindings.json dropbox:Keyboard/vscode
