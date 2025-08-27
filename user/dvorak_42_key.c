@@ -56,15 +56,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SHELL_TAILF:
             SEND_STRING("tail -f ");
             break;
-        case SHELL_GIT_STATUS:
-            SEND_STRING("git status\n");
-            break;
-        case SHELL_GIT_DIFF:
-            SEND_STRING("git diff\n");
-            break;                        
-        case SHELL_GIT_COMMIT:
-            SEND_STRING("git commit -a\n");
-            break;                                    
 
         // tmux shortcuts
         TMUX_SHORTCUT(TMUX_PREV_SESSION, "(");
@@ -94,6 +85,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         TMUX_SHORTCUT(TMUX_PASTE, "]");
         TMUX_SHORTCUT(TMUX_COMMANDS, ":");        
         TMUX_SHORTCUT(TMUX_COPY_LAST, "y");
+
+        TMUX_SHORTCUT(TMUX_EXTRAKTO, "u");
     }
   }
 

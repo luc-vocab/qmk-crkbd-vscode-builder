@@ -50,10 +50,6 @@ enum custom_keycodes {
   SHELL_PGREP,
   SHELL_TAILF,
 
-  SHELL_GIT_STATUS,
-  SHELL_GIT_DIFF,
-  SHELL_GIT_COMMIT,
-
   // tmux shortcuts
   // sessions
   TMUX_PREV_SESSION,
@@ -81,6 +77,7 @@ enum custom_keycodes {
   TMUX_COMMANDS,
   TMUX_PASTE,
   TMUX_COPY_LAST,
+  TMUX_EXTRAKTO,
 
   // Alt+Escape / Switch windows directly in Gnome
   WS_WIN_SWITCH,

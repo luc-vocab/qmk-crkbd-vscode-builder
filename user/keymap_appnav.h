@@ -28,9 +28,9 @@
 // ============
 
 #define __SHELL_L0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
-#define __SHELL_L1__  TERMINAL_CLOSE_TAB, KC_TRNS,          SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
+#define __SHELL_L1__  TERMINAL_CLOSE_TAB, TMUX_EXTRAKTO,    SHELL_PGREP,       SHELL_PLESS,      SHELL_LESS,       SH_EXIT
 #define __SHELL_L2__  TERMINAL_NEW_TAB,   TERMINAL_PASTE,   SHELL_CDPRE,       SHELL_LSLTR,      SHELL_LS,         SHELL_LSLA
-#define __SHELL_L3__  TERMINAL_FULLSCREEN,TO(BASE),         MO(TMUX),          SHELL_GIT_STATUS, SHELL_TAILF,      KC_TRNS
+#define __SHELL_L3__  TERMINAL_FULLSCREEN,TO(BASE),         MO(TMUX),          KC_TRNS,          SHELL_TAILF,      TMUX_PASTE
 
 #define __SHELL_R0__  KC_TRNS,            KC_TRNS,          KC_TRNS,           KC_TRNS,          KC_TRNS,          KC_TRNS
 #define __SHELL_R1__  SH_LAST_TEST,       TMUX_WIN_1,       TMUX_WIN_2,        TMUX_WIN_3,       TMUX_WIN_4,       SH_DEL_PATH
@@ -59,7 +59,7 @@
 #define __TMUX_R1__  KC_TRNS,          TMUX_MOVE_WIN_LEFT, TMUX_MOVE_WIN_RIGHT, KC_TRNS,            KC_TRNS,             TMUX_DETACH_CLIENT
 #define __TMUX_R2__  KC_TRNS,          TMUX_TAB_LEFT,      TMUX_TAB_RIGHT,      TMUX_LIST_WIN,      TMUX_RENAME_WIN,     TMUX_KILL_WIN
 #define __TMUX_R3__  KC_TRNS,          TMUX_PREV_SESSION,  TMUX_NEXT_SESSION,   TMUX_LIST_SESSIONS, TMUX_RENAME_SESSION, TMUX_KILL_SESSION
-
+ 
 #define __TMUX_L_2THUMB__  TMUX_COPY_MODE,    TMUX_NEW_SESSION
 #define __TMUX_R_2THUMB__  KC_TRNS,           TMUX_NEW_WIN
 #define __TMUX_L_3THUMB__  KC_TRNS,           __TMUX_L_2THUMB__
