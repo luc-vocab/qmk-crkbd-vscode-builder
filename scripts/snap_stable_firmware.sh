@@ -1,5 +1,6 @@
 #!/bin/bash
 
+BASEDIR=$(dirname $0)
 . $BASEDIR/directories.sh
 
 if [ $# -ne 1 ]; then
