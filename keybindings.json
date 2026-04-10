@@ -133,7 +133,7 @@
     },
     {
         "key": "ctrl+shift+alt+meta+a",
-        "command": "-"
+        "command": "gitlens.compareWith"
     },
     {
         "key": "ctrl+shift+alt+meta+b",

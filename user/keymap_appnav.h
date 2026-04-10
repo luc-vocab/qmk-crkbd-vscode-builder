@@ -75,7 +75,7 @@
 
 #define __VSCODE_L0__  KC_TRNS,           KC_TRNS,         KC_TRNS,            KC_TRNS,              KC_TRNS,              KC_TRNS
 #define __VSCODE_L1__  TO(BASE),          VS_GO_TO_TOP,    VS_FIND_FILES,      VS_CMT_BLOCK,         VS_CMT_LINE,          VS_RECENT
-#define __VSCODE_L2__  VS_FREE_1,         VS_COPILOT,      VS_FREE_3,          VS_FOCUS_EXPLORER,    VS_FOCUS_BREADCRUMBS, VS_FREE_5
+#define __VSCODE_L2__  VS_COMPARE_WITH,   VS_COPILOT,      VS_FREE_3,          VS_FOCUS_EXPLORER,    VS_FOCUS_BREADCRUMBS, VS_FREE_5
 #define __VSCODE_L3__  VS_FREE_2,         VS_GO_TO_BOTTOM, VS_FREE_4,          VS_COLLAPSE_EXPLORER, VS_OPEN_FILE,         VS_FREE_6
 
 #define __VSCODE_R0__  KC_TRNS,           KC_TRNS,         KC_TRNS,            KC_TRNS,              KC_TRNS,              KC_TRNS

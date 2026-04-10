@@ -51,7 +51,7 @@ class Mapping(enum.Enum):
     VS_GO_TO_BOTTOM        =   (Modifier.MEH,  '8', 'cursorBottom')
     VS_OPEN_FILE           =   (Modifier.MEH,  '9', 'workbench.action.files.openFile')
     # next series of shortcuts can use Modifier.HYPR,  'a'
-    VS_FREE_1              =   (Modifier.HYPR, 'a', '-')
+    VS_COMPARE_WITH        =   (Modifier.HYPR, 'a', 'gitlens.compareWith')
     VS_FREE_2              =   (Modifier.HYPR, 'b', '-')
     VS_FREE_3              =   (Modifier.HYPR, 'c', '-')
     VS_FREE_4              =   (Modifier.HYPR, 'd', '-')

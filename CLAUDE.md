@@ -38,6 +38,10 @@ The `Mapping` enum defines entries as `(Modifier, key, vscode_command)`. Modifie
 
 This file is the single source of truth for all VSCode keyboard shortcuts. Both generated files are derived outputs.
 
+**Adding/changing a VSCode shortcut requires two edits:**
+1. `scripts/process_mapping.py` -- define or update the `Mapping` enum entry (name, modifier, key, VSCode command)
+2. `user/keymap_appnav.h` -- place the macro name in the VSCODE layer layout (e.g. replace a `VS_FREE_*` slot)
+
 ### Keymap Structure
 
 Three keyboard targets share a common `user/` directory:
